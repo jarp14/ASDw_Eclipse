@@ -211,9 +211,9 @@ public class TeawDiagramUpdater {
 		case SocialStoryEditPart.VISUAL_ID:
 			return getSocialStory_3008ContainedLinks(view);
 		case SoothingObjectEditPart.VISUAL_ID:
-			return getSoothingObject_3010ContainedLinks(view);
+			return getSoothingObject_3009ContainedLinks(view);
 		case CommunicationBookEditPart.VISUAL_ID:
-			return getCommunicationBook_3009ContainedLinks(view);
+			return getCommunicationBook_3010ContainedLinks(view);
 		case NormalLinkEditPart.VISUAL_ID:
 			return getNormalLink_4001ContainedLinks(view);
 		case RedLinkEditPart.VISUAL_ID:
@@ -250,9 +250,9 @@ public class TeawDiagramUpdater {
 		case SocialStoryEditPart.VISUAL_ID:
 			return getSocialStory_3008IncomingLinks(view);
 		case SoothingObjectEditPart.VISUAL_ID:
-			return getSoothingObject_3010IncomingLinks(view);
+			return getSoothingObject_3009IncomingLinks(view);
 		case CommunicationBookEditPart.VISUAL_ID:
-			return getCommunicationBook_3009IncomingLinks(view);
+			return getCommunicationBook_3010IncomingLinks(view);
 		case NormalLinkEditPart.VISUAL_ID:
 			return getNormalLink_4001IncomingLinks(view);
 		case RedLinkEditPart.VISUAL_ID:
@@ -289,9 +289,9 @@ public class TeawDiagramUpdater {
 		case SocialStoryEditPart.VISUAL_ID:
 			return getSocialStory_3008OutgoingLinks(view);
 		case SoothingObjectEditPart.VISUAL_ID:
-			return getSoothingObject_3010OutgoingLinks(view);
+			return getSoothingObject_3009OutgoingLinks(view);
 		case CommunicationBookEditPart.VISUAL_ID:
-			return getCommunicationBook_3009OutgoingLinks(view);
+			return getCommunicationBook_3010OutgoingLinks(view);
 		case NormalLinkEditPart.VISUAL_ID:
 			return getNormalLink_4001OutgoingLinks(view);
 		case RedLinkEditPart.VISUAL_ID:
@@ -387,16 +387,16 @@ public class TeawDiagramUpdater {
 	}
 
 	/**
-	* @generated
-	*/
-	public static List<TeawLinkDescriptor> getSoothingObject_3010ContainedLinks(View view) {
+	 * @generated
+	 */
+	public static List<TeawLinkDescriptor> getSoothingObject_3009ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<TeawLinkDescriptor> getCommunicationBook_3009ContainedLinks(View view) {
+	public static List<TeawLinkDescriptor> getCommunicationBook_3010ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -439,20 +439,20 @@ public class TeawDiagramUpdater {
 	 * @generated
 	 */
 	public static List<TeawLinkDescriptor> getEmotionChoice_3001IncomingLinks(View view) {
-		EmotionChoice modelElement = (EmotionChoice) view.getElement();
-		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
-				.find(view.eResource().getResourceSet().getResources());
-		LinkedList<TeawLinkDescriptor> result = new LinkedList<TeawLinkDescriptor>();
-		result.addAll(getIncomingTypeModelFacetLinks_RedLink_4002(modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_GreenLink_4003(modelElement, crossReferences));
-		return result;
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
 	public static List<TeawLinkDescriptor> getEmotion_3002IncomingLinks(View view) {
-		return Collections.emptyList();
+		Emotion modelElement = (Emotion) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<TeawLinkDescriptor> result = new LinkedList<TeawLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_RedLink_4002(modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_GreenLink_4003(modelElement, crossReferences));
+		return result;
 	}
 
 	/**
@@ -513,16 +513,16 @@ public class TeawDiagramUpdater {
 	}
 
 	/**
-	* @generated
-	*/
-	public static List<TeawLinkDescriptor> getSoothingObject_3010IncomingLinks(View view) {
+	 * @generated
+	 */
+	public static List<TeawLinkDescriptor> getSoothingObject_3009IncomingLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<TeawLinkDescriptor> getCommunicationBook_3009IncomingLinks(View view) {
+	public static List<TeawLinkDescriptor> getCommunicationBook_3010IncomingLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -565,18 +565,18 @@ public class TeawDiagramUpdater {
 	 * @generated
 	 */
 	public static List<TeawLinkDescriptor> getEmotionChoice_3001OutgoingLinks(View view) {
-		return Collections.emptyList();
+		EmotionChoice modelElement = (EmotionChoice) view.getElement();
+		LinkedList<TeawLinkDescriptor> result = new LinkedList<TeawLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_RedLink_4002(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_GreenLink_4003(modelElement));
+		return result;
 	}
 
 	/**
 	 * @generated
 	 */
 	public static List<TeawLinkDescriptor> getEmotion_3002OutgoingLinks(View view) {
-		Emotion modelElement = (Emotion) view.getElement();
-		LinkedList<TeawLinkDescriptor> result = new LinkedList<TeawLinkDescriptor>();
-		result.addAll(getOutgoingTypeModelFacetLinks_RedLink_4002(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_GreenLink_4003(modelElement));
-		return result;
+		return Collections.emptyList();
 	}
 
 	/**
@@ -631,16 +631,16 @@ public class TeawDiagramUpdater {
 	}
 
 	/**
-	* @generated
-	*/
-	public static List<TeawLinkDescriptor> getSoothingObject_3010OutgoingLinks(View view) {
+	 * @generated
+	 */
+	public static List<TeawLinkDescriptor> getSoothingObject_3009OutgoingLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<TeawLinkDescriptor> getCommunicationBook_3009OutgoingLinks(View view) {
+	public static List<TeawLinkDescriptor> getCommunicationBook_3010OutgoingLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -701,8 +701,8 @@ public class TeawDiagramUpdater {
 			if (RedLinkEditPart.VISUAL_ID != TeawVisualIDRegistry.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			EmotionChoice dst = link.getTarget();
-			Emotion src = link.getOrigin();
+			Emotion dst = link.getTarget();
+			EmotionChoice src = link.getOrigin();
 			result.add(
 					new TeawLinkDescriptor(src, dst, link, TeawElementTypes.RedLink_4002, RedLinkEditPart.VISUAL_ID));
 		}
@@ -718,8 +718,8 @@ public class TeawDiagramUpdater {
 		if (GreenLinkEditPart.VISUAL_ID != TeawVisualIDRegistry.getLinkWithClassVisualID(link)) {
 			return result;
 		}
-		EmotionChoice dst = link.getTarget();
-		Emotion src = link.getOrigin();
+		Emotion dst = link.getTarget();
+		EmotionChoice src = link.getOrigin();
 		result.add(
 				new TeawLinkDescriptor(src, dst, link, TeawElementTypes.GreenLink_4003, GreenLinkEditPart.VISUAL_ID));
 		return result;
@@ -749,9 +749,9 @@ public class TeawDiagramUpdater {
 	}
 
 	/**
-	* @generated
-	*/
-	private static Collection<TeawLinkDescriptor> getIncomingTypeModelFacetLinks_RedLink_4002(EmotionChoice target,
+	 * @generated
+	 */
+	private static Collection<TeawLinkDescriptor> getIncomingTypeModelFacetLinks_RedLink_4002(Emotion target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<TeawLinkDescriptor> result = new LinkedList<TeawLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
@@ -764,7 +764,7 @@ public class TeawDiagramUpdater {
 			if (RedLinkEditPart.VISUAL_ID != TeawVisualIDRegistry.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Emotion src = link.getOrigin();
+			EmotionChoice src = link.getOrigin();
 			result.add(new TeawLinkDescriptor(src, target, link, TeawElementTypes.RedLink_4002,
 					RedLinkEditPart.VISUAL_ID));
 		}
@@ -772,9 +772,9 @@ public class TeawDiagramUpdater {
 	}
 
 	/**
-	* @generated
-	*/
-	private static Collection<TeawLinkDescriptor> getIncomingTypeModelFacetLinks_GreenLink_4003(EmotionChoice target,
+	 * @generated
+	 */
+	private static Collection<TeawLinkDescriptor> getIncomingTypeModelFacetLinks_GreenLink_4003(Emotion target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<TeawLinkDescriptor> result = new LinkedList<TeawLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
@@ -787,7 +787,7 @@ public class TeawDiagramUpdater {
 			if (GreenLinkEditPart.VISUAL_ID != TeawVisualIDRegistry.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Emotion src = link.getOrigin();
+			EmotionChoice src = link.getOrigin();
 			result.add(new TeawLinkDescriptor(src, target, link, TeawElementTypes.GreenLink_4003,
 					GreenLinkEditPart.VISUAL_ID));
 		}
@@ -834,7 +834,7 @@ public class TeawDiagramUpdater {
 	/**
 	* @generated
 	*/
-	private static Collection<TeawLinkDescriptor> getOutgoingTypeModelFacetLinks_RedLink_4002(Emotion source) {
+	private static Collection<TeawLinkDescriptor> getOutgoingTypeModelFacetLinks_RedLink_4002(EmotionChoice source) {
 		Emotions container = null;
 		// Find container element for the link.
 		// Climb up by containment hierarchy starting from the source
@@ -857,8 +857,8 @@ public class TeawDiagramUpdater {
 			if (RedLinkEditPart.VISUAL_ID != TeawVisualIDRegistry.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			EmotionChoice dst = link.getTarget();
-			Emotion src = link.getOrigin();
+			Emotion dst = link.getTarget();
+			EmotionChoice src = link.getOrigin();
 			if (src != source) {
 				continue;
 			}
@@ -871,7 +871,7 @@ public class TeawDiagramUpdater {
 	/**
 	* @generated
 	*/
-	private static Collection<TeawLinkDescriptor> getOutgoingTypeModelFacetLinks_GreenLink_4003(Emotion source) {
+	private static Collection<TeawLinkDescriptor> getOutgoingTypeModelFacetLinks_GreenLink_4003(EmotionChoice source) {
 		Emotions container = null;
 		// Find container element for the link.
 		// Climb up by containment hierarchy starting from the source
@@ -889,8 +889,8 @@ public class TeawDiagramUpdater {
 		if (GreenLinkEditPart.VISUAL_ID != TeawVisualIDRegistry.getLinkWithClassVisualID(link)) {
 			return result;
 		}
-		EmotionChoice dst = link.getTarget();
-		Emotion src = link.getOrigin();
+		Emotion dst = link.getTarget();
+		EmotionChoice src = link.getOrigin();
 		if (src != source) {
 			return result;
 		}

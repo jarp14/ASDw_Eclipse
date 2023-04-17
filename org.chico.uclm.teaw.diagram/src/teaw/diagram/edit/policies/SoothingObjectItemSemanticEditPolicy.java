@@ -22,7 +22,7 @@ public class SoothingObjectItemSemanticEditPolicy extends TeawBaseItemSemanticEd
 	* @generated
 	*/
 	public SoothingObjectItemSemanticEditPolicy() {
-		super(TeawElementTypes.SoothingObject_3010);
+		super(TeawElementTypes.SoothingObject_3009);
 	}
 
 	/**

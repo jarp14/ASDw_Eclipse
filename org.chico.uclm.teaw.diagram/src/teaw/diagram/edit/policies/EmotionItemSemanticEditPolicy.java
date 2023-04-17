@@ -44,18 +44,18 @@ public class EmotionItemSemanticEditPolicy extends TeawBaseItemSemanticEditPolic
 		View view = (View) getHost().getModel();
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
-			Edge outgoingLink = (Edge) it.next();
-			if (TeawVisualIDRegistry.getVisualID(outgoingLink) == RedLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
+		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
+			Edge incomingLink = (Edge) it.next();
+			if (TeawVisualIDRegistry.getVisualID(incomingLink) == RedLinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (TeawVisualIDRegistry.getVisualID(outgoingLink) == GreenLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
+			if (TeawVisualIDRegistry.getVisualID(incomingLink) == GreenLinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
 		}
@@ -85,10 +85,10 @@ public class EmotionItemSemanticEditPolicy extends TeawBaseItemSemanticEditPolic
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (TeawElementTypes.RedLink_4002 == req.getElementType()) {
-			return getGEFWrapper(new RedLinkCreateCommand(req, req.getSource(), req.getTarget()));
+			return null;
 		}
 		if (TeawElementTypes.GreenLink_4003 == req.getElementType()) {
-			return getGEFWrapper(new GreenLinkCreateCommand(req, req.getSource(), req.getTarget()));
+			return null;
 		}
 		return null;
 	}
@@ -98,10 +98,10 @@ public class EmotionItemSemanticEditPolicy extends TeawBaseItemSemanticEditPolic
 	 */
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (TeawElementTypes.RedLink_4002 == req.getElementType()) {
-			return null;
+			return getGEFWrapper(new RedLinkCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		if (TeawElementTypes.GreenLink_4003 == req.getElementType()) {
-			return null;
+			return getGEFWrapper(new GreenLinkCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
 	}

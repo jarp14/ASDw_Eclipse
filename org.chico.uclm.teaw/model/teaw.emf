@@ -14,7 +14,10 @@ abstract class Node {
 * CATEGORIAS
 */
 abstract class EmotionsNode {
-	attr String name;
+	attr String description;
+	attr String imagePath;
+	attr Integer order;
+	attr Integer size;
 }
 
 @gmf.node(label="name", tool.name="Emotions",
@@ -29,6 +32,9 @@ class Emotions extends Node {
 
 abstract class PlanningNode {
 	attr String description;
+	attr String imagePath;
+	attr Integer order;
+	attr Integer size;
 }
 
 @gmf.node(label="name", tool.name="Planning",
@@ -44,14 +50,11 @@ class Planning extends Node {
 * PICTOS
 */
 class Picto extends PlanningNode {
-	attr Integer order;
-	attr String image_url;
-	attr Integer size;
 }
 
 @gmf.node(figure="org.chico.uclm.teaw.figures.PersonFigure", tool.name="Person",
 	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/person_arasaac128.png", tool.small.path="images/person_arasaac32.png",
-	label.placement="none", resizable="false", size="128,128")
+	label.placement="none", resizable="true", size="128,128")
 class Person extends Picto {
 }
 
@@ -101,16 +104,12 @@ class SoothingObject extends Transiction {
 	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/emochoice_arasaac128.png", tool.small.path="images/emochoice_arasaac32.png",
 	label.placement="none", resizable="false", size="128,128")
 class EmotionChoice extends EmotionsNode {
-	attr String source_url;
-	attr Integer size;
 }
 
 @gmf.node(figure="org.chico.uclm.teaw.figures.EmotionFigure", tool.name="Response option",
 	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/emotion_arasaac128.png", tool.small.path="images/emotion_arasaac32.png",
 	label.placement="none", resizable="false", size="128,128")
 class Emotion extends EmotionsNode {
-	attr String image_url;
-	attr Integer size;
 }
 
 // CUADERNO DE COMUNICACION
@@ -138,14 +137,14 @@ class NormalLink extends Link {
 			tool.small.bundle="org.chico.uclm.teaw.figures", tool.small.path="images/wrong32.png",
 			source.constraint="self <> oppositeEnd",target.constraint="self <> oppositeEnd")
 class RedLink extends Link {
-	ref Emotion[1] origin;
-	ref EmotionChoice[1] target;
+	ref EmotionChoice[1] origin;
+	ref Emotion[1] target;
 }
 
 @gmf.link(source="origin", target="target", tool.name="Correct solution", style="solid", width="2", color="0,217,60",
 			tool.small.bundle="org.chico.uclm.teaw.figures", tool.small.path="images/ok32.png",
 			source.constraint="self <> oppositeEnd",target.constraint="self <> oppositeEnd")
 class GreenLink extends Link {
-	ref Emotion[1] origin;
-	ref EmotionChoice[1] target;
+	ref EmotionChoice[1] origin;
+	ref Emotion[1] target;
 }

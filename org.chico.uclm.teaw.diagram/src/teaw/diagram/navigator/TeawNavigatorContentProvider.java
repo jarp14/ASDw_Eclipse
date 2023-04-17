@@ -330,28 +330,9 @@ public class TeawNavigatorContentProvider implements ICommonContentProvider {
 		case EmotionChoiceEditPart.VISUAL_ID: {
 			LinkedList<TeawAbstractNavigatorItem> result = new LinkedList<TeawAbstractNavigatorItem>();
 			Node sv = (Node) view;
-			TeawNavigatorGroup incominglinks = new TeawNavigatorGroup(
-					Messages.NavigatorGroupName_EmotionChoice_3001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					TeawVisualIDRegistry.getType(RedLinkEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					TeawVisualIDRegistry.getType(GreenLinkEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case EmotionEditPart.VISUAL_ID: {
-			LinkedList<TeawAbstractNavigatorItem> result = new LinkedList<TeawAbstractNavigatorItem>();
-			Node sv = (Node) view;
 			TeawNavigatorGroup outgoinglinks = new TeawNavigatorGroup(
-					Messages.NavigatorGroupName_Emotion_3002_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
-					parentElement);
+					Messages.NavigatorGroupName_EmotionChoice_3001_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					TeawVisualIDRegistry.getType(RedLinkEditPart.VISUAL_ID));
@@ -361,6 +342,25 @@ public class TeawNavigatorContentProvider implements ICommonContentProvider {
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case EmotionEditPart.VISUAL_ID: {
+			LinkedList<TeawAbstractNavigatorItem> result = new LinkedList<TeawAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			TeawNavigatorGroup incominglinks = new TeawNavigatorGroup(
+					Messages.NavigatorGroupName_Emotion_3002_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					TeawVisualIDRegistry.getType(RedLinkEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					TeawVisualIDRegistry.getType(GreenLinkEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
 			return result.toArray();
 		}
@@ -484,10 +484,10 @@ public class TeawNavigatorContentProvider implements ICommonContentProvider {
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					TeawVisualIDRegistry.getType(EmotionChoiceEditPart.VISUAL_ID));
+					TeawVisualIDRegistry.getType(EmotionEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					TeawVisualIDRegistry.getType(EmotionEditPart.VISUAL_ID));
+					TeawVisualIDRegistry.getType(EmotionChoiceEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source, true));
 			if (!target.isEmpty()) {
 				result.add(target);
@@ -507,10 +507,10 @@ public class TeawNavigatorContentProvider implements ICommonContentProvider {
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					TeawVisualIDRegistry.getType(EmotionChoiceEditPart.VISUAL_ID));
+					TeawVisualIDRegistry.getType(EmotionEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					TeawVisualIDRegistry.getType(EmotionEditPart.VISUAL_ID));
+					TeawVisualIDRegistry.getType(EmotionChoiceEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source, true));
 			if (!target.isEmpty()) {
 				result.add(target);

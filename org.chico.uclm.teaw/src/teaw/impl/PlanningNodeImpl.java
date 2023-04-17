@@ -21,6 +21,9 @@ import teaw.TeawPackage;
  * </p>
  * <ul>
  *   <li>{@link teaw.impl.PlanningNodeImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link teaw.impl.PlanningNodeImpl#getImagePath <em>Image Path</em>}</li>
+ *   <li>{@link teaw.impl.PlanningNodeImpl#getOrder <em>Order</em>}</li>
+ *   <li>{@link teaw.impl.PlanningNodeImpl#getSize <em>Size</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +48,66 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getImagePath() <em>Image Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImagePath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMAGE_PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getImagePath() <em>Image Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImagePath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String imagePath = IMAGE_PATH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOrder() <em>Order</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer ORDER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOrder() <em>Order</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrder()
+	 * @generated
+	 * @ordered
+	 */
+	protected Integer order = ORDER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer SIZE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected Integer size = SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,10 +157,85 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 	 * @generated
 	 */
 	@Override
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImagePath(String newImagePath) {
+		String oldImagePath = imagePath;
+		imagePath = newImagePath;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TeawPackage.PLANNING_NODE__IMAGE_PATH, oldImagePath, imagePath));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Integer getOrder() {
+		return order;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOrder(Integer newOrder) {
+		Integer oldOrder = order;
+		order = newOrder;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TeawPackage.PLANNING_NODE__ORDER, oldOrder, order));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Integer getSize() {
+		return size;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSize(Integer newSize) {
+		Integer oldSize = size;
+		size = newSize;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TeawPackage.PLANNING_NODE__SIZE, oldSize, size));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case TeawPackage.PLANNING_NODE__DESCRIPTION:
 				return getDescription();
+			case TeawPackage.PLANNING_NODE__IMAGE_PATH:
+				return getImagePath();
+			case TeawPackage.PLANNING_NODE__ORDER:
+				return getOrder();
+			case TeawPackage.PLANNING_NODE__SIZE:
+				return getSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,6 +250,15 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 		switch (featureID) {
 			case TeawPackage.PLANNING_NODE__DESCRIPTION:
 				setDescription((String)newValue);
+				return;
+			case TeawPackage.PLANNING_NODE__IMAGE_PATH:
+				setImagePath((String)newValue);
+				return;
+			case TeawPackage.PLANNING_NODE__ORDER:
+				setOrder((Integer)newValue);
+				return;
+			case TeawPackage.PLANNING_NODE__SIZE:
+				setSize((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,6 +275,15 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 			case TeawPackage.PLANNING_NODE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case TeawPackage.PLANNING_NODE__IMAGE_PATH:
+				setImagePath(IMAGE_PATH_EDEFAULT);
+				return;
+			case TeawPackage.PLANNING_NODE__ORDER:
+				setOrder(ORDER_EDEFAULT);
+				return;
+			case TeawPackage.PLANNING_NODE__SIZE:
+				setSize(SIZE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -142,6 +298,12 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 		switch (featureID) {
 			case TeawPackage.PLANNING_NODE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case TeawPackage.PLANNING_NODE__IMAGE_PATH:
+				return IMAGE_PATH_EDEFAULT == null ? imagePath != null : !IMAGE_PATH_EDEFAULT.equals(imagePath);
+			case TeawPackage.PLANNING_NODE__ORDER:
+				return ORDER_EDEFAULT == null ? order != null : !ORDER_EDEFAULT.equals(order);
+			case TeawPackage.PLANNING_NODE__SIZE:
+				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -158,6 +320,12 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (description: ");
 		result.append(description);
+		result.append(", imagePath: ");
+		result.append(imagePath);
+		result.append(", order: ");
+		result.append(order);
+		result.append(", size: ");
+		result.append(size);
 		result.append(')');
 		return result.toString();
 	}

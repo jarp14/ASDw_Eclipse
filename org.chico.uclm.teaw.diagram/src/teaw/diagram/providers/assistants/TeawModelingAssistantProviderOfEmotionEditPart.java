@@ -4,14 +4,12 @@
 package teaw.diagram.providers.assistants;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 
-import teaw.diagram.edit.parts.EmotionChoiceEditPart;
 import teaw.diagram.edit.parts.EmotionEditPart;
 import teaw.diagram.providers.TeawElementTypes;
 import teaw.diagram.providers.TeawModelingAssistantProvider;
@@ -26,15 +24,15 @@ public class TeawModelingAssistantProviderOfEmotionEditPart extends TeawModeling
 	*/
 	@Override
 
-	public List<IElementType> getRelTypesOnSource(IAdaptable source) {
-		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
-		return doGetRelTypesOnSource((EmotionEditPart) sourceEditPart);
+	public List<IElementType> getRelTypesOnTarget(IAdaptable target) {
+		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnTarget((EmotionEditPart) targetEditPart);
 	}
 
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetRelTypesOnSource(EmotionEditPart source) {
+	public List<IElementType> doGetRelTypesOnTarget(EmotionEditPart target) {
 		List<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(TeawElementTypes.RedLink_4002);
 		types.add(TeawElementTypes.GreenLink_4003);
@@ -46,41 +44,15 @@ public class TeawModelingAssistantProviderOfEmotionEditPart extends TeawModeling
 	*/
 	@Override
 
-	public List<IElementType> getRelTypesOnSourceAndTarget(IAdaptable source, IAdaptable target) {
-		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
+	public List<IElementType> getTypesForSource(IAdaptable target, IElementType relationshipType) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target.getAdapter(IGraphicalEditPart.class);
-		return doGetRelTypesOnSourceAndTarget((EmotionEditPart) sourceEditPart, targetEditPart);
+		return doGetTypesForSource((EmotionEditPart) targetEditPart, relationshipType);
 	}
 
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetRelTypesOnSourceAndTarget(EmotionEditPart source,
-			IGraphicalEditPart targetEditPart) {
-		List<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof EmotionChoiceEditPart) {
-			types.add(TeawElementTypes.RedLink_4002);
-		}
-		if (targetEditPart instanceof EmotionChoiceEditPart) {
-			types.add(TeawElementTypes.GreenLink_4003);
-		}
-		return types;
-	}
-
-	/**
-	* @generated
-	*/
-	@Override
-
-	public List<IElementType> getTypesForTarget(IAdaptable source, IElementType relationshipType) {
-		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
-		return doGetTypesForTarget((EmotionEditPart) sourceEditPart, relationshipType);
-	}
-
-	/**
-	* @generated
-	*/
-	public List<IElementType> doGetTypesForTarget(EmotionEditPart source, IElementType relationshipType) {
+	public List<IElementType> doGetTypesForSource(EmotionEditPart target, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == TeawElementTypes.RedLink_4002) {
 			types.add(TeawElementTypes.EmotionChoice_3001);

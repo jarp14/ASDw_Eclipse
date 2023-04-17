@@ -327,16 +327,16 @@ public class TeawBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		}
 
 		/**
-		* @generated
-		*/
-		public boolean canCreateRedLink_4002(Emotions container, Emotion source, EmotionChoice target) {
+		 * @generated
+		 */
+		public boolean canCreateRedLink_4002(Emotions container, EmotionChoice source, Emotion target) {
 			return canExistRedLink_4002(container, null, source, target);
 		}
 
 		/**
-		* @generated
-		*/
-		public boolean canCreateGreenLink_4003(Emotions container, Emotion source, EmotionChoice target) {
+		 * @generated
+		 */
+		public boolean canCreateGreenLink_4003(Emotions container, EmotionChoice source, Emotion target) {
 			if (container != null) {
 				if (container.getGreenLink() != null) {
 					return false;
@@ -346,8 +346,8 @@ public class TeawBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		}
 
 		/**
-			* @generated
-			*/
+		* @generated
+		*/
 		public boolean canExistNormalLink_4001(Planning container, NormalLink linkInstance, Picto source,
 				Picto target) {
 			try {
@@ -383,15 +383,15 @@ public class TeawBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		* @generated
 		*/
-		public boolean canExistRedLink_4002(Emotions container, RedLink linkInstance, Emotion source,
-				EmotionChoice target) {
+		public boolean canExistRedLink_4002(Emotions container, RedLink linkInstance, EmotionChoice source,
+				Emotion target) {
 			try {
 				if (source == null) {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections.<String, EClassifier>singletonMap("oppositeEnd", //$NON-NLS-1$
-							TeawPackage.eINSTANCE.getEmotionChoice());
-					Object sourceVal = TeawOCLFactory.getExpression(2, TeawPackage.eINSTANCE.getEmotion(), env)
+							TeawPackage.eINSTANCE.getEmotion());
+					Object sourceVal = TeawOCLFactory.getExpression(2, TeawPackage.eINSTANCE.getEmotionChoice(), env)
 							.evaluate(source, Collections.singletonMap("oppositeEnd", target)); //$NON-NLS-1$
 					if (false == sourceVal instanceof Boolean || !((Boolean) sourceVal).booleanValue()) {
 						return false;
@@ -401,8 +401,8 @@ public class TeawBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections.<String, EClassifier>singletonMap("oppositeEnd", //$NON-NLS-1$
-							TeawPackage.eINSTANCE.getEmotion());
-					Object targetVal = TeawOCLFactory.getExpression(3, TeawPackage.eINSTANCE.getEmotionChoice(), env)
+							TeawPackage.eINSTANCE.getEmotionChoice());
+					Object targetVal = TeawOCLFactory.getExpression(3, TeawPackage.eINSTANCE.getEmotion(), env)
 							.evaluate(target, Collections.singletonMap("oppositeEnd", source)); //$NON-NLS-1$
 					if (false == targetVal instanceof Boolean || !((Boolean) targetVal).booleanValue()) {
 						return false;
@@ -418,15 +418,15 @@ public class TeawBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		* @generated
 		*/
-		public boolean canExistGreenLink_4003(Emotions container, GreenLink linkInstance, Emotion source,
-				EmotionChoice target) {
+		public boolean canExistGreenLink_4003(Emotions container, GreenLink linkInstance, EmotionChoice source,
+				Emotion target) {
 			try {
 				if (source == null) {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections.<String, EClassifier>singletonMap("oppositeEnd", //$NON-NLS-1$
-							TeawPackage.eINSTANCE.getEmotionChoice());
-					Object sourceVal = TeawOCLFactory.getExpression(4, TeawPackage.eINSTANCE.getEmotion(), env)
+							TeawPackage.eINSTANCE.getEmotion());
+					Object sourceVal = TeawOCLFactory.getExpression(4, TeawPackage.eINSTANCE.getEmotionChoice(), env)
 							.evaluate(source, Collections.singletonMap("oppositeEnd", target)); //$NON-NLS-1$
 					if (false == sourceVal instanceof Boolean || !((Boolean) sourceVal).booleanValue()) {
 						return false;
@@ -436,8 +436,8 @@ public class TeawBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections.<String, EClassifier>singletonMap("oppositeEnd", //$NON-NLS-1$
-							TeawPackage.eINSTANCE.getEmotion());
-					Object targetVal = TeawOCLFactory.getExpression(5, TeawPackage.eINSTANCE.getEmotionChoice(), env)
+							TeawPackage.eINSTANCE.getEmotionChoice());
+					Object targetVal = TeawOCLFactory.getExpression(5, TeawPackage.eINSTANCE.getEmotion(), env)
 							.evaluate(target, Collections.singletonMap("oppositeEnd", source)); //$NON-NLS-1$
 					if (false == targetVal instanceof Boolean || !((Boolean) targetVal).booleanValue()) {
 						return false;

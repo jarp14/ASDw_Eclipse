@@ -17,18 +17,8 @@ import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
 import teaw.TeawPackage;
-import teaw.diagram.edit.parts.ActionNameEditPart;
-import teaw.diagram.edit.parts.CommunicationBookNameEditPart;
-import teaw.diagram.edit.parts.EmotionChoiceNameEditPart;
-import teaw.diagram.edit.parts.EmotionNameEditPart;
 import teaw.diagram.edit.parts.EmotionsNameEditPart;
-import teaw.diagram.edit.parts.PersonNameEditPart;
-import teaw.diagram.edit.parts.PlaceNameEditPart;
 import teaw.diagram.edit.parts.PlanningNameEditPart;
-import teaw.diagram.edit.parts.PrizeNameEditPart;
-import teaw.diagram.edit.parts.SocialStoryNameEditPart;
-import teaw.diagram.edit.parts.SoothingObjectNameEditPart;
-import teaw.diagram.edit.parts.WaitTimeNameEditPart;
 import teaw.diagram.parsers.MessageFormatParser;
 import teaw.diagram.part.TeawVisualIDRegistry;
 
@@ -40,35 +30,35 @@ public class TeawParserProvider extends AbstractProvider implements IParserProvi
 	/**
 	* @generated
 	*/
-	private IParser emotionsName_5003Parser;
+	private IParser emotionsName_5001Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getEmotionsName_5003Parser() {
-		if (emotionsName_5003Parser == null) {
+	private IParser getEmotionsName_5001Parser() {
+		if (emotionsName_5001Parser == null) {
 			EAttribute[] features = new EAttribute[] { TeawPackage.eINSTANCE.getEmotions_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			emotionsName_5003Parser = parser;
+			emotionsName_5001Parser = parser;
 		}
-		return emotionsName_5003Parser;
+		return emotionsName_5001Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser planningName_5011Parser;
+	private IParser planningName_5002Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getPlanningName_5011Parser() {
-		if (planningName_5011Parser == null) {
+	private IParser getPlanningName_5002Parser() {
+		if (planningName_5002Parser == null) {
 			EAttribute[] features = new EAttribute[] { TeawPackage.eINSTANCE.getPlanning_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			planningName_5011Parser = parser;
+			planningName_5002Parser = parser;
 		}
-		return planningName_5011Parser;
+		return planningName_5002Parser;
 	}
 
 	/**
@@ -77,9 +67,9 @@ public class TeawParserProvider extends AbstractProvider implements IParserProvi
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case EmotionsNameEditPart.VISUAL_ID:
-			return getEmotionsName_5003Parser();
+			return getEmotionsName_5001Parser();
 		case PlanningNameEditPart.VISUAL_ID:
-			return getPlanningName_5011Parser();
+			return getPlanningName_5002Parser();
 		}
 		return null;
 	}

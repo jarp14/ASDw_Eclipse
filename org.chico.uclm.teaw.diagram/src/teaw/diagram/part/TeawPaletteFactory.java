@@ -127,7 +127,7 @@ public class TeawPaletteFactory {
 	private ToolEntry createAACNotebook7CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.AACNotebook7CreationTool_title,
 				Messages.AACNotebook7CreationTool_desc,
-				Collections.singletonList(TeawElementTypes.CommunicationBook_3009));
+				Collections.singletonList(TeawElementTypes.CommunicationBook_3010));
 		entry.setId("createAACNotebook7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(TeawDiagramEditorPlugin
 				.findImageDescriptor("/org.chico.uclm.teaw.figures/images/notebook_arasaac32.png")); //$NON-NLS-1$
@@ -167,7 +167,7 @@ public class TeawPaletteFactory {
 	private ToolEntry createEntertainmentCalmingactivity10CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.EntertainmentCalmingactivity10CreationTool_title,
 				Messages.EntertainmentCalmingactivity10CreationTool_desc,
-				Collections.singletonList(TeawElementTypes.SoothingObject_3010));
+				Collections.singletonList(TeawElementTypes.SoothingObject_3009));
 		entry.setId("createEntertainmentCalmingactivity10CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(TeawDiagramEditorPlugin
 				.findImageDescriptor("/org.chico.uclm.teaw.figures/images/object_arasaac32.png")); //$NON-NLS-1$

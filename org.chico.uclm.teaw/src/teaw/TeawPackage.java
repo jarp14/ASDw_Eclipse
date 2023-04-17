@@ -114,13 +114,40 @@ public interface TeawPackage extends EPackage {
 	int EMOTIONS_NODE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTIONS_NODE__NAME = 0;
+	int EMOTIONS_NODE__DESCRIPTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMOTIONS_NODE__IMAGE_PATH = 1;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMOTIONS_NODE__ORDER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMOTIONS_NODE__SIZE = 3;
 
 	/**
 	 * The number of structural features of the '<em>Emotions Node</em>' class.
@@ -129,7 +156,7 @@ public interface TeawPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTIONS_NODE_FEATURE_COUNT = 1;
+	int EMOTIONS_NODE_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link teaw.impl.EmotionsImpl <em>Emotions</em>}' class.
@@ -206,13 +233,40 @@ public interface TeawPackage extends EPackage {
 	int PLANNING_NODE__DESCRIPTION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANNING_NODE__IMAGE_PATH = 1;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANNING_NODE__ORDER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANNING_NODE__SIZE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Planning Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANNING_NODE_FEATURE_COUNT = 1;
+	int PLANNING_NODE_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link teaw.impl.PlanningImpl <em>Planning</em>}' class.
@@ -280,22 +334,22 @@ public interface TeawPackage extends EPackage {
 	int PICTO__DESCRIPTION = PLANNING_NODE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PICTO__IMAGE_PATH = PLANNING_NODE__IMAGE_PATH;
+
+	/**
 	 * The feature id for the '<em><b>Order</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PICTO__ORDER = PLANNING_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Image url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PICTO__IMAGE_URL = PLANNING_NODE_FEATURE_COUNT + 1;
+	int PICTO__ORDER = PLANNING_NODE__ORDER;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -304,7 +358,7 @@ public interface TeawPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PICTO__SIZE = PLANNING_NODE_FEATURE_COUNT + 2;
+	int PICTO__SIZE = PLANNING_NODE__SIZE;
 
 	/**
 	 * The number of structural features of the '<em>Picto</em>' class.
@@ -313,7 +367,7 @@ public interface TeawPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PICTO_FEATURE_COUNT = PLANNING_NODE_FEATURE_COUNT + 3;
+	int PICTO_FEATURE_COUNT = PLANNING_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link teaw.impl.PersonImpl <em>Person</em>}' class.
@@ -335,6 +389,15 @@ public interface TeawPackage extends EPackage {
 	int PERSON__DESCRIPTION = PICTO__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__IMAGE_PATH = PICTO__IMAGE_PATH;
+
+	/**
 	 * The feature id for the '<em><b>Order</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -342,15 +405,6 @@ public interface TeawPackage extends EPackage {
 	 * @ordered
 	 */
 	int PERSON__ORDER = PICTO__ORDER;
-
-	/**
-	 * The feature id for the '<em><b>Image url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON__IMAGE_URL = PICTO__IMAGE_URL;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -390,6 +444,15 @@ public interface TeawPackage extends EPackage {
 	int ACTION__DESCRIPTION = PICTO__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__IMAGE_PATH = PICTO__IMAGE_PATH;
+
+	/**
 	 * The feature id for the '<em><b>Order</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -397,15 +460,6 @@ public interface TeawPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTION__ORDER = PICTO__ORDER;
-
-	/**
-	 * The feature id for the '<em><b>Image url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__IMAGE_URL = PICTO__IMAGE_URL;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -445,6 +499,15 @@ public interface TeawPackage extends EPackage {
 	int PLACE__DESCRIPTION = PICTO__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLACE__IMAGE_PATH = PICTO__IMAGE_PATH;
+
+	/**
 	 * The feature id for the '<em><b>Order</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -452,15 +515,6 @@ public interface TeawPackage extends EPackage {
 	 * @ordered
 	 */
 	int PLACE__ORDER = PICTO__ORDER;
-
-	/**
-	 * The feature id for the '<em><b>Image url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACE__IMAGE_URL = PICTO__IMAGE_URL;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -500,6 +554,33 @@ public interface TeawPackage extends EPackage {
 	int TRANSICTION__DESCRIPTION = PLANNING_NODE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSICTION__IMAGE_PATH = PLANNING_NODE__IMAGE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSICTION__ORDER = PLANNING_NODE__ORDER;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSICTION__SIZE = PLANNING_NODE__SIZE;
+
+	/**
 	 * The number of structural features of the '<em>Transiction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -526,6 +607,33 @@ public interface TeawPackage extends EPackage {
 	 * @ordered
 	 */
 	int WAIT_TIME__DESCRIPTION = TRANSICTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIT_TIME__IMAGE_PATH = TRANSICTION__IMAGE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIT_TIME__ORDER = TRANSICTION__ORDER;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIT_TIME__SIZE = TRANSICTION__SIZE;
 
 	/**
 	 * The number of structural features of the '<em>Wait Time</em>' class.
@@ -556,6 +664,33 @@ public interface TeawPackage extends EPackage {
 	int PRIZE__DESCRIPTION = TRANSICTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIZE__IMAGE_PATH = TRANSICTION__IMAGE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIZE__ORDER = TRANSICTION__ORDER;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIZE__SIZE = TRANSICTION__SIZE;
+
+	/**
 	 * The number of structural features of the '<em>Prize</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -582,6 +717,33 @@ public interface TeawPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOCIAL_STORY__DESCRIPTION = TRANSICTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIAL_STORY__IMAGE_PATH = TRANSICTION__IMAGE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIAL_STORY__ORDER = TRANSICTION__ORDER;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIAL_STORY__SIZE = TRANSICTION__SIZE;
 
 	/**
 	 * The number of structural features of the '<em>Social Story</em>' class.
@@ -612,6 +774,33 @@ public interface TeawPackage extends EPackage {
 	int SOOTHING_OBJECT__DESCRIPTION = TRANSICTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOOTHING_OBJECT__IMAGE_PATH = TRANSICTION__IMAGE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOOTHING_OBJECT__ORDER = TRANSICTION__ORDER;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOOTHING_OBJECT__SIZE = TRANSICTION__SIZE;
+
+	/**
 	 * The number of structural features of the '<em>Soothing Object</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -631,22 +820,31 @@ public interface TeawPackage extends EPackage {
 	int EMOTION_CHOICE = 15;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION_CHOICE__NAME = EMOTIONS_NODE__NAME;
+	int EMOTION_CHOICE__DESCRIPTION = EMOTIONS_NODE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Source url</b></em>' attribute.
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION_CHOICE__SOURCE_URL = EMOTIONS_NODE_FEATURE_COUNT + 0;
+	int EMOTION_CHOICE__IMAGE_PATH = EMOTIONS_NODE__IMAGE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMOTION_CHOICE__ORDER = EMOTIONS_NODE__ORDER;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -655,7 +853,7 @@ public interface TeawPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION_CHOICE__SIZE = EMOTIONS_NODE_FEATURE_COUNT + 1;
+	int EMOTION_CHOICE__SIZE = EMOTIONS_NODE__SIZE;
 
 	/**
 	 * The number of structural features of the '<em>Emotion Choice</em>' class.
@@ -664,7 +862,7 @@ public interface TeawPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION_CHOICE_FEATURE_COUNT = EMOTIONS_NODE_FEATURE_COUNT + 2;
+	int EMOTION_CHOICE_FEATURE_COUNT = EMOTIONS_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link teaw.impl.EmotionImpl <em>Emotion</em>}' class.
@@ -677,22 +875,31 @@ public interface TeawPackage extends EPackage {
 	int EMOTION = 16;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION__NAME = EMOTIONS_NODE__NAME;
+	int EMOTION__DESCRIPTION = EMOTIONS_NODE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Image url</b></em>' attribute.
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION__IMAGE_URL = EMOTIONS_NODE_FEATURE_COUNT + 0;
+	int EMOTION__IMAGE_PATH = EMOTIONS_NODE__IMAGE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMOTION__ORDER = EMOTIONS_NODE__ORDER;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -701,7 +908,7 @@ public interface TeawPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION__SIZE = EMOTIONS_NODE_FEATURE_COUNT + 1;
+	int EMOTION__SIZE = EMOTIONS_NODE__SIZE;
 
 	/**
 	 * The number of structural features of the '<em>Emotion</em>' class.
@@ -710,7 +917,7 @@ public interface TeawPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMOTION_FEATURE_COUNT = EMOTIONS_NODE_FEATURE_COUNT + 2;
+	int EMOTION_FEATURE_COUNT = EMOTIONS_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link teaw.impl.CommunicationBookImpl <em>Communication Book</em>}' class.
@@ -730,6 +937,33 @@ public interface TeawPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMMUNICATION_BOOK__DESCRIPTION = PLANNING_NODE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMUNICATION_BOOK__IMAGE_PATH = PLANNING_NODE__IMAGE_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMUNICATION_BOOK__ORDER = PLANNING_NODE__ORDER;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMUNICATION_BOOK__SIZE = PLANNING_NODE__SIZE;
 
 	/**
 	 * The number of structural features of the '<em>Communication Book</em>' class.
@@ -913,15 +1147,48 @@ public interface TeawPackage extends EPackage {
 	EClass getEmotionsNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link teaw.EmotionsNode#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link teaw.EmotionsNode#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see teaw.EmotionsNode#getName()
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see teaw.EmotionsNode#getDescription()
 	 * @see #getEmotionsNode()
 	 * @generated
 	 */
-	EAttribute getEmotionsNode_Name();
+	EAttribute getEmotionsNode_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link teaw.EmotionsNode#getImagePath <em>Image Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image Path</em>'.
+	 * @see teaw.EmotionsNode#getImagePath()
+	 * @see #getEmotionsNode()
+	 * @generated
+	 */
+	EAttribute getEmotionsNode_ImagePath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link teaw.EmotionsNode#getOrder <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Order</em>'.
+	 * @see teaw.EmotionsNode#getOrder()
+	 * @see #getEmotionsNode()
+	 * @generated
+	 */
+	EAttribute getEmotionsNode_Order();
+
+	/**
+	 * Returns the meta object for the attribute '{@link teaw.EmotionsNode#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see teaw.EmotionsNode#getSize()
+	 * @see #getEmotionsNode()
+	 * @generated
+	 */
+	EAttribute getEmotionsNode_Size();
 
 	/**
 	 * Returns the meta object for class '{@link teaw.Emotions <em>Emotions</em>}'.
@@ -999,6 +1266,39 @@ public interface TeawPackage extends EPackage {
 	EAttribute getPlanningNode_Description();
 
 	/**
+	 * Returns the meta object for the attribute '{@link teaw.PlanningNode#getImagePath <em>Image Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image Path</em>'.
+	 * @see teaw.PlanningNode#getImagePath()
+	 * @see #getPlanningNode()
+	 * @generated
+	 */
+	EAttribute getPlanningNode_ImagePath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link teaw.PlanningNode#getOrder <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Order</em>'.
+	 * @see teaw.PlanningNode#getOrder()
+	 * @see #getPlanningNode()
+	 * @generated
+	 */
+	EAttribute getPlanningNode_Order();
+
+	/**
+	 * Returns the meta object for the attribute '{@link teaw.PlanningNode#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see teaw.PlanningNode#getSize()
+	 * @see #getPlanningNode()
+	 * @generated
+	 */
+	EAttribute getPlanningNode_Size();
+
+	/**
 	 * Returns the meta object for class '{@link teaw.Planning <em>Planning</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1050,39 +1350,6 @@ public interface TeawPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPicto();
-
-	/**
-	 * Returns the meta object for the attribute '{@link teaw.Picto#getOrder <em>Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Order</em>'.
-	 * @see teaw.Picto#getOrder()
-	 * @see #getPicto()
-	 * @generated
-	 */
-	EAttribute getPicto_Order();
-
-	/**
-	 * Returns the meta object for the attribute '{@link teaw.Picto#getImage_url <em>Image url</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Image url</em>'.
-	 * @see teaw.Picto#getImage_url()
-	 * @see #getPicto()
-	 * @generated
-	 */
-	EAttribute getPicto_Image_url();
-
-	/**
-	 * Returns the meta object for the attribute '{@link teaw.Picto#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see teaw.Picto#getSize()
-	 * @see #getPicto()
-	 * @generated
-	 */
-	EAttribute getPicto_Size();
 
 	/**
 	 * Returns the meta object for class '{@link teaw.Person <em>Person</em>}'.
@@ -1175,28 +1442,6 @@ public interface TeawPackage extends EPackage {
 	EClass getEmotionChoice();
 
 	/**
-	 * Returns the meta object for the attribute '{@link teaw.EmotionChoice#getSource_url <em>Source url</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Source url</em>'.
-	 * @see teaw.EmotionChoice#getSource_url()
-	 * @see #getEmotionChoice()
-	 * @generated
-	 */
-	EAttribute getEmotionChoice_Source_url();
-
-	/**
-	 * Returns the meta object for the attribute '{@link teaw.EmotionChoice#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see teaw.EmotionChoice#getSize()
-	 * @see #getEmotionChoice()
-	 * @generated
-	 */
-	EAttribute getEmotionChoice_Size();
-
-	/**
 	 * Returns the meta object for class '{@link teaw.Emotion <em>Emotion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1205,28 +1450,6 @@ public interface TeawPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEmotion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link teaw.Emotion#getImage_url <em>Image url</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Image url</em>'.
-	 * @see teaw.Emotion#getImage_url()
-	 * @see #getEmotion()
-	 * @generated
-	 */
-	EAttribute getEmotion_Image_url();
-
-	/**
-	 * Returns the meta object for the attribute '{@link teaw.Emotion#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see teaw.Emotion#getSize()
-	 * @see #getEmotion()
-	 * @generated
-	 */
-	EAttribute getEmotion_Size();
 
 	/**
 	 * Returns the meta object for class '{@link teaw.CommunicationBook <em>Communication Book</em>}'.
@@ -1405,12 +1628,36 @@ public interface TeawPackage extends EPackage {
 		EClass EMOTIONS_NODE = eINSTANCE.getEmotionsNode();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EMOTIONS_NODE__NAME = eINSTANCE.getEmotionsNode_Name();
+		EAttribute EMOTIONS_NODE__DESCRIPTION = eINSTANCE.getEmotionsNode_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Image Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EMOTIONS_NODE__IMAGE_PATH = eINSTANCE.getEmotionsNode_ImagePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EMOTIONS_NODE__ORDER = eINSTANCE.getEmotionsNode_Order();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EMOTIONS_NODE__SIZE = eINSTANCE.getEmotionsNode_Size();
 
 		/**
 		 * The meta object literal for the '{@link teaw.impl.EmotionsImpl <em>Emotions</em>}' class.
@@ -1473,6 +1720,30 @@ public interface TeawPackage extends EPackage {
 		EAttribute PLANNING_NODE__DESCRIPTION = eINSTANCE.getPlanningNode_Description();
 
 		/**
+		 * The meta object literal for the '<em><b>Image Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLANNING_NODE__IMAGE_PATH = eINSTANCE.getPlanningNode_ImagePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLANNING_NODE__ORDER = eINSTANCE.getPlanningNode_Order();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLANNING_NODE__SIZE = eINSTANCE.getPlanningNode_Size();
+
+		/**
 		 * The meta object literal for the '{@link teaw.impl.PlanningImpl <em>Planning</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1515,30 +1786,6 @@ public interface TeawPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PICTO = eINSTANCE.getPicto();
-
-		/**
-		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PICTO__ORDER = eINSTANCE.getPicto_Order();
-
-		/**
-		 * The meta object literal for the '<em><b>Image url</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PICTO__IMAGE_URL = eINSTANCE.getPicto_Image_url();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PICTO__SIZE = eINSTANCE.getPicto_Size();
 
 		/**
 		 * The meta object literal for the '{@link teaw.impl.PersonImpl <em>Person</em>}' class.
@@ -1631,22 +1878,6 @@ public interface TeawPackage extends EPackage {
 		EClass EMOTION_CHOICE = eINSTANCE.getEmotionChoice();
 
 		/**
-		 * The meta object literal for the '<em><b>Source url</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMOTION_CHOICE__SOURCE_URL = eINSTANCE.getEmotionChoice_Source_url();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMOTION_CHOICE__SIZE = eINSTANCE.getEmotionChoice_Size();
-
-		/**
 		 * The meta object literal for the '{@link teaw.impl.EmotionImpl <em>Emotion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1655,22 +1886,6 @@ public interface TeawPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EMOTION = eINSTANCE.getEmotion();
-
-		/**
-		 * The meta object literal for the '<em><b>Image url</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMOTION__IMAGE_URL = eINSTANCE.getEmotion_Image_url();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMOTION__SIZE = eINSTANCE.getEmotion_Size();
 
 		/**
 		 * The meta object literal for the '{@link teaw.impl.CommunicationBookImpl <em>Communication Book</em>}' class.

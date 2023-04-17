@@ -50,10 +50,10 @@ public class PlanningPlanningPlanningNodesCompartmentItemSemanticEditPolicy exte
 		if (TeawElementTypes.SocialStory_3008 == req.getElementType()) {
 			return getGEFWrapper(new SocialStoryCreateCommand(req));
 		}
-		if (TeawElementTypes.SoothingObject_3010 == req.getElementType()) {
+		if (TeawElementTypes.SoothingObject_3009 == req.getElementType()) {
 			return getGEFWrapper(new SoothingObjectCreateCommand(req));
 		}
-		if (TeawElementTypes.CommunicationBook_3009 == req.getElementType()) {
+		if (TeawElementTypes.CommunicationBook_3010 == req.getElementType()) {
 			return getGEFWrapper(new CommunicationBookCreateCommand(req));
 		}
 		return super.getCreateCommand(req);

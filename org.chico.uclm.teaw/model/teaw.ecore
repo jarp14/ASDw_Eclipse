@@ -9,7 +9,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="EmotionsNode" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Emotions" eSuperTypes="#//Node">
     <eAnnotations source="gmf.node">
@@ -34,6 +37,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlanningNode" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Planning" eSuperTypes="#//Node">
     <eAnnotations source="gmf.node">
@@ -54,11 +60,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="normalLinks" upperBound="-1"
         eType="#//NormalLink" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Picto" eSuperTypes="#//PlanningNode">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="image_url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Picto" eSuperTypes="#//PlanningNode"/>
   <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//Picto">
     <eAnnotations source="gmf.node">
       <details key="figure" value="org.chico.uclm.teaw.figures.PersonFigure"/>
@@ -155,8 +157,6 @@
       <details key="resizable" value="false"/>
       <details key="size" value="128,128"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source_url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Emotion" eSuperTypes="#//EmotionsNode">
     <eAnnotations source="gmf.node">
@@ -169,8 +169,6 @@
       <details key="resizable" value="false"/>
       <details key="size" value="128,128"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="image_url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CommunicationBook" eSuperTypes="#//PlanningNode">
     <eAnnotations source="gmf.node">
@@ -218,9 +216,9 @@
       <details key="target.constraint" value="self &lt;> oppositeEnd"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="origin" lowerBound="1"
-        eType="#//Emotion"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//EmotionChoice"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Emotion"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GreenLink" eSuperTypes="#//Link">
     <eAnnotations source="gmf.link">
@@ -236,8 +234,8 @@
       <details key="target.constraint" value="self &lt;> oppositeEnd"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="origin" lowerBound="1"
-        eType="#//Emotion"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//EmotionChoice"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Emotion"/>
   </eClassifiers>
 </ecore:EPackage>

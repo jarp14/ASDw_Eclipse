@@ -22,7 +22,7 @@ public class CommunicationBookItemSemanticEditPolicy extends TeawBaseItemSemanti
 	* @generated
 	*/
 	public CommunicationBookItemSemanticEditPolicy() {
-		super(TeawElementTypes.CommunicationBook_3009);
+		super(TeawElementTypes.CommunicationBook_3010);
 	}
 
 	/**

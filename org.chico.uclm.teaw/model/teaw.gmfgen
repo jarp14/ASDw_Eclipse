@@ -111,7 +111,7 @@
         <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
       </modelFacet>
     </childNodes>
-    <childNodes visualID="3010" editPartClassName="SoothingObjectEditPart" itemSemanticEditPolicyClassName="SoothingObjectItemSemanticEditPolicy" canonicalEditPolicyClassName="SoothingObjectCanonicalEditPolicy" graphicalNodeEditPolicyClassName="SoothingObjectGraphicalNodeEditPolicy" createCommandClassName="SoothingObjectCreateCommand" containers="//@diagram/@compartments.1">
+    <childNodes visualID="3009" editPartClassName="SoothingObjectEditPart" itemSemanticEditPolicyClassName="SoothingObjectItemSemanticEditPolicy" canonicalEditPolicyClassName="SoothingObjectCanonicalEditPolicy" graphicalNodeEditPolicyClassName="SoothingObjectGraphicalNodeEditPolicy" createCommandClassName="SoothingObjectCreateCommand" containers="//@diagram/@compartments.1">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="SoothingObjectEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="SoothingObjectFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SoothingObjectFigure extends org.chico.uclm.teaw.figures.ObjectFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SoothingObjectFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
@@ -124,7 +124,7 @@
         <childMetaFeature href="teaw.genmodel#//teaw/Planning/planningNodes"/>
       </modelFacet>
     </childNodes>
-    <childNodes visualID="3009" editPartClassName="CommunicationBookEditPart" itemSemanticEditPolicyClassName="CommunicationBookItemSemanticEditPolicy" canonicalEditPolicyClassName="CommunicationBookCanonicalEditPolicy" graphicalNodeEditPolicyClassName="CommunicationBookGraphicalNodeEditPolicy" createCommandClassName="CommunicationBookCreateCommand" containers="//@diagram/@compartments.1">
+    <childNodes visualID="3010" editPartClassName="CommunicationBookEditPart" itemSemanticEditPolicyClassName="CommunicationBookItemSemanticEditPolicy" canonicalEditPolicyClassName="CommunicationBookCanonicalEditPolicy" graphicalNodeEditPolicyClassName="CommunicationBookGraphicalNodeEditPolicy" createCommandClassName="CommunicationBookCreateCommand" containers="//@diagram/@compartments.1">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="CommunicationBookEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="CommunicationBookFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CommunicationBookFigure extends org.chico.uclm.teaw.figures.NotebookFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CommunicationBookFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
@@ -147,7 +147,7 @@
         <containmentMetaFeature href="teaw.genmodel#//teaw/TEAWDiagram/itsNodes"/>
         <childMetaFeature href="teaw.genmodel#//teaw/TEAWDiagram/itsNodes"/>
       </modelFacet>
-      <labels visualID="5003" editPartClassName="EmotionsNameEditPart" itemSemanticEditPolicyClassName="EmotionsNameItemSemanticEditPolicy" elementIcon="true">
+      <labels visualID="5001" editPartClassName="EmotionsNameEditPart" itemSemanticEditPolicyClassName="EmotionsNameItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureEmotionsLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
@@ -165,7 +165,7 @@
         <containmentMetaFeature href="teaw.genmodel#//teaw/TEAWDiagram/itsNodes"/>
         <childMetaFeature href="teaw.genmodel#//teaw/TEAWDiagram/itsNodes"/>
       </modelFacet>
-      <labels visualID="5011" editPartClassName="PlanningNameEditPart" itemSemanticEditPolicyClassName="PlanningNameItemSemanticEditPolicy" elementIcon="true">
+      <labels visualID="5002" editPartClassName="PlanningNameEditPart" itemSemanticEditPolicyClassName="PlanningNameItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigurePlanningLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
@@ -294,15 +294,15 @@
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.4" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@childNodes.4" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.1" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.1" child="//@diagram/@childNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.1" child="//@diagram/@childNodes.1" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@childNodes.1" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@childNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.2" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.2" child="//@diagram/@childNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.2" child="//@diagram/@childNodes.1" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@childNodes.1" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@childNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
   </navigator>
   <diagramUpdater/>
   <propertySheet>

@@ -426,12 +426,12 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_EmotionChoice_3001_incominglinks;
+	public static String NavigatorGroupName_EmotionChoice_3001_outgoinglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_Emotion_3002_outgoinglinks;
+	public static String NavigatorGroupName_Emotion_3002_incominglinks;
 
 	/**
 	* @generated

@@ -29,7 +29,6 @@ import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
-import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
@@ -46,35 +45,25 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
 
 import teaw.diagram.edit.parts.ActionEditPart;
-import teaw.diagram.edit.parts.ActionNameEditPart;
 import teaw.diagram.edit.parts.CommunicationBookEditPart;
-import teaw.diagram.edit.parts.CommunicationBookNameEditPart;
 import teaw.diagram.edit.parts.EmotionChoiceEditPart;
-import teaw.diagram.edit.parts.EmotionChoiceNameEditPart;
 import teaw.diagram.edit.parts.EmotionEditPart;
-import teaw.diagram.edit.parts.EmotionNameEditPart;
 import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.EmotionsEmotionsEmotionsCompartmentEditPart;
 import teaw.diagram.edit.parts.EmotionsNameEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
-import teaw.diagram.edit.parts.PersonNameEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
-import teaw.diagram.edit.parts.PlaceNameEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
 import teaw.diagram.edit.parts.PlanningNameEditPart;
 import teaw.diagram.edit.parts.PlanningPlanningPlanningNodesCompartmentEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
-import teaw.diagram.edit.parts.PrizeNameEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
-import teaw.diagram.edit.parts.SocialStoryNameEditPart;
 import teaw.diagram.edit.parts.SoothingObjectEditPart;
-import teaw.diagram.edit.parts.SoothingObjectNameEditPart;
 import teaw.diagram.edit.parts.TEAWDiagramEditPart;
 import teaw.diagram.edit.parts.WaitTimeEditPart;
-import teaw.diagram.edit.parts.WaitTimeNameEditPart;
 import teaw.diagram.part.TeawVisualIDRegistry;
 
 /**
@@ -255,9 +244,9 @@ public class TeawViewProvider extends AbstractProvider implements IViewProvider 
 		case SocialStoryEditPart.VISUAL_ID:
 			return createSocialStory_3008(domainElement, containerView, index, persisted, preferencesHint);
 		case SoothingObjectEditPart.VISUAL_ID:
-			return createSoothingObject_3010(domainElement, containerView, index, persisted, preferencesHint);
+			return createSoothingObject_3009(domainElement, containerView, index, persisted, preferencesHint);
 		case CommunicationBookEditPart.VISUAL_ID:
-			return createCommunicationBook_3009(domainElement, containerView, index, persisted, preferencesHint);
+			return createCommunicationBook_3010(domainElement, containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -319,7 +308,7 @@ public class TeawViewProvider extends AbstractProvider implements IViewProvider 
 				IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5003 = createLabel(node, TeawVisualIDRegistry.getType(EmotionsNameEditPart.VISUAL_ID));
+		Node label5001 = createLabel(node, TeawVisualIDRegistry.getType(EmotionsNameEditPart.VISUAL_ID));
 		createCompartment(node, TeawVisualIDRegistry.getType(EmotionsEmotionsEmotionsCompartmentEditPart.VISUAL_ID),
 				false, false, false, false);
 		return node;
@@ -359,7 +348,7 @@ public class TeawViewProvider extends AbstractProvider implements IViewProvider 
 				IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5011 = createLabel(node, TeawVisualIDRegistry.getType(PlanningNameEditPart.VISUAL_ID));
+		Node label5002 = createLabel(node, TeawVisualIDRegistry.getType(PlanningNameEditPart.VISUAL_ID));
 		createCompartment(node,
 				TeawVisualIDRegistry.getType(PlanningPlanningPlanningNodesCompartmentEditPart.VISUAL_ID), false, false,
 				false, false);
@@ -649,7 +638,7 @@ public class TeawViewProvider extends AbstractProvider implements IViewProvider 
 	/**
 	* @generated
 	*/
-	public Node createSoothingObject_3010(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createSoothingObject_3009(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -684,7 +673,7 @@ public class TeawViewProvider extends AbstractProvider implements IViewProvider 
 	/**
 	* @generated
 	*/
-	public Node createCommunicationBook_3009(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createCommunicationBook_3010(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());

@@ -258,7 +258,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Teaw"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3010,3009"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
       </viewProvider>
    </extension>
@@ -271,13 +271,13 @@
             <method name="getType()" value="Teaw"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3010,3009"/>
+            <method name="getType()" value="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002,4003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5003,5011"/>
+            <method name="getType()" value="5001,5002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value="7001,7002"/>
@@ -346,13 +346,13 @@
       </modelingAssistantProvider>
             <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfSoothingObjectEditPart">
          <Priority name="Lowest"/>
-         <object class="teaw.diagram.edit.parts.SoothingObjectEditPart" id="SoothingObject_3010"/>
-         <context elements="SoothingObject_3010"/>
+         <object class="teaw.diagram.edit.parts.SoothingObjectEditPart" id="SoothingObject_3009"/>
+         <context elements="SoothingObject_3009"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfCommunicationBookEditPart">
          <Priority name="Lowest"/>
-         <object class="teaw.diagram.edit.parts.CommunicationBookEditPart" id="CommunicationBook_3009"/>
-         <context elements="CommunicationBook_3009"/>
+         <object class="teaw.diagram.edit.parts.CommunicationBookEditPart" id="CommunicationBook_3010"/>
+         <context elements="CommunicationBook_3010"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -497,22 +497,22 @@
       </metamodel>
       <metamodel nsURI="teaw">
          <metamodelType
-               id="org.chico.uclm.teaw.diagram.SoothingObject_3010"
-               name="%metatype.name.SoothingObject_3010"
+               id="org.chico.uclm.teaw.diagram.SoothingObject_3009"
+               name="%metatype.name.SoothingObject_3009"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="SoothingObject"
                edithelper="teaw.diagram.edit.helpers.SoothingObjectEditHelper">
-            <param name="semanticHint" value="3010"/>
+            <param name="semanticHint" value="3009"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="teaw">
          <metamodelType
-               id="org.chico.uclm.teaw.diagram.CommunicationBook_3009"
-               name="%metatype.name.CommunicationBook_3009"
+               id="org.chico.uclm.teaw.diagram.CommunicationBook_3010"
+               name="%metatype.name.CommunicationBook_3010"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="CommunicationBook"
                edithelper="teaw.diagram.edit.helpers.CommunicationBookEditHelper">
-            <param name="semanticHint" value="3009"/>
+            <param name="semanticHint" value="3010"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="teaw">
@@ -568,8 +568,8 @@
          <elementType ref="org.chico.uclm.teaw.diagram.WaitTime_3006"/>
          <elementType ref="org.chico.uclm.teaw.diagram.Prize_3007"/>
          <elementType ref="org.chico.uclm.teaw.diagram.SocialStory_3008"/>
-         <elementType ref="org.chico.uclm.teaw.diagram.SoothingObject_3010"/>
-         <elementType ref="org.chico.uclm.teaw.diagram.CommunicationBook_3009"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.SoothingObject_3009"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.CommunicationBook_3010"/>
          <elementType ref="org.chico.uclm.teaw.diagram.NormalLink_4001"/>
          <elementType ref="org.chico.uclm.teaw.diagram.RedLink_4002"/>
          <elementType ref="org.chico.uclm.teaw.diagram.GreenLink_4003"/>

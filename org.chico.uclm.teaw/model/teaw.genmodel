@@ -10,7 +10,10 @@
     </genClasses>
     <genClasses image="false" ecoreClass="teaw.ecore#//Node"/>
     <genClasses image="false" ecoreClass="teaw.ecore#//EmotionsNode">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionsNode/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionsNode/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionsNode/imagePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionsNode/order"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionsNode/size"/>
     </genClasses>
     <genClasses ecoreClass="teaw.ecore#//Emotions">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//Emotions/name"/>
@@ -20,17 +23,16 @@
     </genClasses>
     <genClasses image="false" ecoreClass="teaw.ecore#//PlanningNode">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//PlanningNode/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//PlanningNode/imagePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//PlanningNode/order"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//PlanningNode/size"/>
     </genClasses>
     <genClasses ecoreClass="teaw.ecore#//Planning">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//Planning/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference teaw.ecore#//Planning/planningNodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference teaw.ecore#//Planning/normalLinks"/>
     </genClasses>
-    <genClasses ecoreClass="teaw.ecore#//Picto">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//Picto/order"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//Picto/image_url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//Picto/size"/>
-    </genClasses>
+    <genClasses ecoreClass="teaw.ecore#//Picto"/>
     <genClasses ecoreClass="teaw.ecore#//Person"/>
     <genClasses ecoreClass="teaw.ecore#//Action"/>
     <genClasses ecoreClass="teaw.ecore#//Place"/>
@@ -39,14 +41,8 @@
     <genClasses ecoreClass="teaw.ecore#//Prize"/>
     <genClasses ecoreClass="teaw.ecore#//SocialStory"/>
     <genClasses ecoreClass="teaw.ecore#//SoothingObject"/>
-    <genClasses ecoreClass="teaw.ecore#//EmotionChoice">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionChoice/source_url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//EmotionChoice/size"/>
-    </genClasses>
-    <genClasses ecoreClass="teaw.ecore#//Emotion">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//Emotion/image_url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute teaw.ecore#//Emotion/size"/>
-    </genClasses>
+    <genClasses ecoreClass="teaw.ecore#//EmotionChoice"/>
+    <genClasses ecoreClass="teaw.ecore#//Emotion"/>
     <genClasses ecoreClass="teaw.ecore#//CommunicationBook"/>
     <genClasses image="false" ecoreClass="teaw.ecore#//Link"/>
     <genClasses ecoreClass="teaw.ecore#//NormalLink">

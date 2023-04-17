@@ -337,14 +337,14 @@ public class TEAWDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		case SoothingObjectEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(TeawDiagramUpdater.getSoothingObject_3010ContainedLinks(view));
+				result.addAll(TeawDiagramUpdater.getSoothingObject_3009ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
 		case CommunicationBookEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(TeawDiagramUpdater.getCommunicationBook_3009ContainedLinks(view));
+				result.addAll(TeawDiagramUpdater.getCommunicationBook_3010ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

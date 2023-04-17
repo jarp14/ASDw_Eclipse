@@ -111,14 +111,13 @@ public class TeawElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType SoothingObject_3010 = getElementType(
-			"org.chico.uclm.teaw.diagram.SoothingObject_3010"); //$NON-NLS-1$
-
+	public static final IElementType SoothingObject_3009 = getElementType(
+			"org.chico.uclm.teaw.diagram.SoothingObject_3009"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType CommunicationBook_3009 = getElementType(
-			"org.chico.uclm.teaw.diagram.CommunicationBook_3009"); //$NON-NLS-1$
+	public static final IElementType CommunicationBook_3010 = getElementType(
+			"org.chico.uclm.teaw.diagram.CommunicationBook_3010"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
@@ -192,9 +191,9 @@ public class TeawElementTypes {
 
 			elements.put(SocialStory_3008, TeawPackage.eINSTANCE.getSocialStory());
 
-			elements.put(SoothingObject_3010, TeawPackage.eINSTANCE.getSoothingObject());
+			elements.put(SoothingObject_3009, TeawPackage.eINSTANCE.getSoothingObject());
 
-			elements.put(CommunicationBook_3009, TeawPackage.eINSTANCE.getCommunicationBook());
+			elements.put(CommunicationBook_3010, TeawPackage.eINSTANCE.getCommunicationBook());
 
 			elements.put(NormalLink_4001, TeawPackage.eINSTANCE.getNormalLink());
 
@@ -229,8 +228,8 @@ public class TeawElementTypes {
 			KNOWN_ELEMENT_TYPES.add(WaitTime_3006);
 			KNOWN_ELEMENT_TYPES.add(Prize_3007);
 			KNOWN_ELEMENT_TYPES.add(SocialStory_3008);
-			KNOWN_ELEMENT_TYPES.add(SoothingObject_3010);
-			KNOWN_ELEMENT_TYPES.add(CommunicationBook_3009);
+			KNOWN_ELEMENT_TYPES.add(SoothingObject_3009);
+			KNOWN_ELEMENT_TYPES.add(CommunicationBook_3010);
 			KNOWN_ELEMENT_TYPES.add(NormalLink_4001);
 			KNOWN_ELEMENT_TYPES.add(RedLink_4002);
 			KNOWN_ELEMENT_TYPES.add(GreenLink_4003);
@@ -266,9 +265,9 @@ public class TeawElementTypes {
 		case SocialStoryEditPart.VISUAL_ID:
 			return SocialStory_3008;
 		case SoothingObjectEditPart.VISUAL_ID:
-			return SoothingObject_3010;
+			return SoothingObject_3009;
 		case CommunicationBookEditPart.VISUAL_ID:
-			return CommunicationBook_3009;
+			return CommunicationBook_3010;
 		case NormalLinkEditPart.VISUAL_ID:
 			return NormalLink_4001;
 		case RedLinkEditPart.VISUAL_ID:

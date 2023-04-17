@@ -107,10 +107,10 @@ public class PlanningPlanningPlanningNodesCompartmentEditPart extends ShapeCompa
 			if (type == TeawElementTypes.SocialStory_3008) {
 				return this;
 			}
-			if (type == TeawElementTypes.SoothingObject_3010) {
+			if (type == TeawElementTypes.SoothingObject_3009) {
 				return this;
 			}
-			if (type == TeawElementTypes.CommunicationBook_3009) {
+			if (type == TeawElementTypes.CommunicationBook_3010) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

@@ -9,13 +9,9 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import teaw.Emotion;
-import teaw.TeawPackage;
 
 /**
  * This is the item provider adapter for a {@link teaw.Emotion} object.
@@ -45,54 +41,8 @@ public class EmotionItemProvider extends EmotionsNodeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addImage_urlPropertyDescriptor(object);
-			addSizePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Image url feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addImage_urlPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Emotion_image_url_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Emotion_image_url_feature", "_UI_Emotion_type"),
-				 TeawPackage.Literals.EMOTION__IMAGE_URL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Size feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSizePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Emotion_size_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Emotion_size_feature", "_UI_Emotion_type"),
-				 TeawPackage.Literals.EMOTION__SIZE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -114,7 +64,7 @@ public class EmotionItemProvider extends EmotionsNodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Emotion)object).getName();
+		String label = ((Emotion)object).getDescription();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Emotion_type") :
 			getString("_UI_Emotion_type") + " " + label;
@@ -131,13 +81,6 @@ public class EmotionItemProvider extends EmotionsNodeItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Emotion.class)) {
-			case TeawPackage.EMOTION__IMAGE_URL:
-			case TeawPackage.EMOTION__SIZE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

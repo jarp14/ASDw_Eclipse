@@ -31,33 +31,23 @@ import teaw.SocialStory;
 import teaw.SoothingObject;
 import teaw.WaitTime;
 import teaw.diagram.edit.parts.ActionEditPart;
-import teaw.diagram.edit.parts.ActionNameEditPart;
 import teaw.diagram.edit.parts.CommunicationBookEditPart;
-import teaw.diagram.edit.parts.CommunicationBookNameEditPart;
 import teaw.diagram.edit.parts.EmotionChoiceEditPart;
-import teaw.diagram.edit.parts.EmotionChoiceNameEditPart;
 import teaw.diagram.edit.parts.EmotionEditPart;
-import teaw.diagram.edit.parts.EmotionNameEditPart;
 import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.EmotionsNameEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
-import teaw.diagram.edit.parts.PersonNameEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
-import teaw.diagram.edit.parts.PlaceNameEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
 import teaw.diagram.edit.parts.PlanningNameEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
-import teaw.diagram.edit.parts.PrizeNameEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
-import teaw.diagram.edit.parts.SocialStoryNameEditPart;
 import teaw.diagram.edit.parts.SoothingObjectEditPart;
-import teaw.diagram.edit.parts.SoothingObjectNameEditPart;
 import teaw.diagram.edit.parts.TEAWDiagramEditPart;
 import teaw.diagram.edit.parts.WaitTimeEditPart;
-import teaw.diagram.edit.parts.WaitTimeNameEditPart;
 import teaw.diagram.part.TeawDiagramEditorPlugin;
 import teaw.diagram.part.TeawVisualIDRegistry;
 import teaw.diagram.providers.TeawElementTypes;
@@ -145,10 +135,10 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 			return getImage("Navigator?Node?teaw?Prize", TeawElementTypes.Prize_3007); //$NON-NLS-1$
 		case SocialStoryEditPart.VISUAL_ID:
 			return getImage("Navigator?Node?teaw?SocialStory", TeawElementTypes.SocialStory_3008); //$NON-NLS-1$
-		case CommunicationBookEditPart.VISUAL_ID:
-			return getImage("Navigator?Node?teaw?CommunicationBook", TeawElementTypes.CommunicationBook_3009); //$NON-NLS-1$
 		case SoothingObjectEditPart.VISUAL_ID:
-			return getImage("Navigator?Node?teaw?SoothingObject", TeawElementTypes.SoothingObject_3010); //$NON-NLS-1$
+			return getImage("Navigator?Node?teaw?SoothingObject", TeawElementTypes.SoothingObject_3009); //$NON-NLS-1$
+		case CommunicationBookEditPart.VISUAL_ID:
+			return getImage("Navigator?Node?teaw?CommunicationBook", TeawElementTypes.CommunicationBook_3010); //$NON-NLS-1$
 		case NormalLinkEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?teaw?NormalLink", TeawElementTypes.NormalLink_4001); //$NON-NLS-1$
 		case RedLinkEditPart.VISUAL_ID:
@@ -235,10 +225,10 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 			return getPrize_3007Text(view);
 		case SocialStoryEditPart.VISUAL_ID:
 			return getSocialStory_3008Text(view);
-		case CommunicationBookEditPart.VISUAL_ID:
-			return getCommunicationBook_3009Text(view);
 		case SoothingObjectEditPart.VISUAL_ID:
-			return getSoothingObject_3010Text(view);
+			return getSoothingObject_3009Text(view);
+		case CommunicationBookEditPart.VISUAL_ID:
+			return getCommunicationBook_3010Text(view);
 		case NormalLinkEditPart.VISUAL_ID:
 			return getNormalLink_4001Text(view);
 		case RedLinkEditPart.VISUAL_ID:
@@ -267,7 +257,7 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
-			TeawDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5003); //$NON-NLS-1$
+			TeawDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -283,7 +273,7 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
-			TeawDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5011); //$NON-NLS-1$
+			TeawDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5002); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -294,7 +284,7 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 	private String getEmotionChoice_3001Text(View view) {
 		EmotionChoice domainModelElement = (EmotionChoice) view.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getName();
+			return domainModelElement.getDescription();
 		} else {
 			TeawDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
@@ -307,7 +297,7 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 	private String getEmotion_3002Text(View view) {
 		Emotion domainModelElement = (Emotion) view.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getName();
+			return domainModelElement.getDescription();
 		} else {
 			TeawDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3002); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
@@ -395,8 +385,8 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 	/**
 	* @generated
 	*/
-	private String getCommunicationBook_3009Text(View view) {
-		CommunicationBook domainModelElement = (CommunicationBook) view.getElement();
+	private String getSoothingObject_3009Text(View view) {
+		SoothingObject domainModelElement = (SoothingObject) view.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getDescription();
 		} else {
@@ -408,8 +398,8 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 	/**
 	* @generated
 	*/
-	private String getSoothingObject_3010Text(View view) {
-		SoothingObject domainModelElement = (SoothingObject) view.getElement();
+	private String getCommunicationBook_3010Text(View view) {
+		CommunicationBook domainModelElement = (CommunicationBook) view.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getDescription();
 		} else {

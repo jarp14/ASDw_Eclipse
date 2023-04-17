@@ -67,10 +67,10 @@ public class RedLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof Emotion && newEnd instanceof Emotion)) {
+		if (!(oldEnd instanceof EmotionChoice && newEnd instanceof EmotionChoice)) {
 			return false;
 		}
-		EmotionChoice target = getLink().getTarget();
+		Emotion target = getLink().getTarget();
 		if (!(getLink().eContainer() instanceof Emotions)) {
 			return false;
 		}
@@ -83,10 +83,10 @@ public class RedLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof EmotionChoice && newEnd instanceof EmotionChoice)) {
+		if (!(oldEnd instanceof Emotion && newEnd instanceof Emotion)) {
 			return false;
 		}
-		Emotion source = getLink().getOrigin();
+		EmotionChoice source = getLink().getOrigin();
 		if (!(getLink().eContainer() instanceof Emotions)) {
 			return false;
 		}
@@ -137,28 +137,28 @@ public class RedLinkReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected Emotion getOldSource() {
-		return (Emotion) oldEnd;
-	}
-
-	/**
-	* @generated
-	*/
-	protected Emotion getNewSource() {
-		return (Emotion) newEnd;
-	}
-
-	/**
-	* @generated
-	*/
-	protected EmotionChoice getOldTarget() {
+	protected EmotionChoice getOldSource() {
 		return (EmotionChoice) oldEnd;
 	}
 
 	/**
 	* @generated
 	*/
-	protected EmotionChoice getNewTarget() {
+	protected EmotionChoice getNewSource() {
 		return (EmotionChoice) newEnd;
+	}
+
+	/**
+	* @generated
+	*/
+	protected Emotion getOldTarget() {
+		return (Emotion) oldEnd;
+	}
+
+	/**
+	* @generated
+	*/
+	protected Emotion getNewTarget() {
+		return (Emotion) newEnd;
 	}
 }

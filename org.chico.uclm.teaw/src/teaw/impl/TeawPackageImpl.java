@@ -302,8 +302,38 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEmotionsNode_Name() {
+	public EAttribute getEmotionsNode_Description() {
 		return (EAttribute)emotionsNodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionsNode_ImagePath() {
+		return (EAttribute)emotionsNodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionsNode_Order() {
+		return (EAttribute)emotionsNodeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionsNode_Size() {
+		return (EAttribute)emotionsNodeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -382,6 +412,36 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getPlanningNode_ImagePath() {
+		return (EAttribute)planningNodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPlanningNode_Order() {
+		return (EAttribute)planningNodeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPlanningNode_Size() {
+		return (EAttribute)planningNodeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPlanning() {
 		return planningEClass;
 	}
@@ -424,36 +484,6 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	@Override
 	public EClass getPicto() {
 		return pictoEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getPicto_Order() {
-		return (EAttribute)pictoEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getPicto_Image_url() {
-		return (EAttribute)pictoEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getPicto_Size() {
-		return (EAttribute)pictoEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -552,48 +582,8 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEmotionChoice_Source_url() {
-		return (EAttribute)emotionChoiceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionChoice_Size() {
-		return (EAttribute)emotionChoiceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getEmotion() {
 		return emotionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotion_Image_url() {
-		return (EAttribute)emotionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotion_Size() {
-		return (EAttribute)emotionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -741,7 +731,10 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		nodeEClass = createEClass(NODE);
 
 		emotionsNodeEClass = createEClass(EMOTIONS_NODE);
-		createEAttribute(emotionsNodeEClass, EMOTIONS_NODE__NAME);
+		createEAttribute(emotionsNodeEClass, EMOTIONS_NODE__DESCRIPTION);
+		createEAttribute(emotionsNodeEClass, EMOTIONS_NODE__IMAGE_PATH);
+		createEAttribute(emotionsNodeEClass, EMOTIONS_NODE__ORDER);
+		createEAttribute(emotionsNodeEClass, EMOTIONS_NODE__SIZE);
 
 		emotionsEClass = createEClass(EMOTIONS);
 		createEAttribute(emotionsEClass, EMOTIONS__NAME);
@@ -751,6 +744,9 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 
 		planningNodeEClass = createEClass(PLANNING_NODE);
 		createEAttribute(planningNodeEClass, PLANNING_NODE__DESCRIPTION);
+		createEAttribute(planningNodeEClass, PLANNING_NODE__IMAGE_PATH);
+		createEAttribute(planningNodeEClass, PLANNING_NODE__ORDER);
+		createEAttribute(planningNodeEClass, PLANNING_NODE__SIZE);
 
 		planningEClass = createEClass(PLANNING);
 		createEAttribute(planningEClass, PLANNING__NAME);
@@ -758,9 +754,6 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		createEReference(planningEClass, PLANNING__NORMAL_LINKS);
 
 		pictoEClass = createEClass(PICTO);
-		createEAttribute(pictoEClass, PICTO__ORDER);
-		createEAttribute(pictoEClass, PICTO__IMAGE_URL);
-		createEAttribute(pictoEClass, PICTO__SIZE);
 
 		personEClass = createEClass(PERSON);
 
@@ -779,12 +772,8 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		soothingObjectEClass = createEClass(SOOTHING_OBJECT);
 
 		emotionChoiceEClass = createEClass(EMOTION_CHOICE);
-		createEAttribute(emotionChoiceEClass, EMOTION_CHOICE__SOURCE_URL);
-		createEAttribute(emotionChoiceEClass, EMOTION_CHOICE__SIZE);
 
 		emotionEClass = createEClass(EMOTION);
-		createEAttribute(emotionEClass, EMOTION__IMAGE_URL);
-		createEAttribute(emotionEClass, EMOTION__SIZE);
 
 		communicationBookEClass = createEClass(COMMUNICATION_BOOK);
 
@@ -856,7 +845,10 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(emotionsNodeEClass, EmotionsNode.class, "EmotionsNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEmotionsNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, EmotionsNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEmotionsNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, EmotionsNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEmotionsNode_ImagePath(), ecorePackage.getEString(), "imagePath", null, 0, 1, EmotionsNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEmotionsNode_Order(), ecorePackage.getEIntegerObject(), "order", null, 0, 1, EmotionsNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEmotionsNode_Size(), ecorePackage.getEIntegerObject(), "size", null, 0, 1, EmotionsNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(emotionsEClass, Emotions.class, "Emotions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEmotions_Name(), ecorePackage.getEString(), "name", "<Emotions ...>", 0, 1, Emotions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -866,6 +858,9 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 
 		initEClass(planningNodeEClass, PlanningNode.class, "PlanningNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPlanningNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlanningNode_ImagePath(), ecorePackage.getEString(), "imagePath", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlanningNode_Order(), ecorePackage.getEIntegerObject(), "order", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlanningNode_Size(), ecorePackage.getEIntegerObject(), "size", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(planningEClass, Planning.class, "Planning", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPlanning_Name(), ecorePackage.getEString(), "name", "<Planning ...>", 0, 1, Planning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -873,9 +868,6 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		initEReference(getPlanning_NormalLinks(), this.getNormalLink(), null, "normalLinks", null, 0, -1, Planning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pictoEClass, Picto.class, "Picto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPicto_Order(), ecorePackage.getEIntegerObject(), "order", null, 0, 1, Picto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPicto_Image_url(), ecorePackage.getEString(), "image_url", null, 0, 1, Picto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPicto_Size(), ecorePackage.getEIntegerObject(), "size", null, 0, 1, Picto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -894,12 +886,8 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		initEClass(soothingObjectEClass, SoothingObject.class, "SoothingObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(emotionChoiceEClass, EmotionChoice.class, "EmotionChoice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEmotionChoice_Source_url(), ecorePackage.getEString(), "source_url", null, 0, 1, EmotionChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEmotionChoice_Size(), ecorePackage.getEIntegerObject(), "size", null, 0, 1, EmotionChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(emotionEClass, Emotion.class, "Emotion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEmotion_Image_url(), ecorePackage.getEString(), "image_url", null, 0, 1, Emotion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEmotion_Size(), ecorePackage.getEIntegerObject(), "size", null, 0, 1, Emotion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(communicationBookEClass, CommunicationBook.class, "CommunicationBook", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -910,12 +898,12 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		initEReference(getNormalLink_Target(), this.getPicto(), null, "target", null, 1, 1, NormalLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(redLinkEClass, RedLink.class, "RedLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRedLink_Origin(), this.getEmotion(), null, "origin", null, 1, 1, RedLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRedLink_Target(), this.getEmotionChoice(), null, "target", null, 1, 1, RedLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRedLink_Origin(), this.getEmotionChoice(), null, "origin", null, 1, 1, RedLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRedLink_Target(), this.getEmotion(), null, "target", null, 1, 1, RedLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(greenLinkEClass, GreenLink.class, "GreenLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGreenLink_Origin(), this.getEmotion(), null, "origin", null, 1, 1, GreenLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGreenLink_Target(), this.getEmotionChoice(), null, "target", null, 1, 1, GreenLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGreenLink_Origin(), this.getEmotionChoice(), null, "origin", null, 1, 1, GreenLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGreenLink_Target(), this.getEmotion(), null, "target", null, 1, 1, GreenLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

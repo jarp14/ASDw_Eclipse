@@ -26,12 +26,12 @@ public interface RedLink extends Link {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Origin</em>' reference.
-	 * @see #setOrigin(Emotion)
+	 * @see #setOrigin(EmotionChoice)
 	 * @see teaw.TeawPackage#getRedLink_Origin()
 	 * @model required="true"
 	 * @generated
 	 */
-	Emotion getOrigin();
+	EmotionChoice getOrigin();
 
 	/**
 	 * Sets the value of the '{@link teaw.RedLink#getOrigin <em>Origin</em>}' reference.
@@ -41,19 +41,19 @@ public interface RedLink extends Link {
 	 * @see #getOrigin()
 	 * @generated
 	 */
-	void setOrigin(Emotion value);
+	void setOrigin(EmotionChoice value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(EmotionChoice)
+	 * @see #setTarget(Emotion)
 	 * @see teaw.TeawPackage#getRedLink_Target()
 	 * @model required="true"
 	 * @generated
 	 */
-	EmotionChoice getTarget();
+	Emotion getTarget();
 
 	/**
 	 * Sets the value of the '{@link teaw.RedLink#getTarget <em>Target</em>}' reference.
@@ -63,6 +63,6 @@ public interface RedLink extends Link {
 	 * @see #getTarget()
 	 * @generated
 	 */
-	void setTarget(EmotionChoice value);
+	void setTarget(Emotion value);
 
 } // RedLink

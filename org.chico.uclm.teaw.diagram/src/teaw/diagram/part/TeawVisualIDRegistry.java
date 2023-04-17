@@ -13,35 +13,25 @@ import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
 import teaw.TEAWDiagram;
 import teaw.TeawPackage;
 import teaw.diagram.edit.parts.ActionEditPart;
-import teaw.diagram.edit.parts.ActionNameEditPart;
 import teaw.diagram.edit.parts.CommunicationBookEditPart;
-import teaw.diagram.edit.parts.CommunicationBookNameEditPart;
 import teaw.diagram.edit.parts.EmotionChoiceEditPart;
-import teaw.diagram.edit.parts.EmotionChoiceNameEditPart;
 import teaw.diagram.edit.parts.EmotionEditPart;
-import teaw.diagram.edit.parts.EmotionNameEditPart;
 import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.EmotionsEmotionsEmotionsCompartmentEditPart;
 import teaw.diagram.edit.parts.EmotionsNameEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
-import teaw.diagram.edit.parts.PersonNameEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
-import teaw.diagram.edit.parts.PlaceNameEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
 import teaw.diagram.edit.parts.PlanningNameEditPart;
 import teaw.diagram.edit.parts.PlanningPlanningPlanningNodesCompartmentEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
-import teaw.diagram.edit.parts.PrizeNameEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
-import teaw.diagram.edit.parts.SocialStoryNameEditPart;
 import teaw.diagram.edit.parts.SoothingObjectEditPart;
-import teaw.diagram.edit.parts.SoothingObjectNameEditPart;
 import teaw.diagram.edit.parts.TEAWDiagramEditPart;
 import teaw.diagram.edit.parts.WaitTimeEditPart;
-import teaw.diagram.edit.parts.WaitTimeNameEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -341,8 +331,8 @@ public class TeawVisualIDRegistry {
 		case WaitTimeEditPart.VISUAL_ID:
 		case PrizeEditPart.VISUAL_ID:
 		case SocialStoryEditPart.VISUAL_ID:
-		case CommunicationBookEditPart.VISUAL_ID:
 		case SoothingObjectEditPart.VISUAL_ID:
+		case CommunicationBookEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

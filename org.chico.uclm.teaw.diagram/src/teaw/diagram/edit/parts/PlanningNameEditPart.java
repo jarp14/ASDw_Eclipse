@@ -60,7 +60,7 @@ public class PlanningNameEditPart extends CompartmentEditPart implements ITextAw
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5011;
+	public static final int VISUAL_ID = 5002;
 
 	/**
 	* @generated

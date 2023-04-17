@@ -59,10 +59,10 @@ public class RedLinkCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof Emotion) {
+		if (source != null && false == source instanceof EmotionChoice) {
 			return false;
 		}
-		if (target != null && false == target instanceof EmotionChoice) {
+		if (target != null && false == target instanceof Emotion) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -121,15 +121,15 @@ public class RedLinkCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected Emotion getSource() {
-		return (Emotion) source;
+	protected EmotionChoice getSource() {
+		return (EmotionChoice) source;
 	}
 
 	/**
 	* @generated
 	*/
-	protected EmotionChoice getTarget() {
-		return (EmotionChoice) target;
+	protected Emotion getTarget() {
+		return (Emotion) target;
 	}
 
 	/**

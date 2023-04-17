@@ -37,7 +37,7 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * @generated
 	 * @ordered
 	 */
-	protected Emotion origin;
+	protected EmotionChoice origin;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
@@ -47,7 +47,7 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * @generated
 	 * @ordered
 	 */
-	protected EmotionChoice target;
+	protected Emotion target;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,10 +74,10 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * @generated
 	 */
 	@Override
-	public Emotion getOrigin() {
+	public EmotionChoice getOrigin() {
 		if (origin != null && origin.eIsProxy()) {
 			InternalEObject oldOrigin = (InternalEObject)origin;
-			origin = (Emotion)eResolveProxy(oldOrigin);
+			origin = (EmotionChoice)eResolveProxy(oldOrigin);
 			if (origin != oldOrigin) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TeawPackage.GREEN_LINK__ORIGIN, oldOrigin, origin));
@@ -91,7 +91,7 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Emotion basicGetOrigin() {
+	public EmotionChoice basicGetOrigin() {
 		return origin;
 	}
 
@@ -101,8 +101,8 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * @generated
 	 */
 	@Override
-	public void setOrigin(Emotion newOrigin) {
-		Emotion oldOrigin = origin;
+	public void setOrigin(EmotionChoice newOrigin) {
+		EmotionChoice oldOrigin = origin;
 		origin = newOrigin;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TeawPackage.GREEN_LINK__ORIGIN, oldOrigin, origin));
@@ -114,10 +114,10 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * @generated
 	 */
 	@Override
-	public EmotionChoice getTarget() {
+	public Emotion getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
-			target = (EmotionChoice)eResolveProxy(oldTarget);
+			target = (Emotion)eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TeawPackage.GREEN_LINK__TARGET, oldTarget, target));
@@ -131,7 +131,7 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EmotionChoice basicGetTarget() {
+	public Emotion basicGetTarget() {
 		return target;
 	}
 
@@ -141,8 +141,8 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * @generated
 	 */
 	@Override
-	public void setTarget(EmotionChoice newTarget) {
-		EmotionChoice oldTarget = target;
+	public void setTarget(Emotion newTarget) {
+		Emotion oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TeawPackage.GREEN_LINK__TARGET, oldTarget, target));
@@ -175,10 +175,10 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case TeawPackage.GREEN_LINK__ORIGIN:
-				setOrigin((Emotion)newValue);
+				setOrigin((EmotionChoice)newValue);
 				return;
 			case TeawPackage.GREEN_LINK__TARGET:
-				setTarget((EmotionChoice)newValue);
+				setTarget((Emotion)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -193,10 +193,10 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case TeawPackage.GREEN_LINK__ORIGIN:
-				setOrigin((Emotion)null);
+				setOrigin((EmotionChoice)null);
 				return;
 			case TeawPackage.GREEN_LINK__TARGET:
-				setTarget((EmotionChoice)null);
+				setTarget((Emotion)null);
 				return;
 		}
 		super.eUnset(featureID);
