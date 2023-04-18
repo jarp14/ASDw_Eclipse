@@ -8,9 +8,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.FileDialog;
 
-public class PersonImagePathCellEditor extends DialogCellEditor {
+public class ImagePathCellEditor extends DialogCellEditor {
 
-	public PersonImagePathCellEditor(Composite parent) {
+	public ImagePathCellEditor(Composite parent) {
 	      super(parent);
 	  }
 

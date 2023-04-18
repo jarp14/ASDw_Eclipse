@@ -8,6 +8,9 @@ import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -23,6 +26,7 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
+import teaw.EmotionChoice;
 import teaw.diagram.edit.policies.EmotionChoiceItemSemanticEditPolicy;
 
 /**
@@ -92,7 +96,10 @@ public class EmotionChoiceEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure createNodeShape() {
-		return primaryShape = new EmotionChoiceFigure();
+		primaryShape = new EmotionChoiceFigure();
+		EmotionChoice component = (EmotionChoice) getNotationView().getElement();
+		((EmotionChoiceFigure) primaryShape).setImagePath(component.getImagePath());
+		return primaryShape;
 	}
 
 	/**
@@ -195,6 +202,26 @@ public class EmotionChoiceEditPart extends ShapeNodeEditPart {
 		}
 	}
 
+	protected void handleNotificationEvent(Notification event) {
+		if (event.getNotifier() == getModel()
+				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations().equals(event.getFeature())) {
+			handleMajorSemanticChange();
+		} else {
+
+			if (event.getFeature() instanceof EAttribute) {
+				EAttribute eAttribute = (EAttribute) event.getFeature();
+
+				if (eAttribute.getName().equalsIgnoreCase("imagePath")) {
+					EmotionChoiceFigure figure = (EmotionChoiceFigure) this.getPrimaryShape();
+					figure.setImagePath(event.getNewStringValue());
+				}
+
+			}
+
+			super.handleNotificationEvent(event);
+		}
+	}
+	
 	/**
 	 * @generated
 	 */

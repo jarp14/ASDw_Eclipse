@@ -11,15 +11,15 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.ImageData;
 
-public class TimeFigure extends ImageFigure {
+public class SoothingObjectFigure extends ImageFigure {
 	static Image unspecified = null;
 
-	  public TimeFigure() {
+	  public SoothingObjectFigure() {
 	      if (unspecified == null) {
 	    	  unspecified = ImageDescriptor.createFromURL(
 	               FileLocator.find(
 	                       Platform.getBundle(Activator.PLUGIN_ID),
-	                       new Path("images/time_arasaac64.png"), 
+	                       new Path("images/object_arasaac64.png"), 
 	                       new HashMap())).createImage();
 	      }
 	  }

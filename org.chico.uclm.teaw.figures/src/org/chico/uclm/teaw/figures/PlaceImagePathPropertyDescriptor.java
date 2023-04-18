@@ -6,9 +6,9 @@ import org.eclipse.gmf.runtime.emf.ui.properties.descriptors.EMFCompositeSourceP
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.swt.widgets.Composite;
 
-public class PersonImagePathPropertyDescriptor extends EMFCompositeSourcePropertyDescriptor {
+public class PlaceImagePathPropertyDescriptor extends EMFCompositeSourcePropertyDescriptor {
 
-	public PersonImagePathPropertyDescriptor(Object object,
+	public PlaceImagePathPropertyDescriptor(Object object,
 	          IItemPropertyDescriptor itemPropertyDescriptor, String category) {
 		super(object, itemPropertyDescriptor, category);
 	}
