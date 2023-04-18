@@ -34,51 +34,45 @@ public class TeawPropertySection extends DefaultPropertySection implements IProp
 		selected = /*super.*/transformSelectionToDomain(selected);
 		return selected;
 	}
-	
+
 	public IPropertySource getPropertySource(Object object) {
-		  if (object instanceof IPropertySource) {
-		    return (IPropertySource) object;
-		  }
-		  
-		  AdapterFactory af = getAdapterFactory(object);
-		  if (af != null) {
-		    IItemPropertySource ips = 
-		    		(IItemPropertySource) af.adapt(object, IItemPropertySource.class);
+		if (object instanceof IPropertySource) {
+			return (IPropertySource) object;
+		}
 
-		    if (ips != null) {
+		AdapterFactory af = getAdapterFactory(object);
+		if (af != null) {
+			IItemPropertySource ips = (IItemPropertySource) af.adapt(object, IItemPropertySource.class);
 
-		      if (object instanceof PlanningNode) {
-		        return new PropertySource(object, ips) {
-		          protected IPropertyDescriptor createPropertyDescriptor(
-		              IItemPropertyDescriptor itemPropertyDescriptor) {
+			if (ips != null) {
 
-		            EStructuralFeature feature = 
-		            		(EStructuralFeature) itemPropertyDescriptor.getFeature(object);
+				if (object instanceof PlanningNode) {
+					return new PropertySource(object, ips) {
+						protected IPropertyDescriptor createPropertyDescriptor(
+								IItemPropertyDescriptor itemPropertyDescriptor) {
 
-		            if(feature.getName().equalsIgnoreCase("imagePath")) {
+							EStructuralFeature feature = (EStructuralFeature) itemPropertyDescriptor.getFeature(object);
 
-		              return new PersonImagePathPropertyDescriptor(
-		                  object, itemPropertyDescriptor, "Misc");
+							if (feature.getName().equalsIgnoreCase("imagePath")) {
 
+								return new PersonImagePathPropertyDescriptor(object, itemPropertyDescriptor, "Misc");
 
-		            }
-		            else {
-		              return new EMFCompositeSourcePropertyDescriptor(object, itemPropertyDescriptor, "Misc");
-		            }
-		          }
-		        };
-		      }
+							} else {
+								return new EMFCompositeSourcePropertyDescriptor(object, itemPropertyDescriptor, "Misc");
+							}
+						}
+					};
+				}
 
-		      //return new PropertySource(object, ips);
-		      return new EMFCompositePropertySource(object, ips, "Misc");
-		    }
-		  }
-		  
-		  if (object instanceof IAdaptable) {
-		    return (IPropertySource) ((IAdaptable) object)
-		        .getAdapter(IPropertySource.class);
-		  }
-		  	return null;
-		  }
+				//return new PropertySource(object, ips);
+				return new EMFCompositePropertySource(object, ips, "Misc");
+			}
+		}
+
+		if (object instanceof IAdaptable) {
+			return (IPropertySource) ((IAdaptable) object).getAdapter(IPropertySource.class);
+		}
+		return null;
+	}
 
 }

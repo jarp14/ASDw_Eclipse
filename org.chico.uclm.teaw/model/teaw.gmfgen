@@ -51,7 +51,6 @@
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ActionEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="ActionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ActionFigure extends org.chico.uclm.teaw.figures.ActionFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ActionFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(128)&#xA;, getMapMode().DPtoLP(128)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="128" height="128"/>
-        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
       </viewmap>
       <modelFacet>
         <metaClass href="teaw.genmodel#//teaw/Action"/>

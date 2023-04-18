@@ -54,13 +54,13 @@ class Picto extends PlanningNode {
 
 @gmf.node(figure="org.chico.uclm.teaw.figures.PersonFigure", tool.name="Person",
 	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/person_arasaac128.png", tool.small.path="images/person_arasaac32.png",
-	label.placement="none", resizable="true", size="128,128")
+	label.placement="none", resizable="false", size="128,128")
 class Person extends Picto {
 }
 
 @gmf.node(figure="org.chico.uclm.teaw.figures.ActionFigure", tool.name="Action",
 	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/action_arasaac128.png", tool.small.path="images/action_arasaac32.png",
-	label.placement="none", resizable="false", size="128,128")
+	label.placement="none", resizable="true", size="128,128")
 class Action extends Picto {
 }
 

@@ -111,18 +111,6 @@ public class ActionEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	* @generated
-	*/
-	public EditPolicy getPrimaryDragEditPolicy() {
-		EditPolicy result = super.getPrimaryDragEditPolicy();
-		if (result instanceof ResizableEditPolicy) {
-			ResizableEditPolicy ep = (ResizableEditPolicy) result;
-			ep.setResizeDirections(PositionConstants.NONE);
-		}
-		return result;
-	}
-
-	/**
 	* Creates figure for this edit part.
 	* 
 	* Body of this method does not depend on settings in generation model

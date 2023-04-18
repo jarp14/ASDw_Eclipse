@@ -97,9 +97,9 @@ public class PersonEditPart extends ShapeNodeEditPart {
 	*/
 	protected IFigure createNodeShape() {
 		primaryShape = new PersonFigure();
-		  Person component = (Person) getNotationView().getElement();
-		  ((PersonFigure) primaryShape).setImagePath(component.getImagePath());
-		  return primaryShape;
+		Person component = (Person) getNotationView().getElement();
+		((PersonFigure) primaryShape).setImagePath(component.getImagePath());
+		return primaryShape;
 	}
 
 	/**
@@ -142,11 +142,7 @@ public class PersonEditPart extends ShapeNodeEditPart {
 		figure.setLayoutManager(new StackLayout());
 		IFigure shape = createNodeShape();
 		figure.add(shape);
-//		figure.setSize(new Dimension(getMapMode().DPtoLP(128), getMapMode().DPtoLP(128)));
-//		figure.setPreferredSize(new Dimension(getMapMode().DPtoLP(128), getMapMode().DPtoLP(128)));
 		contentPane = setupContentPane(shape);
-		//contentPane.setSize(new Dimension(getMapMode().DPtoLP(128), getMapMode().DPtoLP(128)));
-		
 		return figure;
 	}
 
@@ -205,26 +201,25 @@ public class PersonEditPart extends ShapeNodeEditPart {
 			((Shape) primaryShape).setLineStyle(style);
 		}
 	}
-	
+
 	protected void handleNotificationEvent(Notification event) {
-		  if (event.getNotifier() == getModel()
-		      && EcorePackage.eINSTANCE.getEModelElement_EAnnotations()
-		          .equals(event.getFeature())) {
-		    handleMajorSemanticChange();
-		  } else {
+		if (event.getNotifier() == getModel()
+				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations().equals(event.getFeature())) {
+			handleMajorSemanticChange();
+		} else {
 
-		    if (event.getFeature() instanceof EAttribute) {
-		      EAttribute eAttribute = (EAttribute) event.getFeature();
+			if (event.getFeature() instanceof EAttribute) {
+				EAttribute eAttribute = (EAttribute) event.getFeature();
 
-		      if (eAttribute.getName().equalsIgnoreCase("imagePath")) {
-		        PersonFigure figure = (PersonFigure) this.getPrimaryShape();
-		        figure.setImagePath(event.getNewStringValue());
-		      }
+				if (eAttribute.getName().equalsIgnoreCase("imagePath")) {
+					PersonFigure figure = (PersonFigure) this.getPrimaryShape();
+					figure.setImagePath(event.getNewStringValue());
+				}
 
-		    }
+			}
 
-		    super.handleNotificationEvent(event);
-		  }
+			super.handleNotificationEvent(event);
+		}
 	}
 
 	/**

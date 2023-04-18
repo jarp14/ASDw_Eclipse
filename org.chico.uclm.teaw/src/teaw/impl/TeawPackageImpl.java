@@ -1000,7 +1000,7 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 			   "tool.large.path", "images/action_arasaac128.png",
 			   "tool.small.path", "images/action_arasaac32.png",
 			   "label.placement", "none",
-			   "resizable", "false",
+			   "resizable", "true",
 			   "size", "128,128"
 		   });
 		addAnnotation

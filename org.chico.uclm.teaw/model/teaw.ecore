@@ -81,7 +81,7 @@
       <details key="tool.large.path" value="images/action_arasaac128.png"/>
       <details key="tool.small.path" value="images/action_arasaac32.png"/>
       <details key="label.placement" value="none"/>
-      <details key="resizable" value="false"/>
+      <details key="resizable" value="true"/>
       <details key="size" value="128,128"/>
     </eAnnotations>
   </eClassifiers>
