@@ -100,6 +100,17 @@ class SocialStory extends Transiction {
 class SoothingObject extends Transiction {
 }
 
+// CUADERNO DE COMUNICACION
+@gmf.node(figure="org.chico.uclm.teaw.figures.NotebookFigure", tool.name="AAC Notebook",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/notebook_arasaac64.png", tool.small.path="images/notebook_arasaac32.png",
+	label.placement="none", resizable="false", size="64,64")
+class CommunicationBook extends PlanningNode {
+}
+
+
+/*
+* NODOS DIAGRAMA EMOCIONES
+*/
 @gmf.node(figure="org.chico.uclm.teaw.figures.EmotionChoiceFigure", tool.name="Target emotion",
 	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/emochoice_arasaac128.png", tool.small.path="images/emochoice_arasaac32.png",
 	label.placement="none", resizable="false", size="128,128")
@@ -110,13 +121,6 @@ class EmotionChoice extends EmotionsNode {
 	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/emotion_arasaac128.png", tool.small.path="images/emotion_arasaac32.png",
 	label.placement="none", resizable="false", size="128,128")
 class Emotion extends EmotionsNode {
-}
-
-// CUADERNO DE COMUNICACION
-@gmf.node(figure="org.chico.uclm.teaw.figures.NotebookFigure", tool.name="AAC Notebook",
-	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/notebook_arasaac64.png", tool.small.path="images/notebook_arasaac32.png",
-	label.placement="none", resizable="false", size="64,64")
-class CommunicationBook extends PlanningNode {
 }
 
 

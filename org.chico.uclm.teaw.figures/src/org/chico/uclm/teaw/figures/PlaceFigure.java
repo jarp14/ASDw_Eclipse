@@ -8,8 +8,11 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.draw2d.ImageFigure;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.ImageData;
+import org.eclipse.swt.graphics.RGB;
+import org.eclipse.swt.graphics.Color;
 
 public class PlaceFigure extends ImageFigure {
 	static Image unspecified = null;
@@ -32,7 +35,16 @@ public class PlaceFigure extends ImageFigure {
 	          ImageData data = ImageDescriptor.createFromURL(file.toURI().toURL()).createImage().getImageData();
 	          ImageData scaledData = data.scaledTo(128, 128);
 	          
-	          return new Image(null, scaledData);
+	          Image originalImage = new Image(null, scaledData);
+	          Image borderImage = new Image(null, originalImage.getBounds().width + 10, originalImage.getBounds().height + 10);
+	          GC gc = new GC(borderImage);
+	          gc.setLineWidth(6);
+	          gc.setForeground(new Color(null, new RGB(76, 175, 80)));
+	          gc.drawRectangle(0, 0, borderImage.getBounds().width, borderImage.getBounds().height);
+	          gc.drawImage(originalImage, 5, 5);
+	          gc.dispose();
+	          
+	          return borderImage;
 	      }
 	      catch (Exception ex) {
 	          return unspecified;
