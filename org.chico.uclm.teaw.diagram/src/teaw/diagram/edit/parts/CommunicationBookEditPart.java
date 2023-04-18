@@ -108,8 +108,8 @@ public class CommunicationBookEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public CommunicationBookFigure getPrimaryShape() {
-		return (CommunicationBookFigure) primaryShape;
+	public NotebookFigure getPrimaryShape() {
+		return (NotebookFigure) primaryShape;
 	}
 
 	/**
@@ -228,12 +228,12 @@ public class CommunicationBookEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class CommunicationBookFigure extends org.chico.uclm.teaw.figures.NotebookFigure {
+	public class NotebookFigure extends org.chico.uclm.teaw.figures.NotebookFigure {
 
 		/**
 		 * @generated
 		 */
-		public CommunicationBookFigure() {
+		public NotebookFigure() {
 			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(64), getMapMode().DPtoLP(64)));
 		}
 
