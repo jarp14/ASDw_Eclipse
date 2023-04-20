@@ -1,0 +1,60 @@
+// Plannification diagram
+context Planning {
+	
+	constraint NodesSize {
+		check {
+    		var n = PlanningNode.all.size();
+    		return n < 10;
+    	} 
+    	message : "You can specify a maximum of 10 elements"
+	}
+
+}
+
+context PlanningNode {
+
+  	critique HasOrder {
+    	check : self.order != null and self.order > 0
+    	message : "The order of " + self + " must be specified"
+  	}
+  	
+  	constraint HasImage {
+    	check : self.imagePath != null
+    	message : "The image path of " + self + " must be specified"
+  	}
+
+}
+
+
+// Emotions diagram
+context EmotionsNode {
+
+  	critique HasOrder {
+    	check : self.order != null and self.order > 0
+    	message : "The order of " + self + " must be specified"
+  	}
+  	
+  	constraint HasImage {
+    	check : self.imagePath != null
+    	message : "The image path of " + self + " must be specified"
+  	}
+
+}
+
+context Emotions {
+
+	constraint OnlyOneGreenLink {
+    	check {
+    		var n = GreenLink.all.size();
+    		return n <= 1;
+    	} 
+    	message : "You must specify only one correct link"
+    	fix {
+			title : 'Remove duplicated correct link'
+			do {
+				delete self;
+			}
+		}
+  	}
+
+}
