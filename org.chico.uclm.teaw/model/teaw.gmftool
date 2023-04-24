@@ -177,6 +177,30 @@
             path="images/emotion_arasaac128.png"/>
       </tools>
       <tools
+          xsi:type="gmftool:CreationTool"
+          title="Positive feedback"
+          description="Create new Positive feedback">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/positiveFeedback32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/positiveFeedback64.png"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Negative feedback"
+          description="Create new Negative feedback">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/negativeFeedback32.png"
+            bundle="org.chico.uclm.teaw.figures"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/negativeFeedback64.png"/>
+      </tools>
+      <tools
           xsi:type="gmftool:PaletteSeparator"/>
       <tools
           xsi:type="gmftool:CreationTool"

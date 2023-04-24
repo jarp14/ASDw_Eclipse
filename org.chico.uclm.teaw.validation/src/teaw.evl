@@ -14,29 +14,24 @@ context Planning {
 context PlanningNode {
 
   	critique HasOrder {
-    	check : self.order != null and self.order > 0
-    	message : "The order of " + self + " must be specified"
+    	check : self.order != Order#None
+    	message : "The order must be specified"
   	}
   	
   	constraint HasImage {
     	check : self.imagePath != null
-    	message : "The image path of " + self + " must be specified"
+    	message : "The image path must be specified"
   	}
 
 }
 
 
 // Emotions diagram
-context EmotionsNode {
+context EmotionsPicto {
 
-  	critique HasOrder {
-    	check : self.order != null and self.order > 0
-    	message : "The order of " + self + " must be specified"
-  	}
-  	
   	constraint HasImage {
     	check : self.imagePath != null
-    	message : "The image path of " + self + " must be specified"
+    	message : "The image path must be specified"
   	}
 
 }

@@ -52,12 +52,14 @@ import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.EmotionsEmotionsEmotionsCompartmentEditPart;
 import teaw.diagram.edit.parts.EmotionsNameEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
+import teaw.diagram.edit.parts.NegativeFeedbackEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
 import teaw.diagram.edit.parts.PlanningNameEditPart;
 import teaw.diagram.edit.parts.PlanningPlanningPlanningNodesCompartmentEditPart;
+import teaw.diagram.edit.parts.PositiveFeedbackEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
@@ -151,6 +153,8 @@ public class TeawViewProvider extends AbstractProvider implements IViewProvider 
 				case PlanningEditPart.VISUAL_ID:
 				case EmotionChoiceEditPart.VISUAL_ID:
 				case EmotionEditPart.VISUAL_ID:
+				case PositiveFeedbackEditPart.VISUAL_ID:
+				case NegativeFeedbackEditPart.VISUAL_ID:
 				case PersonEditPart.VISUAL_ID:
 				case ActionEditPart.VISUAL_ID:
 				case PlaceEditPart.VISUAL_ID:
@@ -171,6 +175,7 @@ public class TeawViewProvider extends AbstractProvider implements IViewProvider 
 		}
 		return EmotionsEditPart.VISUAL_ID == visualID || PlanningEditPart.VISUAL_ID == visualID
 				|| EmotionChoiceEditPart.VISUAL_ID == visualID || EmotionEditPart.VISUAL_ID == visualID
+				|| PositiveFeedbackEditPart.VISUAL_ID == visualID || NegativeFeedbackEditPart.VISUAL_ID == visualID
 				|| PersonEditPart.VISUAL_ID == visualID || ActionEditPart.VISUAL_ID == visualID
 				|| PlaceEditPart.VISUAL_ID == visualID || WaitTimeEditPart.VISUAL_ID == visualID
 				|| PrizeEditPart.VISUAL_ID == visualID || SocialStoryEditPart.VISUAL_ID == visualID
@@ -231,6 +236,10 @@ public class TeawViewProvider extends AbstractProvider implements IViewProvider 
 			return createEmotionChoice_3001(domainElement, containerView, index, persisted, preferencesHint);
 		case EmotionEditPart.VISUAL_ID:
 			return createEmotion_3002(domainElement, containerView, index, persisted, preferencesHint);
+		case PositiveFeedbackEditPart.VISUAL_ID:
+			return createPositiveFeedback_3011(domainElement, containerView, index, persisted, preferencesHint);
+		case NegativeFeedbackEditPart.VISUAL_ID:
+			return createNegativeFeedback_3012(domainElement, containerView, index, persisted, preferencesHint);
 		case PersonEditPart.VISUAL_ID:
 			return createPerson_3003(domainElement, containerView, index, persisted, preferencesHint);
 		case ActionEditPart.VISUAL_ID:
@@ -398,6 +407,76 @@ public class TeawViewProvider extends AbstractProvider implements IViewProvider 
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(TeawVisualIDRegistry.getType(EmotionEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
+	public Node createPositiveFeedback_3011(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(TeawVisualIDRegistry.getType(PositiveFeedbackEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
+	public Node createNegativeFeedback_3012(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(TeawVisualIDRegistry.getType(NegativeFeedbackEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 

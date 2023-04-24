@@ -8,11 +8,25 @@
         eType="#//Node" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EmotionsNode" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="PlanningNode" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="imagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Order"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmotionsNode" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Order">
+    <eLiterals name="None"/>
+    <eLiterals name="First" value="1"/>
+    <eLiterals name="Second" value="2"/>
+    <eLiterals name="Third" value="3"/>
+    <eLiterals name="Fourth" value="4"/>
+    <eLiterals name="Fifth" value="5"/>
+    <eLiterals name="Sixth" value="6"/>
+    <eLiterals name="Seventh" value="7"/>
+    <eLiterals name="Eighth" value="8"/>
+    <eLiterals name="Ninth" value="9"/>
+    <eLiterals name="Tenth" value="10"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Emotions" eSuperTypes="#//Node">
     <eAnnotations source="gmf.node">
@@ -34,12 +48,6 @@
         eType="#//RedLink" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="greenLink" lowerBound="1"
         eType="#//GreenLink" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PlanningNode" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Planning" eSuperTypes="#//Node">
     <eAnnotations source="gmf.node">
@@ -146,7 +154,25 @@
       <details key="size" value="64,64"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EmotionChoice" eSuperTypes="#//EmotionsNode">
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationBook" eSuperTypes="#//PlanningNode">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.NotebookFigure"/>
+      <details key="tool.name" value="AAC Notebook"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/notebook_arasaac64.png"/>
+      <details key="tool.small.path" value="images/notebook_arasaac32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmotionsPicto" abstract="true" eSuperTypes="#//EmotionsNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Feedback" abstract="true" eSuperTypes="#//EmotionsNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EmotionChoice" eSuperTypes="#//EmotionsPicto">
     <eAnnotations source="gmf.node">
       <details key="figure" value="org.chico.uclm.teaw.figures.EmotionChoiceFigure"/>
       <details key="tool.name" value="Target emotion"/>
@@ -158,7 +184,7 @@
       <details key="size" value="128,128"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Emotion" eSuperTypes="#//EmotionsNode">
+  <eClassifiers xsi:type="ecore:EClass" name="Emotion" eSuperTypes="#//EmotionsPicto">
     <eAnnotations source="gmf.node">
       <details key="figure" value="org.chico.uclm.teaw.figures.EmotionFigure"/>
       <details key="tool.name" value="Response option"/>
@@ -170,13 +196,25 @@
       <details key="size" value="128,128"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CommunicationBook" eSuperTypes="#//PlanningNode">
+  <eClassifiers xsi:type="ecore:EClass" name="PositiveFeedback" eSuperTypes="#//Feedback">
     <eAnnotations source="gmf.node">
-      <details key="figure" value="org.chico.uclm.teaw.figures.NotebookFigure"/>
-      <details key="tool.name" value="AAC Notebook"/>
+      <details key="figure" value="org.chico.uclm.teaw.figures.PosFeedbackFigure"/>
+      <details key="tool.name" value="Positive feedback"/>
       <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
-      <details key="tool.large.path" value="images/notebook_arasaac64.png"/>
-      <details key="tool.small.path" value="images/notebook_arasaac32.png"/>
+      <details key="tool.large.path" value="images/positiveFeedback64.png"/>
+      <details key="tool.small.path" value="images/positiveFeedback32.png"/>
+      <details key="label.placement" value="none"/>
+      <details key="resizable" value="false"/>
+      <details key="size" value="64,64"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NegativeFeedback" eSuperTypes="#//Feedback">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="org.chico.uclm.teaw.figures.NegFeedbackFigure"/>
+      <details key="tool.name" value="Negative feedback"/>
+      <details key="tool.small.bundle" value="org.chico.uclm.teaw.figures"/>
+      <details key="tool.large.path" value="images/negativeFeedback64.png"/>
+      <details key="tool.small.path" value="images/negativeFeedback32.png"/>
       <details key="label.placement" value="none"/>
       <details key="resizable" value="false"/>
       <details key="size" value="64,64"/>
@@ -219,6 +257,8 @@
         eType="#//EmotionChoice"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//Emotion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="npFeedback" lowerBound="1"
+        eType="#//Feedback"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GreenLink" eSuperTypes="#//Link">
     <eAnnotations source="gmf.link">
@@ -237,5 +277,7 @@
         eType="#//EmotionChoice"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//Emotion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="npFeedback" lowerBound="1"
+        eType="#//Feedback"/>
   </eClassifiers>
 </ecore:EPackage>

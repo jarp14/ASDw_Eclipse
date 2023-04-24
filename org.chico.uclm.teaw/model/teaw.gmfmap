@@ -53,8 +53,36 @@
               href="teaw.gmfgraph#Emotion"/>
         </ownedChild>
       </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="teaw.ecore#//Emotions/emotions"/>
+        <ownedChild>
+          <domainMetaElement
+              href="teaw.ecore#//PositiveFeedback"/>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="teaw.gmftool#//@palette/@tools.1/@tools.4"/>
+          <diagramNode
+              href="teaw.gmfgraph#PositiveFeedback"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="teaw.ecore#//Emotions/emotions"/>
+        <ownedChild>
+          <domainMetaElement
+              href="teaw.ecore#//NegativeFeedback"/>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="teaw.gmftool#//@palette/@tools.1/@tools.5"/>
+          <diagramNode
+              href="teaw.gmfgraph#NegativeFeedback"/>
+        </ownedChild>
+      </children>
       <compartments
-          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1">
+          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3">
         <compartment
             href="teaw.gmfgraph#EmotionsEmotionsCompartment"/>
       </compartments>
@@ -228,7 +256,7 @@
         href="teaw.ecore#//Emotions/redLinks"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="teaw.gmftool#//@palette/@tools.1/@tools.6"/>
+        href="teaw.gmftool#//@palette/@tools.1/@tools.8"/>
     <diagramLink
         href="teaw.gmfgraph#RedLink"/>
     <sourceMetaFeature
@@ -251,7 +279,7 @@
         href="teaw.ecore#//Emotions/greenLink"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="teaw.gmftool#//@palette/@tools.1/@tools.5"/>
+        href="teaw.gmftool#//@palette/@tools.1/@tools.7"/>
     <diagramLink
         href="teaw.gmfgraph#GreenLink"/>
     <sourceMetaFeature

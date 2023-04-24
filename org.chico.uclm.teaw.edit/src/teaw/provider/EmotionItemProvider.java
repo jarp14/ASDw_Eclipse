@@ -19,7 +19,7 @@ import teaw.Emotion;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EmotionItemProvider extends EmotionsNodeItemProvider {
+public class EmotionItemProvider extends EmotionsPictoItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

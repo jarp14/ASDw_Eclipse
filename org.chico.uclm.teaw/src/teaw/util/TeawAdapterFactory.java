@@ -76,16 +76,16 @@ public class TeawAdapterFactory extends AdapterFactoryImpl {
 				return createNodeAdapter();
 			}
 			@Override
+			public Adapter casePlanningNode(PlanningNode object) {
+				return createPlanningNodeAdapter();
+			}
+			@Override
 			public Adapter caseEmotionsNode(EmotionsNode object) {
 				return createEmotionsNodeAdapter();
 			}
 			@Override
 			public Adapter caseEmotions(Emotions object) {
 				return createEmotionsAdapter();
-			}
-			@Override
-			public Adapter casePlanningNode(PlanningNode object) {
-				return createPlanningNodeAdapter();
 			}
 			@Override
 			public Adapter casePlanning(Planning object) {
@@ -128,6 +128,18 @@ public class TeawAdapterFactory extends AdapterFactoryImpl {
 				return createSoothingObjectAdapter();
 			}
 			@Override
+			public Adapter caseCommunicationBook(CommunicationBook object) {
+				return createCommunicationBookAdapter();
+			}
+			@Override
+			public Adapter caseEmotionsPicto(EmotionsPicto object) {
+				return createEmotionsPictoAdapter();
+			}
+			@Override
+			public Adapter caseFeedback(Feedback object) {
+				return createFeedbackAdapter();
+			}
+			@Override
 			public Adapter caseEmotionChoice(EmotionChoice object) {
 				return createEmotionChoiceAdapter();
 			}
@@ -136,8 +148,12 @@ public class TeawAdapterFactory extends AdapterFactoryImpl {
 				return createEmotionAdapter();
 			}
 			@Override
-			public Adapter caseCommunicationBook(CommunicationBook object) {
-				return createCommunicationBookAdapter();
+			public Adapter casePositiveFeedback(PositiveFeedback object) {
+				return createPositiveFeedbackAdapter();
+			}
+			@Override
+			public Adapter caseNegativeFeedback(NegativeFeedback object) {
+				return createNegativeFeedbackAdapter();
 			}
 			@Override
 			public Adapter caseLink(Link object) {
@@ -414,6 +430,34 @@ public class TeawAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link teaw.PositiveFeedback <em>Positive Feedback</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see teaw.PositiveFeedback
+	 * @generated
+	 */
+	public Adapter createPositiveFeedbackAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link teaw.NegativeFeedback <em>Negative Feedback</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see teaw.NegativeFeedback
+	 * @generated
+	 */
+	public Adapter createNegativeFeedbackAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link teaw.CommunicationBook <em>Communication Book</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -424,6 +468,34 @@ public class TeawAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCommunicationBookAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link teaw.EmotionsPicto <em>Emotions Picto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see teaw.EmotionsPicto
+	 * @generated
+	 */
+	public Adapter createEmotionsPictoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link teaw.Feedback <em>Feedback</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see teaw.Feedback
+	 * @generated
+	 */
+	public Adapter createFeedbackAdapter() {
 		return null;
 	}
 

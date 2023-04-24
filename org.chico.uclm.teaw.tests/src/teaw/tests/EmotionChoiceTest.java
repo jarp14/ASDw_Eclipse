@@ -13,7 +13,7 @@ import teaw.TeawFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EmotionChoiceTest extends EmotionsNodeTest {
+public class EmotionChoiceTest extends EmotionsPictoTest {
 
 	/**
 	 * <!-- begin-user-doc -->

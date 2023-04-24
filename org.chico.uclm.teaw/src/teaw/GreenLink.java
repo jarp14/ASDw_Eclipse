@@ -14,6 +14,7 @@ package teaw;
  * <ul>
  *   <li>{@link teaw.GreenLink#getOrigin <em>Origin</em>}</li>
  *   <li>{@link teaw.GreenLink#getTarget <em>Target</em>}</li>
+ *   <li>{@link teaw.GreenLink#getNpFeedback <em>Np Feedback</em>}</li>
  * </ul>
  *
  * @see teaw.TeawPackage#getGreenLink()
@@ -64,5 +65,27 @@ public interface GreenLink extends Link {
 	 * @generated
 	 */
 	void setTarget(Emotion value);
+
+	/**
+	 * Returns the value of the '<em><b>Np Feedback</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Np Feedback</em>' reference.
+	 * @see #setNpFeedback(Feedback)
+	 * @see teaw.TeawPackage#getGreenLink_NpFeedback()
+	 * @model required="true"
+	 * @generated
+	 */
+	Feedback getNpFeedback();
+
+	/**
+	 * Sets the value of the '{@link teaw.GreenLink#getNpFeedback <em>Np Feedback</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Np Feedback</em>' reference.
+	 * @see #getNpFeedback()
+	 * @generated
+	 */
+	void setNpFeedback(Feedback value);
 
 } // GreenLink

@@ -20,12 +20,14 @@ import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.EmotionsEmotionsEmotionsCompartmentEditPart;
 import teaw.diagram.edit.parts.EmotionsNameEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
+import teaw.diagram.edit.parts.NegativeFeedbackEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
 import teaw.diagram.edit.parts.PlanningNameEditPart;
 import teaw.diagram.edit.parts.PlanningPlanningPlanningNodesCompartmentEditPart;
+import teaw.diagram.edit.parts.PositiveFeedbackEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
@@ -149,6 +151,12 @@ public class TeawVisualIDRegistry {
 			if (TeawPackage.eINSTANCE.getEmotion().isSuperTypeOf(domainElement.eClass())) {
 				return EmotionEditPart.VISUAL_ID;
 			}
+			if (TeawPackage.eINSTANCE.getPositiveFeedback().isSuperTypeOf(domainElement.eClass())) {
+				return PositiveFeedbackEditPart.VISUAL_ID;
+			}
+			if (TeawPackage.eINSTANCE.getNegativeFeedback().isSuperTypeOf(domainElement.eClass())) {
+				return NegativeFeedbackEditPart.VISUAL_ID;
+			}
 			break;
 		case PlanningPlanningPlanningNodesCompartmentEditPart.VISUAL_ID:
 			if (TeawPackage.eINSTANCE.getPerson().isSuperTypeOf(domainElement.eClass())) {
@@ -228,6 +236,12 @@ public class TeawVisualIDRegistry {
 				return true;
 			}
 			if (EmotionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (PositiveFeedbackEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (NegativeFeedbackEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -333,6 +347,8 @@ public class TeawVisualIDRegistry {
 		case SocialStoryEditPart.VISUAL_ID:
 		case SoothingObjectEditPart.VISUAL_ID:
 		case CommunicationBookEditPart.VISUAL_ID:
+		case PositiveFeedbackEditPart.VISUAL_ID:
+		case NegativeFeedbackEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

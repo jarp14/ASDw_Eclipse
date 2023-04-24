@@ -386,22 +386,42 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String Correctsolution6CreationTool_title;
+	public static String Positivefeedback5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Correctsolution6CreationTool_desc;
+	public static String Positivefeedback5CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Incorrectsolution7CreationTool_title;
+	public static String Negativefeedback6CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Incorrectsolution7CreationTool_desc;
+	public static String Negativefeedback6CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Correctsolution8CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Correctsolution8CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Incorrectsolution9CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Incorrectsolution9CreationTool_desc;
 
 	/**
 	* @generated

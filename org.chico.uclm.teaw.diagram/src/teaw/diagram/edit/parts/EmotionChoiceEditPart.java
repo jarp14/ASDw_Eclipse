@@ -221,7 +221,7 @@ public class EmotionChoiceEditPart extends ShapeNodeEditPart {
 			super.handleNotificationEvent(event);
 		}
 	}
-	
+
 	/**
 	 * @generated
 	 */

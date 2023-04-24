@@ -4,6 +4,7 @@ package teaw.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -15,15 +16,20 @@ import teaw.Emotion;
 import teaw.EmotionChoice;
 import teaw.Emotions;
 import teaw.EmotionsNode;
+import teaw.EmotionsPicto;
+import teaw.Feedback;
 import teaw.GreenLink;
 import teaw.Link;
+import teaw.NegativeFeedback;
 import teaw.Node;
 import teaw.NormalLink;
+import teaw.Order;
 import teaw.Person;
 import teaw.Picto;
 import teaw.Place;
 import teaw.Planning;
 import teaw.PlanningNode;
+import teaw.PositiveFeedback;
 import teaw.Prize;
 import teaw.RedLink;
 import teaw.SocialStory;
@@ -165,7 +171,35 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass positiveFeedbackEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass negativeFeedbackEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass communicationBookEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass emotionsPictoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass feedbackEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -194,6 +228,13 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	 * @generated
 	 */
 	private EClass greenLinkEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum orderEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -294,46 +335,6 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	@Override
 	public EClass getEmotionsNode() {
 		return emotionsNodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionsNode_Description() {
-		return (EAttribute)emotionsNodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionsNode_ImagePath() {
-		return (EAttribute)emotionsNodeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionsNode_Order() {
-		return (EAttribute)emotionsNodeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEmotionsNode_Size() {
-		return (EAttribute)emotionsNodeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -592,8 +593,78 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getPositiveFeedback() {
+		return positiveFeedbackEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNegativeFeedback() {
+		return negativeFeedbackEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getCommunicationBook() {
 		return communicationBookEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEmotionsPicto() {
+		return emotionsPictoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionsPicto_Description() {
+		return (EAttribute)emotionsPictoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionsPicto_ImagePath() {
+		return (EAttribute)emotionsPictoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEmotionsPicto_Size() {
+		return (EAttribute)emotionsPictoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFeedback() {
+		return feedbackEClass;
 	}
 
 	/**
@@ -672,6 +743,16 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getRedLink_NpFeedback() {
+		return (EReference)redLinkEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getGreenLink() {
 		return greenLinkEClass;
 	}
@@ -694,6 +775,26 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 	@Override
 	public EReference getGreenLink_Target() {
 		return (EReference)greenLinkEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getGreenLink_NpFeedback() {
+		return (EReference)greenLinkEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getOrder() {
+		return orderEEnum;
 	}
 
 	/**
@@ -730,23 +831,19 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 
 		nodeEClass = createEClass(NODE);
 
+		planningNodeEClass = createEClass(PLANNING_NODE);
+		createEAttribute(planningNodeEClass, PLANNING_NODE__DESCRIPTION);
+		createEAttribute(planningNodeEClass, PLANNING_NODE__IMAGE_PATH);
+		createEAttribute(planningNodeEClass, PLANNING_NODE__ORDER);
+		createEAttribute(planningNodeEClass, PLANNING_NODE__SIZE);
+
 		emotionsNodeEClass = createEClass(EMOTIONS_NODE);
-		createEAttribute(emotionsNodeEClass, EMOTIONS_NODE__DESCRIPTION);
-		createEAttribute(emotionsNodeEClass, EMOTIONS_NODE__IMAGE_PATH);
-		createEAttribute(emotionsNodeEClass, EMOTIONS_NODE__ORDER);
-		createEAttribute(emotionsNodeEClass, EMOTIONS_NODE__SIZE);
 
 		emotionsEClass = createEClass(EMOTIONS);
 		createEAttribute(emotionsEClass, EMOTIONS__NAME);
 		createEReference(emotionsEClass, EMOTIONS__EMOTIONS);
 		createEReference(emotionsEClass, EMOTIONS__RED_LINKS);
 		createEReference(emotionsEClass, EMOTIONS__GREEN_LINK);
-
-		planningNodeEClass = createEClass(PLANNING_NODE);
-		createEAttribute(planningNodeEClass, PLANNING_NODE__DESCRIPTION);
-		createEAttribute(planningNodeEClass, PLANNING_NODE__IMAGE_PATH);
-		createEAttribute(planningNodeEClass, PLANNING_NODE__ORDER);
-		createEAttribute(planningNodeEClass, PLANNING_NODE__SIZE);
 
 		planningEClass = createEClass(PLANNING);
 		createEAttribute(planningEClass, PLANNING__NAME);
@@ -771,11 +868,22 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 
 		soothingObjectEClass = createEClass(SOOTHING_OBJECT);
 
+		communicationBookEClass = createEClass(COMMUNICATION_BOOK);
+
+		emotionsPictoEClass = createEClass(EMOTIONS_PICTO);
+		createEAttribute(emotionsPictoEClass, EMOTIONS_PICTO__DESCRIPTION);
+		createEAttribute(emotionsPictoEClass, EMOTIONS_PICTO__IMAGE_PATH);
+		createEAttribute(emotionsPictoEClass, EMOTIONS_PICTO__SIZE);
+
+		feedbackEClass = createEClass(FEEDBACK);
+
 		emotionChoiceEClass = createEClass(EMOTION_CHOICE);
 
 		emotionEClass = createEClass(EMOTION);
 
-		communicationBookEClass = createEClass(COMMUNICATION_BOOK);
+		positiveFeedbackEClass = createEClass(POSITIVE_FEEDBACK);
+
+		negativeFeedbackEClass = createEClass(NEGATIVE_FEEDBACK);
 
 		linkEClass = createEClass(LINK);
 
@@ -786,10 +894,15 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		redLinkEClass = createEClass(RED_LINK);
 		createEReference(redLinkEClass, RED_LINK__ORIGIN);
 		createEReference(redLinkEClass, RED_LINK__TARGET);
+		createEReference(redLinkEClass, RED_LINK__NP_FEEDBACK);
 
 		greenLinkEClass = createEClass(GREEN_LINK);
 		createEReference(greenLinkEClass, GREEN_LINK__ORIGIN);
 		createEReference(greenLinkEClass, GREEN_LINK__TARGET);
+		createEReference(greenLinkEClass, GREEN_LINK__NP_FEEDBACK);
+
+		// Create enums
+		orderEEnum = createEEnum(ORDER);
 	}
 
 	/**
@@ -831,9 +944,13 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		prizeEClass.getESuperTypes().add(this.getTransiction());
 		socialStoryEClass.getESuperTypes().add(this.getTransiction());
 		soothingObjectEClass.getESuperTypes().add(this.getTransiction());
-		emotionChoiceEClass.getESuperTypes().add(this.getEmotionsNode());
-		emotionEClass.getESuperTypes().add(this.getEmotionsNode());
 		communicationBookEClass.getESuperTypes().add(this.getPlanningNode());
+		emotionsPictoEClass.getESuperTypes().add(this.getEmotionsNode());
+		feedbackEClass.getESuperTypes().add(this.getEmotionsNode());
+		emotionChoiceEClass.getESuperTypes().add(this.getEmotionsPicto());
+		emotionEClass.getESuperTypes().add(this.getEmotionsPicto());
+		positiveFeedbackEClass.getESuperTypes().add(this.getFeedback());
+		negativeFeedbackEClass.getESuperTypes().add(this.getFeedback());
 		normalLinkEClass.getESuperTypes().add(this.getLink());
 		redLinkEClass.getESuperTypes().add(this.getLink());
 		greenLinkEClass.getESuperTypes().add(this.getLink());
@@ -844,23 +961,19 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(planningNodeEClass, PlanningNode.class, "PlanningNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPlanningNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlanningNode_ImagePath(), ecorePackage.getEString(), "imagePath", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlanningNode_Order(), this.getOrder(), "order", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlanningNode_Size(), ecorePackage.getEIntegerObject(), "size", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(emotionsNodeEClass, EmotionsNode.class, "EmotionsNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEmotionsNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, EmotionsNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEmotionsNode_ImagePath(), ecorePackage.getEString(), "imagePath", null, 0, 1, EmotionsNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEmotionsNode_Order(), ecorePackage.getEIntegerObject(), "order", null, 0, 1, EmotionsNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEmotionsNode_Size(), ecorePackage.getEIntegerObject(), "size", null, 0, 1, EmotionsNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(emotionsEClass, Emotions.class, "Emotions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEmotions_Name(), ecorePackage.getEString(), "name", "<Emotions ...>", 0, 1, Emotions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmotions_Emotions(), this.getEmotionsNode(), null, "emotions", null, 0, -1, Emotions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmotions_RedLinks(), this.getRedLink(), null, "redLinks", null, 0, -1, Emotions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEmotions_GreenLink(), this.getGreenLink(), null, "greenLink", null, 1, 1, Emotions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(planningNodeEClass, PlanningNode.class, "PlanningNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPlanningNode_Description(), ecorePackage.getEString(), "description", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPlanningNode_ImagePath(), ecorePackage.getEString(), "imagePath", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPlanningNode_Order(), ecorePackage.getEIntegerObject(), "order", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPlanningNode_Size(), ecorePackage.getEIntegerObject(), "size", null, 0, 1, PlanningNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(planningEClass, Planning.class, "Planning", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPlanning_Name(), ecorePackage.getEString(), "name", "<Planning ...>", 0, 1, Planning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -885,11 +998,22 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 
 		initEClass(soothingObjectEClass, SoothingObject.class, "SoothingObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(communicationBookEClass, CommunicationBook.class, "CommunicationBook", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(emotionsPictoEClass, EmotionsPicto.class, "EmotionsPicto", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEmotionsPicto_Description(), ecorePackage.getEString(), "description", null, 0, 1, EmotionsPicto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEmotionsPicto_ImagePath(), ecorePackage.getEString(), "imagePath", null, 0, 1, EmotionsPicto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEmotionsPicto_Size(), ecorePackage.getEIntegerObject(), "size", null, 0, 1, EmotionsPicto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(feedbackEClass, Feedback.class, "Feedback", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(emotionChoiceEClass, EmotionChoice.class, "EmotionChoice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(emotionEClass, Emotion.class, "Emotion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(communicationBookEClass, CommunicationBook.class, "CommunicationBook", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(positiveFeedbackEClass, PositiveFeedback.class, "PositiveFeedback", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(negativeFeedbackEClass, NegativeFeedback.class, "NegativeFeedback", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(linkEClass, Link.class, "Link", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -900,10 +1024,26 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 		initEClass(redLinkEClass, RedLink.class, "RedLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRedLink_Origin(), this.getEmotionChoice(), null, "origin", null, 1, 1, RedLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRedLink_Target(), this.getEmotion(), null, "target", null, 1, 1, RedLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRedLink_NpFeedback(), this.getFeedback(), null, "npFeedback", null, 1, 1, RedLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(greenLinkEClass, GreenLink.class, "GreenLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGreenLink_Origin(), this.getEmotionChoice(), null, "origin", null, 1, 1, GreenLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGreenLink_Target(), this.getEmotion(), null, "target", null, 1, 1, GreenLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGreenLink_NpFeedback(), this.getFeedback(), null, "npFeedback", null, 1, 1, GreenLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(orderEEnum, Order.class, "Order");
+		addEEnumLiteral(orderEEnum, Order.NONE);
+		addEEnumLiteral(orderEEnum, Order.FIRST);
+		addEEnumLiteral(orderEEnum, Order.SECOND);
+		addEEnumLiteral(orderEEnum, Order.THIRD);
+		addEEnumLiteral(orderEEnum, Order.FOURTH);
+		addEEnumLiteral(orderEEnum, Order.FIFTH);
+		addEEnumLiteral(orderEEnum, Order.SIXTH);
+		addEEnumLiteral(orderEEnum, Order.SEVENTH);
+		addEEnumLiteral(orderEEnum, Order.EIGHTH);
+		addEEnumLiteral(orderEEnum, Order.NINTH);
+		addEEnumLiteral(orderEEnum, Order.TENTH);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1069,6 +1209,19 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 			   "size", "64,64"
 		   });
 		addAnnotation
+		  (communicationBookEClass,
+		   source,
+		   new String[] {
+			   "figure", "org.chico.uclm.teaw.figures.NotebookFigure",
+			   "tool.name", "AAC Notebook",
+			   "tool.small.bundle", "org.chico.uclm.teaw.figures",
+			   "tool.large.path", "images/notebook_arasaac64.png",
+			   "tool.small.path", "images/notebook_arasaac32.png",
+			   "label.placement", "none",
+			   "resizable", "false",
+			   "size", "64,64"
+		   });
+		addAnnotation
 		  (emotionChoiceEClass,
 		   source,
 		   new String[] {
@@ -1095,14 +1248,27 @@ public class TeawPackageImpl extends EPackageImpl implements TeawPackage {
 			   "size", "128,128"
 		   });
 		addAnnotation
-		  (communicationBookEClass,
+		  (positiveFeedbackEClass,
 		   source,
 		   new String[] {
-			   "figure", "org.chico.uclm.teaw.figures.NotebookFigure",
-			   "tool.name", "AAC Notebook",
+			   "figure", "org.chico.uclm.teaw.figures.PosFeedbackFigure",
+			   "tool.name", "Positive feedback",
 			   "tool.small.bundle", "org.chico.uclm.teaw.figures",
-			   "tool.large.path", "images/notebook_arasaac64.png",
-			   "tool.small.path", "images/notebook_arasaac32.png",
+			   "tool.large.path", "images/positiveFeedback64.png",
+			   "tool.small.path", "images/positiveFeedback32.png",
+			   "label.placement", "none",
+			   "resizable", "false",
+			   "size", "64,64"
+		   });
+		addAnnotation
+		  (negativeFeedbackEClass,
+		   source,
+		   new String[] {
+			   "figure", "org.chico.uclm.teaw.figures.NegFeedbackFigure",
+			   "tool.name", "Negative feedback",
+			   "tool.small.bundle", "org.chico.uclm.teaw.figures",
+			   "tool.large.path", "images/negativeFeedback64.png",
+			   "tool.small.path", "images/negativeFeedback32.png",
 			   "label.placement", "none",
 			   "resizable", "false",
 			   "size", "64,64"

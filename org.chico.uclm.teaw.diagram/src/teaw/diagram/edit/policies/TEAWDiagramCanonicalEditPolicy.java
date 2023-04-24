@@ -39,10 +39,12 @@ import teaw.diagram.edit.parts.EmotionChoiceEditPart;
 import teaw.diagram.edit.parts.EmotionEditPart;
 import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
+import teaw.diagram.edit.parts.NegativeFeedbackEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
+import teaw.diagram.edit.parts.PositiveFeedbackEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
@@ -289,6 +291,20 @@ public class TEAWDiagramCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EmotionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(TeawDiagramUpdater.getEmotion_3002ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case PositiveFeedbackEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(TeawDiagramUpdater.getPositiveFeedback_3011ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case NegativeFeedbackEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(TeawDiagramUpdater.getNegativeFeedback_3012ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

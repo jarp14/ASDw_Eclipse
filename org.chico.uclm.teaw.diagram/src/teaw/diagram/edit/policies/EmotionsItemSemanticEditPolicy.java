@@ -20,6 +20,8 @@ import teaw.diagram.edit.parts.EmotionChoiceEditPart;
 import teaw.diagram.edit.parts.EmotionEditPart;
 import teaw.diagram.edit.parts.EmotionsEmotionsEmotionsCompartmentEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
+import teaw.diagram.edit.parts.NegativeFeedbackEditPart;
+import teaw.diagram.edit.parts.PositiveFeedbackEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.part.TeawVisualIDRegistry;
 import teaw.diagram.providers.TeawElementTypes;
@@ -105,6 +107,18 @@ public class EmotionsItemSemanticEditPolicy extends TeawBaseItemSemanticEditPoli
 								continue;
 							}
 						}
+						cmd.add(new DestroyElementCommand(
+								new DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+						break;
+					case PositiveFeedbackEditPart.VISUAL_ID:
+						cmd.add(new DestroyElementCommand(
+								new DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
+						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+						break;
+					case NegativeFeedbackEditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 

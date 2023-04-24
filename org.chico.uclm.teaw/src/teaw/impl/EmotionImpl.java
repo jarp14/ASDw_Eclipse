@@ -14,7 +14,7 @@ import teaw.TeawPackage;
  *
  * @generated
  */
-public class EmotionImpl extends EmotionsNodeImpl implements Emotion {
+public class EmotionImpl extends EmotionsPictoImpl implements Emotion {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

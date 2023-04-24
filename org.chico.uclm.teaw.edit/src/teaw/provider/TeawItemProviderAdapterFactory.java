@@ -394,6 +394,52 @@ public class TeawItemProviderAdapterFactory extends TeawAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link teaw.PositiveFeedback} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PositiveFeedbackItemProvider positiveFeedbackItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link teaw.PositiveFeedback}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPositiveFeedbackAdapter() {
+		if (positiveFeedbackItemProvider == null) {
+			positiveFeedbackItemProvider = new PositiveFeedbackItemProvider(this);
+		}
+
+		return positiveFeedbackItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link teaw.NegativeFeedback} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NegativeFeedbackItemProvider negativeFeedbackItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link teaw.NegativeFeedback}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNegativeFeedbackAdapter() {
+		if (negativeFeedbackItemProvider == null) {
+			negativeFeedbackItemProvider = new NegativeFeedbackItemProvider(this);
+		}
+
+		return negativeFeedbackItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link teaw.CommunicationBook} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -602,9 +648,11 @@ public class TeawItemProviderAdapterFactory extends TeawAdapterFactory implement
 		if (prizeItemProvider != null) prizeItemProvider.dispose();
 		if (socialStoryItemProvider != null) socialStoryItemProvider.dispose();
 		if (soothingObjectItemProvider != null) soothingObjectItemProvider.dispose();
+		if (communicationBookItemProvider != null) communicationBookItemProvider.dispose();
 		if (emotionChoiceItemProvider != null) emotionChoiceItemProvider.dispose();
 		if (emotionItemProvider != null) emotionItemProvider.dispose();
-		if (communicationBookItemProvider != null) communicationBookItemProvider.dispose();
+		if (positiveFeedbackItemProvider != null) positiveFeedbackItemProvider.dispose();
+		if (negativeFeedbackItemProvider != null) negativeFeedbackItemProvider.dispose();
 		if (normalLinkItemProvider != null) normalLinkItemProvider.dispose();
 		if (redLinkItemProvider != null) redLinkItemProvider.dispose();
 		if (greenLinkItemProvider != null) greenLinkItemProvider.dispose();

@@ -63,9 +63,11 @@ public class TeawPaletteFactory {
 		paletteContainer.add(new PaletteSeparator());
 		paletteContainer.add(createTargetemotion3CreationTool());
 		paletteContainer.add(createResponseoption4CreationTool());
+		paletteContainer.add(createPositivefeedback5CreationTool());
+		paletteContainer.add(createNegativefeedback6CreationTool());
 		paletteContainer.add(new PaletteSeparator());
-		paletteContainer.add(createCorrectsolution6CreationTool());
-		paletteContainer.add(createIncorrectsolution7CreationTool());
+		paletteContainer.add(createCorrectsolution8CreationTool());
+		paletteContainer.add(createIncorrectsolution9CreationTool());
 		return paletteContainer;
 	}
 
@@ -244,10 +246,38 @@ public class TeawPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createCorrectsolution6CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Correctsolution6CreationTool_title,
-				Messages.Correctsolution6CreationTool_desc, Collections.singletonList(TeawElementTypes.GreenLink_4003));
-		entry.setId("createCorrectsolution6CreationTool"); //$NON-NLS-1$
+	private ToolEntry createPositivefeedback5CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Positivefeedback5CreationTool_title,
+				Messages.Positivefeedback5CreationTool_desc,
+				Collections.singletonList(TeawElementTypes.PositiveFeedback_3011));
+		entry.setId("createPositivefeedback5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(TeawDiagramEditorPlugin
+				.findImageDescriptor("/org.chico.uclm.teaw.figures/images/positiveFeedback32.png")); //$NON-NLS-1$
+		entry.setLargeIcon(TeawDiagramEditorPlugin.findImageDescriptor("images/positiveFeedback64.png")); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createNegativefeedback6CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Negativefeedback6CreationTool_title,
+				Messages.Negativefeedback6CreationTool_desc,
+				Collections.singletonList(TeawElementTypes.NegativeFeedback_3012));
+		entry.setId("createNegativefeedback6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(TeawDiagramEditorPlugin
+				.findImageDescriptor("/org.chico.uclm.teaw.figures/images/negativeFeedback32.png")); //$NON-NLS-1$
+		entry.setLargeIcon(TeawDiagramEditorPlugin.findImageDescriptor("images/negativeFeedback64.png")); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createCorrectsolution8CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Correctsolution8CreationTool_title,
+				Messages.Correctsolution8CreationTool_desc, Collections.singletonList(TeawElementTypes.GreenLink_4003));
+		entry.setId("createCorrectsolution8CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(TeawDiagramEditorPlugin.findImageDescriptor("/org.chico.uclm.teaw.figures/images/ok32.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
@@ -256,10 +286,10 @@ public class TeawPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createIncorrectsolution7CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Incorrectsolution7CreationTool_title,
-				Messages.Incorrectsolution7CreationTool_desc, Collections.singletonList(TeawElementTypes.RedLink_4002));
-		entry.setId("createIncorrectsolution7CreationTool"); //$NON-NLS-1$
+	private ToolEntry createIncorrectsolution9CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Incorrectsolution9CreationTool_title,
+				Messages.Incorrectsolution9CreationTool_desc, Collections.singletonList(TeawElementTypes.RedLink_4002));
+		entry.setId("createIncorrectsolution9CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(
 				TeawDiagramEditorPlugin.findImageDescriptor("/org.chico.uclm.teaw.figures/images/wrong32.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());

@@ -258,7 +258,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Teaw"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3011,3012,3003,3004,3005,3006,3007,3008,3009,3010"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
       </viewProvider>
    </extension>
@@ -271,7 +271,7 @@
             <method name="getType()" value="Teaw"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010"/>
+            <method name="getType()" value="2001,2002,3001,3002,3011,3012,3003,3004,3005,3006,3007,3008,3009,3010"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002,4003"/>
@@ -313,6 +313,16 @@
          <Priority name="Lowest"/>
          <object class="teaw.diagram.edit.parts.EmotionEditPart" id="Emotion_3002"/>
          <context elements="Emotion_3002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfPositiveFeedbackEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.PositiveFeedbackEditPart" id="PositiveFeedback_3011"/>
+         <context elements="PositiveFeedback_3011"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfNegativeFeedbackEditPart">
+         <Priority name="Lowest"/>
+         <object class="teaw.diagram.edit.parts.NegativeFeedbackEditPart" id="NegativeFeedback_3012"/>
+         <context elements="NegativeFeedback_3012"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="teaw.diagram.providers.assistants.TeawModelingAssistantProviderOfPersonEditPart">
          <Priority name="Lowest"/>
@@ -433,6 +443,26 @@
                eclass="Emotion"
                edithelper="teaw.diagram.edit.helpers.EmotionEditHelper">
             <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.PositiveFeedback_3011"
+               name="%metatype.name.PositiveFeedback_3011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="PositiveFeedback"
+               edithelper="teaw.diagram.edit.helpers.PositiveFeedbackEditHelper">
+            <param name="semanticHint" value="3011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="teaw">
+         <metamodelType
+               id="org.chico.uclm.teaw.diagram.NegativeFeedback_3012"
+               name="%metatype.name.NegativeFeedback_3012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NegativeFeedback"
+               edithelper="teaw.diagram.edit.helpers.NegativeFeedbackEditHelper">
+            <param name="semanticHint" value="3012"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="teaw">
@@ -562,6 +592,8 @@
          <elementType ref="org.chico.uclm.teaw.diagram.Planning_2002"/>
          <elementType ref="org.chico.uclm.teaw.diagram.EmotionChoice_3001"/>
          <elementType ref="org.chico.uclm.teaw.diagram.Emotion_3002"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.PositiveFeedback_3011"/>
+         <elementType ref="org.chico.uclm.teaw.diagram.NegativeFeedback_3012"/>
          <elementType ref="org.chico.uclm.teaw.diagram.Person_3003"/>
          <elementType ref="org.chico.uclm.teaw.diagram.Action_3004"/>
          <elementType ref="org.chico.uclm.teaw.diagram.Place_3005"/>

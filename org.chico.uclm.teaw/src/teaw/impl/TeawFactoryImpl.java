@@ -3,6 +3,7 @@
 package teaw.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -68,14 +69,46 @@ public class TeawFactoryImpl extends EFactoryImpl implements TeawFactory {
 			case TeawPackage.PRIZE: return createPrize();
 			case TeawPackage.SOCIAL_STORY: return createSocialStory();
 			case TeawPackage.SOOTHING_OBJECT: return createSoothingObject();
+			case TeawPackage.COMMUNICATION_BOOK: return createCommunicationBook();
 			case TeawPackage.EMOTION_CHOICE: return createEmotionChoice();
 			case TeawPackage.EMOTION: return createEmotion();
-			case TeawPackage.COMMUNICATION_BOOK: return createCommunicationBook();
+			case TeawPackage.POSITIVE_FEEDBACK: return createPositiveFeedback();
+			case TeawPackage.NEGATIVE_FEEDBACK: return createNegativeFeedback();
 			case TeawPackage.NORMAL_LINK: return createNormalLink();
 			case TeawPackage.RED_LINK: return createRedLink();
 			case TeawPackage.GREEN_LINK: return createGreenLink();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case TeawPackage.ORDER:
+				return createOrderFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case TeawPackage.ORDER:
+				return convertOrderToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -239,6 +272,28 @@ public class TeawFactoryImpl extends EFactoryImpl implements TeawFactory {
 	 * @generated
 	 */
 	@Override
+	public PositiveFeedback createPositiveFeedback() {
+		PositiveFeedbackImpl positiveFeedback = new PositiveFeedbackImpl();
+		return positiveFeedback;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NegativeFeedback createNegativeFeedback() {
+		NegativeFeedbackImpl negativeFeedback = new NegativeFeedbackImpl();
+		return negativeFeedback;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public CommunicationBook createCommunicationBook() {
 		CommunicationBookImpl communicationBook = new CommunicationBookImpl();
 		return communicationBook;
@@ -275,6 +330,26 @@ public class TeawFactoryImpl extends EFactoryImpl implements TeawFactory {
 	public GreenLink createGreenLink() {
 		GreenLinkImpl greenLink = new GreenLinkImpl();
 		return greenLink;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Order createOrderFromString(EDataType eDataType, String initialValue) {
+		Order result = Order.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertOrderToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

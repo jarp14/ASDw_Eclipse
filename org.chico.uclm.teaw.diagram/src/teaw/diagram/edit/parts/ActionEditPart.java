@@ -96,7 +96,7 @@ public class ActionEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	protected IFigure createNodeShape() {
+	protected IFigure createNodeShape() {		
 		primaryShape = new ActionFigure();
 		Action component = (Action) getNotationView().getElement();
 		((ActionFigure) primaryShape).setImagePath(component.getImagePath());
@@ -190,7 +190,7 @@ public class ActionEditPart extends ShapeNodeEditPart {
 			((Shape) primaryShape).setLineStyle(style);
 		}
 	}
-	
+
 	protected void handleNotificationEvent(Notification event) {
 		if (event.getNotifier() == getModel()
 				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations().equals(event.getFeature())) {

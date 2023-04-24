@@ -148,6 +148,24 @@ public interface TeawFactory extends EFactory {
 	Emotion createEmotion();
 
 	/**
+	 * Returns a new object of class '<em>Positive Feedback</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Positive Feedback</em>'.
+	 * @generated
+	 */
+	PositiveFeedback createPositiveFeedback();
+
+	/**
+	 * Returns a new object of class '<em>Negative Feedback</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Negative Feedback</em>'.
+	 * @generated
+	 */
+	NegativeFeedback createNegativeFeedback();
+
+	/**
 	 * Returns a new object of class '<em>Communication Book</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

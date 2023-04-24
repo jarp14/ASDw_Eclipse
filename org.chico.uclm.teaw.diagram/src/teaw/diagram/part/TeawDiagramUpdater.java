@@ -39,11 +39,13 @@ import teaw.diagram.edit.parts.EmotionEditPart;
 import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.EmotionsEmotionsEmotionsCompartmentEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
+import teaw.diagram.edit.parts.NegativeFeedbackEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
 import teaw.diagram.edit.parts.PlanningPlanningPlanningNodesCompartmentEditPart;
+import teaw.diagram.edit.parts.PositiveFeedbackEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
@@ -127,6 +129,14 @@ public class TeawDiagramUpdater {
 				result.add(new TeawNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == PositiveFeedbackEditPart.VISUAL_ID) {
+				result.add(new TeawNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == NegativeFeedbackEditPart.VISUAL_ID) {
+				result.add(new TeawNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -198,6 +208,10 @@ public class TeawDiagramUpdater {
 			return getEmotionChoice_3001ContainedLinks(view);
 		case EmotionEditPart.VISUAL_ID:
 			return getEmotion_3002ContainedLinks(view);
+		case PositiveFeedbackEditPart.VISUAL_ID:
+			return getPositiveFeedback_3011ContainedLinks(view);
+		case NegativeFeedbackEditPart.VISUAL_ID:
+			return getNegativeFeedback_3012ContainedLinks(view);
 		case PersonEditPart.VISUAL_ID:
 			return getPerson_3003ContainedLinks(view);
 		case ActionEditPart.VISUAL_ID:
@@ -237,6 +251,10 @@ public class TeawDiagramUpdater {
 			return getEmotionChoice_3001IncomingLinks(view);
 		case EmotionEditPart.VISUAL_ID:
 			return getEmotion_3002IncomingLinks(view);
+		case PositiveFeedbackEditPart.VISUAL_ID:
+			return getPositiveFeedback_3011IncomingLinks(view);
+		case NegativeFeedbackEditPart.VISUAL_ID:
+			return getNegativeFeedback_3012IncomingLinks(view);
 		case PersonEditPart.VISUAL_ID:
 			return getPerson_3003IncomingLinks(view);
 		case ActionEditPart.VISUAL_ID:
@@ -276,6 +294,10 @@ public class TeawDiagramUpdater {
 			return getEmotionChoice_3001OutgoingLinks(view);
 		case EmotionEditPart.VISUAL_ID:
 			return getEmotion_3002OutgoingLinks(view);
+		case PositiveFeedbackEditPart.VISUAL_ID:
+			return getPositiveFeedback_3011OutgoingLinks(view);
+		case NegativeFeedbackEditPart.VISUAL_ID:
+			return getNegativeFeedback_3012OutgoingLinks(view);
 		case PersonEditPart.VISUAL_ID:
 			return getPerson_3003OutgoingLinks(view);
 		case ActionEditPart.VISUAL_ID:
@@ -341,6 +363,20 @@ public class TeawDiagramUpdater {
 	 * @generated
 	 */
 	public static List<TeawLinkDescriptor> getEmotion_3002ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<TeawLinkDescriptor> getPositiveFeedback_3011ContainedLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<TeawLinkDescriptor> getNegativeFeedback_3012ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -453,6 +489,20 @@ public class TeawDiagramUpdater {
 		result.addAll(getIncomingTypeModelFacetLinks_RedLink_4002(modelElement, crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_GreenLink_4003(modelElement, crossReferences));
 		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<TeawLinkDescriptor> getPositiveFeedback_3011IncomingLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<TeawLinkDescriptor> getNegativeFeedback_3012IncomingLinks(View view) {
+		return Collections.emptyList();
 	}
 
 	/**
@@ -576,6 +626,20 @@ public class TeawDiagramUpdater {
 	 * @generated
 	 */
 	public static List<TeawLinkDescriptor> getEmotion_3002OutgoingLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<TeawLinkDescriptor> getPositiveFeedback_3011OutgoingLinks(View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	* @generated
+	*/
+	public static List<TeawLinkDescriptor> getNegativeFeedback_3012OutgoingLinks(View view) {
 		return Collections.emptyList();
 	}
 

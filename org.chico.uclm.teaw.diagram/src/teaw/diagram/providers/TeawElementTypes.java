@@ -24,10 +24,12 @@ import teaw.diagram.edit.parts.EmotionChoiceEditPart;
 import teaw.diagram.edit.parts.EmotionEditPart;
 import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
+import teaw.diagram.edit.parts.NegativeFeedbackEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
+import teaw.diagram.edit.parts.PositiveFeedbackEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
@@ -84,6 +86,18 @@ public class TeawElementTypes {
 	* @generated
 	*/
 	public static final IElementType Emotion_3002 = getElementType("org.chico.uclm.teaw.diagram.Emotion_3002"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType PositiveFeedback_3011 = getElementType(
+			"org.chico.uclm.teaw.diagram.PositiveFeedback_3011"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
+	public static final IElementType NegativeFeedback_3012 = getElementType(
+			"org.chico.uclm.teaw.diagram.NegativeFeedback_3012"); //$NON-NLS-1$
+
 	/**
 	* @generated
 	*/
@@ -179,6 +193,10 @@ public class TeawElementTypes {
 
 			elements.put(Emotion_3002, TeawPackage.eINSTANCE.getEmotion());
 
+			elements.put(PositiveFeedback_3011, TeawPackage.eINSTANCE.getPositiveFeedback());
+
+			elements.put(NegativeFeedback_3012, TeawPackage.eINSTANCE.getNegativeFeedback());
+
 			elements.put(Person_3003, TeawPackage.eINSTANCE.getPerson());
 
 			elements.put(Action_3004, TeawPackage.eINSTANCE.getAction());
@@ -222,6 +240,8 @@ public class TeawElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Planning_2002);
 			KNOWN_ELEMENT_TYPES.add(EmotionChoice_3001);
 			KNOWN_ELEMENT_TYPES.add(Emotion_3002);
+			KNOWN_ELEMENT_TYPES.add(PositiveFeedback_3011);
+			KNOWN_ELEMENT_TYPES.add(NegativeFeedback_3012);
 			KNOWN_ELEMENT_TYPES.add(Person_3003);
 			KNOWN_ELEMENT_TYPES.add(Action_3004);
 			KNOWN_ELEMENT_TYPES.add(Place_3005);
@@ -252,6 +272,10 @@ public class TeawElementTypes {
 			return EmotionChoice_3001;
 		case EmotionEditPart.VISUAL_ID:
 			return Emotion_3002;
+		case PositiveFeedbackEditPart.VISUAL_ID:
+			return PositiveFeedback_3011;
+		case NegativeFeedbackEditPart.VISUAL_ID:
+			return NegativeFeedback_3012;
 		case PersonEditPart.VISUAL_ID:
 			return Person_3003;
 		case ActionEditPart.VISUAL_ID:

@@ -203,7 +203,7 @@ public class PrizeEditPart extends ShapeNodeEditPart {
 			((Shape) primaryShape).setLineStyle(style);
 		}
 	}
-	
+
 	protected void handleNotificationEvent(Notification event) {
 		if (event.getNotifier() == getModel()
 				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations().equals(event.getFeature())) {

@@ -94,6 +94,12 @@ public class EmotionsEmotionsEmotionsCompartmentEditPart extends ShapeCompartmen
 			if (type == TeawElementTypes.Emotion_3002) {
 				return this;
 			}
+			if (type == TeawElementTypes.PositiveFeedback_3011) {
+				return this;
+			}
+			if (type == TeawElementTypes.NegativeFeedback_3012) {
+				return this;
+			}
 			return getParent().getTargetEditPart(request);
 		}
 		if (request instanceof CreateUnspecifiedTypeConnectionRequest) {

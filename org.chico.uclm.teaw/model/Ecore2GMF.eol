@@ -16,7 +16,7 @@ var toolGroupConnections = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Connecti
 var PlanningNodes : Sequence = Sequence{"Planning","Sep","Action","Person","Place","Sep","AAC Notebook",
 									"Award","Social story","Entertainment/Calming activity","Time management","Sep"};
 var PlanningLinks : Sequence = Sequence{"Sequence/order"};
-var EmotionsNodes : Sequence = Sequence{"Emotions","Sep","Target emotion","Response option","Sep"};
+var EmotionsNodes : Sequence = Sequence{"Emotions","Sep","Target emotion","Response option","Positive feedback","Negative feedback","Sep"};
 var EmotionsLinks : Sequence = Sequence{"Correct solution","Incorrect solution"};
 
 objectsConnectionsToPalette(PlanningNodes, toolGroupPlanning, true);

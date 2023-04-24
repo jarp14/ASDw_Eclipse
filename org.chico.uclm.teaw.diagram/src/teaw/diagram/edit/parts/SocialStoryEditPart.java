@@ -27,9 +27,7 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import teaw.Person;
 import teaw.SocialStory;
-import teaw.diagram.edit.parts.PersonEditPart.PersonFigure;
 import teaw.diagram.edit.policies.SocialStoryItemSemanticEditPolicy;
 
 /**
@@ -99,9 +97,9 @@ public class SocialStoryEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure createNodeShape() {
-		primaryShape = new StoryFigure();
+		primaryShape = new SocialStoryFigure();
 		SocialStory component = (SocialStory) getNotationView().getElement();
-		((StoryFigure) primaryShape).setImagePath(component.getImagePath());
+		((SocialStoryFigure) primaryShape).setImagePath(component.getImagePath());
 		return primaryShape;
 	}
 
@@ -228,7 +226,7 @@ public class SocialStoryEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class SocialStoryFigure extends StoryFigure {
+	public class SocialStoryFigure extends org.chico.uclm.teaw.figures.StoryFigure {
 
 		/**
 		 * @generated

@@ -221,7 +221,7 @@ public class SoothingObjectEditPart extends ShapeNodeEditPart {
 			super.handleNotificationEvent(event);
 		}
 	}
-	
+
 	/**
 	 * @generated
 	 */

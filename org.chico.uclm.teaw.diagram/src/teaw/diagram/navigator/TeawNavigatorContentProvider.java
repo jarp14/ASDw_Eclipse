@@ -35,11 +35,13 @@ import teaw.diagram.edit.parts.EmotionEditPart;
 import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.EmotionsEmotionsEmotionsCompartmentEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
+import teaw.diagram.edit.parts.NegativeFeedbackEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
 import teaw.diagram.edit.parts.PlanningPlanningPlanningNodesCompartmentEditPart;
+import teaw.diagram.edit.parts.PositiveFeedbackEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
@@ -280,6 +282,16 @@ public class TeawNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					TeawVisualIDRegistry.getType(EmotionsEmotionsEmotionsCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews, TeawVisualIDRegistry.getType(EmotionEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					TeawVisualIDRegistry.getType(EmotionsEmotionsEmotionsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					TeawVisualIDRegistry.getType(PositiveFeedbackEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					TeawVisualIDRegistry.getType(EmotionsEmotionsEmotionsCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					TeawVisualIDRegistry.getType(NegativeFeedbackEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			return result.toArray();
 		}

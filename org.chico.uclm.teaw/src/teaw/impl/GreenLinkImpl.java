@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import teaw.Emotion;
 import teaw.EmotionChoice;
+import teaw.Feedback;
 import teaw.GreenLink;
 import teaw.TeawPackage;
 
@@ -24,6 +25,7 @@ import teaw.TeawPackage;
  * <ul>
  *   <li>{@link teaw.impl.GreenLinkImpl#getOrigin <em>Origin</em>}</li>
  *   <li>{@link teaw.impl.GreenLinkImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link teaw.impl.GreenLinkImpl#getNpFeedback <em>Np Feedback</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,6 +50,16 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * @ordered
 	 */
 	protected Emotion target;
+
+	/**
+	 * The cached value of the '{@link #getNpFeedback() <em>Np Feedback</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNpFeedback()
+	 * @generated
+	 * @ordered
+	 */
+	protected Feedback npFeedback;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,6 +166,46 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 	 * @generated
 	 */
 	@Override
+	public Feedback getNpFeedback() {
+		if (npFeedback != null && npFeedback.eIsProxy()) {
+			InternalEObject oldNpFeedback = (InternalEObject)npFeedback;
+			npFeedback = (Feedback)eResolveProxy(oldNpFeedback);
+			if (npFeedback != oldNpFeedback) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TeawPackage.GREEN_LINK__NP_FEEDBACK, oldNpFeedback, npFeedback));
+			}
+		}
+		return npFeedback;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Feedback basicGetNpFeedback() {
+		return npFeedback;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNpFeedback(Feedback newNpFeedback) {
+		Feedback oldNpFeedback = npFeedback;
+		npFeedback = newNpFeedback;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TeawPackage.GREEN_LINK__NP_FEEDBACK, oldNpFeedback, npFeedback));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case TeawPackage.GREEN_LINK__ORIGIN:
@@ -162,6 +214,9 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 			case TeawPackage.GREEN_LINK__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
+			case TeawPackage.GREEN_LINK__NP_FEEDBACK:
+				if (resolve) return getNpFeedback();
+				return basicGetNpFeedback();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,6 +234,9 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 				return;
 			case TeawPackage.GREEN_LINK__TARGET:
 				setTarget((Emotion)newValue);
+				return;
+			case TeawPackage.GREEN_LINK__NP_FEEDBACK:
+				setNpFeedback((Feedback)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -198,6 +256,9 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 			case TeawPackage.GREEN_LINK__TARGET:
 				setTarget((Emotion)null);
 				return;
+			case TeawPackage.GREEN_LINK__NP_FEEDBACK:
+				setNpFeedback((Feedback)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -214,6 +275,8 @@ public class GreenLinkImpl extends LinkImpl implements GreenLink {
 				return origin != null;
 			case TeawPackage.GREEN_LINK__TARGET:
 				return target != null;
+			case TeawPackage.GREEN_LINK__NP_FEEDBACK:
+				return npFeedback != null;
 		}
 		return super.eIsSet(featureID);
 	}

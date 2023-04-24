@@ -46,6 +46,12 @@ public class TeawEditPartFactory implements EditPartFactory {
 			case EmotionEditPart.VISUAL_ID:
 				return new EmotionEditPart(view);
 
+			case PositiveFeedbackEditPart.VISUAL_ID:
+				return new PositiveFeedbackEditPart(view);
+
+			case NegativeFeedbackEditPart.VISUAL_ID:
+				return new NegativeFeedbackEditPart(view);
+
 			case PersonEditPart.VISUAL_ID:
 				return new PersonEditPart(view);
 

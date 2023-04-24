@@ -69,6 +69,11 @@
           <preferredSize dx="64" dy="64"/>
         </actualFigure>
       </descriptors>
+      <descriptors name="CommunicationBookFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="CommunicationBookFigure" qualifiedClassName="org.chico.uclm.teaw.figures.NotebookFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
       <descriptors name="EmotionChoiceFigure">
         <actualFigure xsi:type="gmfgraph:CustomFigure" name="EmotionChoiceFigure" qualifiedClassName="org.chico.uclm.teaw.figures.EmotionChoiceFigure">
           <preferredSize dx="128" dy="128"/>
@@ -79,8 +84,13 @@
           <preferredSize dx="128" dy="128"/>
         </actualFigure>
       </descriptors>
-      <descriptors name="CommunicationBookFigure">
-        <actualFigure xsi:type="gmfgraph:CustomFigure" name="CommunicationBookFigure" qualifiedClassName="org.chico.uclm.teaw.figures.NotebookFigure">
+      <descriptors name="PositiveFeedbackFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="PositiveFeedbackFigure" qualifiedClassName="org.chico.uclm.teaw.figures.PosFeedbackFigure">
+          <preferredSize dx="64" dy="64"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="NegativeFeedbackFigure">
+        <actualFigure xsi:type="gmfgraph:CustomFigure" name="NegativeFeedbackFigure" qualifiedClassName="org.chico.uclm.teaw.figures.NegFeedbackFigure">
           <preferredSize dx="64" dy="64"/>
         </actualFigure>
       </descriptors>
@@ -137,6 +147,11 @@
         <defaultSize dx="64" dy="64"/>
       </facets>
     </nodes>
+    <nodes name="CommunicationBook" figure="CommunicationBookFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
     <nodes name="EmotionChoice" figure="EmotionChoiceFigure">
       <facets xsi:type="gmfgraph:DefaultSizeFacet">
         <defaultSize dx="128" dy="128"/>
@@ -147,7 +162,12 @@
         <defaultSize dx="128" dy="128"/>
       </facets>
     </nodes>
-    <nodes name="CommunicationBook" figure="CommunicationBookFigure">
+    <nodes name="PositiveFeedback" figure="PositiveFeedbackFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="64" dy="64"/>
+      </facets>
+    </nodes>
+    <nodes name="NegativeFeedback" figure="NegativeFeedbackFigure">
       <facets xsi:type="gmfgraph:DefaultSizeFacet">
         <defaultSize dx="64" dy="64"/>
       </facets>
@@ -167,7 +187,9 @@
   <gmfgraph:Label name="PrizeLabelFigure" text="Prize"/>
   <gmfgraph:Label name="SocialStoryLabelFigure" text="SocialStory"/>
   <gmfgraph:Label name="SoothingObjectLabelFigure" text="SoothingObject"/>
+  <gmfgraph:Label name="CommunicationBookLabelFigure" text="CommunicationBook"/>
   <gmfgraph:Label name="EmotionChoiceLabelFigure" text="EmotionChoice"/>
   <gmfgraph:Label name="EmotionLabelFigure" text="Emotion"/>
-  <gmfgraph:Label name="CommunicationBookLabelFigure" text="CommunicationBook"/>
+  <gmfgraph:Label name="PositiveFeedbackLabelFigure" text="PositiveFeedback"/>
+  <gmfgraph:Label name="NegativeFeedbackLabelFigure" text="NegativeFeedback"/>
 </xmi:XMI>

@@ -180,6 +180,16 @@ public class EmotionsItemProvider extends NodeItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(TeawPackage.Literals.EMOTIONS__EMOTIONS,
+				 TeawFactory.eINSTANCE.createPositiveFeedback()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TeawPackage.Literals.EMOTIONS__EMOTIONS,
+				 TeawFactory.eINSTANCE.createNegativeFeedback()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(TeawPackage.Literals.EMOTIONS__RED_LINKS,
 				 TeawFactory.eINSTANCE.createRedLink()));
 

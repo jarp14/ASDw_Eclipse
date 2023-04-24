@@ -18,7 +18,7 @@ import org.eclipse.ui.views.properties.IPropertyDescriptor;
 import org.eclipse.ui.views.properties.IPropertySource;
 import org.eclipse.ui.views.properties.IPropertySourceProvider;
 
-import teaw.EmotionsNode;
+import teaw.EmotionsPicto;
 import teaw.PlanningNode;
 
 /**
@@ -47,7 +47,7 @@ public class TeawPropertySection extends DefaultPropertySection implements IProp
 
 			if (ips != null) {
 
-				if (object instanceof PlanningNode || object instanceof EmotionsNode) {
+				if (object instanceof PlanningNode || object instanceof EmotionsPicto) {
 					return new PropertySource(object, ips) {
 						protected IPropertyDescriptor createPropertyDescriptor(
 								IItemPropertyDescriptor itemPropertyDescriptor) {

@@ -13,5 +13,5 @@ package teaw;
  * @model annotation="gmf.node figure='org.chico.uclm.teaw.figures.EmotionFigure' tool.name='Response option' tool.small.bundle='org.chico.uclm.teaw.figures' tool.large.path='images/emotion_arasaac128.png' tool.small.path='images/emotion_arasaac32.png' label.placement='none' resizable='false' size='128,128'"
  * @generated
  */
-public interface Emotion extends EmotionsNode {
+public interface Emotion extends EmotionsPicto {
 } // Emotion

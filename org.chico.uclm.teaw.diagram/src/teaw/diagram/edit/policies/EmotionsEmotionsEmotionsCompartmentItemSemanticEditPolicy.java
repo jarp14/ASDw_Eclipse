@@ -8,6 +8,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
 import teaw.diagram.edit.commands.EmotionChoiceCreateCommand;
 import teaw.diagram.edit.commands.EmotionCreateCommand;
+import teaw.diagram.edit.commands.NegativeFeedbackCreateCommand;
+import teaw.diagram.edit.commands.PositiveFeedbackCreateCommand;
 import teaw.diagram.providers.TeawElementTypes;
 
 /**
@@ -31,6 +33,12 @@ public class EmotionsEmotionsEmotionsCompartmentItemSemanticEditPolicy extends T
 		}
 		if (TeawElementTypes.Emotion_3002 == req.getElementType()) {
 			return getGEFWrapper(new EmotionCreateCommand(req));
+		}
+		if (TeawElementTypes.PositiveFeedback_3011 == req.getElementType()) {
+			return getGEFWrapper(new PositiveFeedbackCreateCommand(req));
+		}
+		if (TeawElementTypes.NegativeFeedback_3012 == req.getElementType()) {
+			return getGEFWrapper(new NegativeFeedbackCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import teaw.Order;
 import teaw.PlanningNode;
 import teaw.TeawPackage;
 
@@ -77,7 +78,7 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer ORDER_EDEFAULT = null;
+	protected static final Order ORDER_EDEFAULT = Order.NONE;
 
 	/**
 	 * The cached value of the '{@link #getOrder() <em>Order</em>}' attribute.
@@ -87,7 +88,7 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 	 * @generated
 	 * @ordered
 	 */
-	protected Integer order = ORDER_EDEFAULT;
+	protected Order order = ORDER_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
@@ -180,7 +181,7 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 	 * @generated
 	 */
 	@Override
-	public Integer getOrder() {
+	public Order getOrder() {
 		return order;
 	}
 
@@ -190,9 +191,9 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 	 * @generated
 	 */
 	@Override
-	public void setOrder(Integer newOrder) {
-		Integer oldOrder = order;
-		order = newOrder;
+	public void setOrder(Order newOrder) {
+		Order oldOrder = order;
+		order = newOrder == null ? ORDER_EDEFAULT : newOrder;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TeawPackage.PLANNING_NODE__ORDER, oldOrder, order));
 	}
@@ -255,7 +256,7 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 				setImagePath((String)newValue);
 				return;
 			case TeawPackage.PLANNING_NODE__ORDER:
-				setOrder((Integer)newValue);
+				setOrder((Order)newValue);
 				return;
 			case TeawPackage.PLANNING_NODE__SIZE:
 				setSize((Integer)newValue);
@@ -301,7 +302,7 @@ public abstract class PlanningNodeImpl extends EObjectImpl implements PlanningNo
 			case TeawPackage.PLANNING_NODE__IMAGE_PATH:
 				return IMAGE_PATH_EDEFAULT == null ? imagePath != null : !IMAGE_PATH_EDEFAULT.equals(imagePath);
 			case TeawPackage.PLANNING_NODE__ORDER:
-				return ORDER_EDEFAULT == null ? order != null : !ORDER_EDEFAULT.equals(order);
+				return order != ORDER_EDEFAULT;
 			case TeawPackage.PLANNING_NODE__SIZE:
 				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 		}

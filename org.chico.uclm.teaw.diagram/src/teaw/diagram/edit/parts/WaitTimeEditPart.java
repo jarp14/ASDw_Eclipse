@@ -224,7 +224,7 @@ public class WaitTimeEditPart extends ShapeNodeEditPart {
 			super.handleNotificationEvent(event);
 		}
 	}
-	
+
 	/**
 	 * @generated
 	 */

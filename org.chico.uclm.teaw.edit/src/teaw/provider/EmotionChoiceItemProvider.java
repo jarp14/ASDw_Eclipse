@@ -19,7 +19,7 @@ import teaw.EmotionChoice;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EmotionChoiceItemProvider extends EmotionsNodeItemProvider {
+public class EmotionChoiceItemProvider extends EmotionsPictoItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

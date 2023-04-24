@@ -44,6 +44,7 @@ public class RedLinkItemProvider extends LinkItemProvider {
 
 			addOriginPropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
+			addNpFeedbackPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,6 +85,28 @@ public class RedLinkItemProvider extends LinkItemProvider {
 				 getString("_UI_RedLink_target_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RedLink_target_feature", "_UI_RedLink_type"),
 				 TeawPackage.Literals.RED_LINK__TARGET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Np Feedback feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNpFeedbackPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RedLink_npFeedback_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RedLink_npFeedback_feature", "_UI_RedLink_type"),
+				 TeawPackage.Literals.RED_LINK__NP_FEEDBACK,
 				 true,
 				 false,
 				 true,

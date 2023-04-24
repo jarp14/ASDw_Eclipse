@@ -78,6 +78,12 @@ public class TeawSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TeawPackage.PLANNING_NODE: {
+				PlanningNode planningNode = (PlanningNode)theEObject;
+				T result = casePlanningNode(planningNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case TeawPackage.EMOTIONS_NODE: {
 				EmotionsNode emotionsNode = (EmotionsNode)theEObject;
 				T result = caseEmotionsNode(emotionsNode);
@@ -88,12 +94,6 @@ public class TeawSwitch<T> extends Switch<T> {
 				Emotions emotions = (Emotions)theEObject;
 				T result = caseEmotions(emotions);
 				if (result == null) result = caseNode(emotions);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TeawPackage.PLANNING_NODE: {
-				PlanningNode planningNode = (PlanningNode)theEObject;
-				T result = casePlanningNode(planningNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -174,9 +174,31 @@ public class TeawSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TeawPackage.COMMUNICATION_BOOK: {
+				CommunicationBook communicationBook = (CommunicationBook)theEObject;
+				T result = caseCommunicationBook(communicationBook);
+				if (result == null) result = casePlanningNode(communicationBook);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TeawPackage.EMOTIONS_PICTO: {
+				EmotionsPicto emotionsPicto = (EmotionsPicto)theEObject;
+				T result = caseEmotionsPicto(emotionsPicto);
+				if (result == null) result = caseEmotionsNode(emotionsPicto);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TeawPackage.FEEDBACK: {
+				Feedback feedback = (Feedback)theEObject;
+				T result = caseFeedback(feedback);
+				if (result == null) result = caseEmotionsNode(feedback);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case TeawPackage.EMOTION_CHOICE: {
 				EmotionChoice emotionChoice = (EmotionChoice)theEObject;
 				T result = caseEmotionChoice(emotionChoice);
+				if (result == null) result = caseEmotionsPicto(emotionChoice);
 				if (result == null) result = caseEmotionsNode(emotionChoice);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -184,14 +206,24 @@ public class TeawSwitch<T> extends Switch<T> {
 			case TeawPackage.EMOTION: {
 				Emotion emotion = (Emotion)theEObject;
 				T result = caseEmotion(emotion);
+				if (result == null) result = caseEmotionsPicto(emotion);
 				if (result == null) result = caseEmotionsNode(emotion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TeawPackage.COMMUNICATION_BOOK: {
-				CommunicationBook communicationBook = (CommunicationBook)theEObject;
-				T result = caseCommunicationBook(communicationBook);
-				if (result == null) result = casePlanningNode(communicationBook);
+			case TeawPackage.POSITIVE_FEEDBACK: {
+				PositiveFeedback positiveFeedback = (PositiveFeedback)theEObject;
+				T result = casePositiveFeedback(positiveFeedback);
+				if (result == null) result = caseFeedback(positiveFeedback);
+				if (result == null) result = caseEmotionsNode(positiveFeedback);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TeawPackage.NEGATIVE_FEEDBACK: {
+				NegativeFeedback negativeFeedback = (NegativeFeedback)theEObject;
+				T result = caseNegativeFeedback(negativeFeedback);
+				if (result == null) result = caseFeedback(negativeFeedback);
+				if (result == null) result = caseEmotionsNode(negativeFeedback);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -482,6 +514,36 @@ public class TeawSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Positive Feedback</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Positive Feedback</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePositiveFeedback(PositiveFeedback object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Negative Feedback</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Negative Feedback</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNegativeFeedback(NegativeFeedback object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Communication Book</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -493,6 +555,36 @@ public class TeawSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCommunicationBook(CommunicationBook object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Emotions Picto</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Emotions Picto</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEmotionsPicto(EmotionsPicto object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feedback</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feedback</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeedback(Feedback object) {
 		return null;
 	}
 

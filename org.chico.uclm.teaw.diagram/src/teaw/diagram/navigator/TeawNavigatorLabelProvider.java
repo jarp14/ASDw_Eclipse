@@ -37,11 +37,13 @@ import teaw.diagram.edit.parts.EmotionEditPart;
 import teaw.diagram.edit.parts.EmotionsEditPart;
 import teaw.diagram.edit.parts.EmotionsNameEditPart;
 import teaw.diagram.edit.parts.GreenLinkEditPart;
+import teaw.diagram.edit.parts.NegativeFeedbackEditPart;
 import teaw.diagram.edit.parts.NormalLinkEditPart;
 import teaw.diagram.edit.parts.PersonEditPart;
 import teaw.diagram.edit.parts.PlaceEditPart;
 import teaw.diagram.edit.parts.PlanningEditPart;
 import teaw.diagram.edit.parts.PlanningNameEditPart;
+import teaw.diagram.edit.parts.PositiveFeedbackEditPart;
 import teaw.diagram.edit.parts.PrizeEditPart;
 import teaw.diagram.edit.parts.RedLinkEditPart;
 import teaw.diagram.edit.parts.SocialStoryEditPart;
@@ -139,6 +141,10 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 			return getImage("Navigator?Node?teaw?SoothingObject", TeawElementTypes.SoothingObject_3009); //$NON-NLS-1$
 		case CommunicationBookEditPart.VISUAL_ID:
 			return getImage("Navigator?Node?teaw?CommunicationBook", TeawElementTypes.CommunicationBook_3010); //$NON-NLS-1$
+		case PositiveFeedbackEditPart.VISUAL_ID:
+			return getImage("Navigator?Node?teaw?PositiveFeedback", TeawElementTypes.PositiveFeedback_3011); //$NON-NLS-1$
+		case NegativeFeedbackEditPart.VISUAL_ID:
+			return getImage("Navigator?Node?teaw?NegativeFeedback", TeawElementTypes.NegativeFeedback_3012); //$NON-NLS-1$
 		case NormalLinkEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?teaw?NormalLink", TeawElementTypes.NormalLink_4001); //$NON-NLS-1$
 		case RedLinkEditPart.VISUAL_ID:
@@ -229,6 +235,10 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 			return getSoothingObject_3009Text(view);
 		case CommunicationBookEditPart.VISUAL_ID:
 			return getCommunicationBook_3010Text(view);
+		case PositiveFeedbackEditPart.VISUAL_ID:
+			return getPositiveFeedback_3011Text(view);
+		case NegativeFeedbackEditPart.VISUAL_ID:
+			return getNegativeFeedback_3012Text(view);
 		case NormalLinkEditPart.VISUAL_ID:
 			return getNormalLink_4001Text(view);
 		case RedLinkEditPart.VISUAL_ID:
@@ -406,6 +416,20 @@ public class TeawNavigatorLabelProvider extends LabelProvider implements ICommon
 			TeawDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 3010); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getPositiveFeedback_3011Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	* @generated
+	*/
+	private String getNegativeFeedback_3012Text(View view) {
+		return ""; //$NON-NLS-1$
 	}
 
 	/**

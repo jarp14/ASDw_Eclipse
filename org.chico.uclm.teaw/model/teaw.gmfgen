@@ -33,6 +33,32 @@
         <childMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
       </modelFacet>
     </childNodes>
+    <childNodes visualID="3011" editPartClassName="PositiveFeedbackEditPart" itemSemanticEditPolicyClassName="PositiveFeedbackItemSemanticEditPolicy" canonicalEditPolicyClassName="PositiveFeedbackCanonicalEditPolicy" graphicalNodeEditPolicyClassName="PositiveFeedbackGraphicalNodeEditPolicy" createCommandClassName="PositiveFeedbackCreateCommand" containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="PositiveFeedbackEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="PositiveFeedbackFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PositiveFeedbackFigure extends org.chico.uclm.teaw.figures.PosFeedbackFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PositiveFeedbackFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/PositiveFeedback"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes visualID="3012" editPartClassName="NegativeFeedbackEditPart" itemSemanticEditPolicyClassName="NegativeFeedbackItemSemanticEditPolicy" canonicalEditPolicyClassName="NegativeFeedbackCanonicalEditPolicy" graphicalNodeEditPolicyClassName="NegativeFeedbackGraphicalNodeEditPolicy" createCommandClassName="NegativeFeedbackCreateCommand" containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="NegativeFeedbackEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="NegativeFeedbackFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class NegativeFeedbackFigure extends org.chico.uclm.teaw.figures.NegFeedbackFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public NegativeFeedbackFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(64)&#xA;, getMapMode().DPtoLP(64)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="64" height="64"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="teaw.genmodel#//teaw/NegativeFeedback"/>
+        <containmentMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+        <childMetaFeature href="teaw.genmodel#//teaw/Emotions/emotions"/>
+      </modelFacet>
+    </childNodes>
     <childNodes visualID="3003" editPartClassName="PersonEditPart" itemSemanticEditPolicyClassName="PersonItemSemanticEditPolicy" canonicalEditPolicyClassName="PersonCanonicalEditPolicy" graphicalNodeEditPolicyClassName="PersonGraphicalNodeEditPolicy" createCommandClassName="PersonCreateCommand" containers="//@diagram/@compartments.1">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="PersonEditHelper"/>
@@ -217,11 +243,11 @@
       </modelFacet>
       <creationConstraints sourceEnd="//@expressionProviders/@providers.0/@expressions.4" targetEnd="//@expressionProviders/@providers.0/@expressions.5"/>
     </links>
-    <compartments visualID="7001" editPartClassName="EmotionsEmotionsEmotionsCompartmentEditPart" itemSemanticEditPolicyClassName="EmotionsEmotionsEmotionsCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="EmotionsEmotionsEmotionsCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1" title="EmotionsEmotionsCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.0" listLayout="false">
+    <compartments visualID="7001" editPartClassName="EmotionsEmotionsEmotionsCompartmentEditPart" itemSemanticEditPolicyClassName="EmotionsEmotionsEmotionsCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="EmotionsEmotionsEmotionsCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1 //@diagram/@childNodes.2 //@diagram/@childNodes.3" title="EmotionsEmotionsCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.0" listLayout="false">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getEmotionsEmotionsCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
-    <compartments visualID="7002" editPartClassName="PlanningPlanningPlanningNodesCompartmentEditPart" itemSemanticEditPolicyClassName="PlanningPlanningPlanningNodesCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="PlanningPlanningPlanningNodesCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.2 //@diagram/@childNodes.3 //@diagram/@childNodes.4 //@diagram/@childNodes.5 //@diagram/@childNodes.6 //@diagram/@childNodes.7 //@diagram/@childNodes.8 //@diagram/@childNodes.9" title="PlanningPlanningNodesCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.1" listLayout="false">
+    <compartments visualID="7002" editPartClassName="PlanningPlanningPlanningNodesCompartmentEditPart" itemSemanticEditPolicyClassName="PlanningPlanningPlanningNodesCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="PlanningPlanningPlanningNodesCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.4 //@diagram/@childNodes.5 //@diagram/@childNodes.6 //@diagram/@childNodes.7 //@diagram/@childNodes.8 //@diagram/@childNodes.9 //@diagram/@childNodes.10 //@diagram/@childNodes.11" title="PlanningPlanningNodesCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.1" listLayout="false">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getPlanningPlanningNodesCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
@@ -229,15 +255,15 @@
       <groups title="Planning" collapse="true">
         <entries xsi:type="gmfgen:ToolEntry" title="Planning" description="Create new Planning" smallIconPath="/org.chico.uclm.teaw.figures/images/planning_arasaac32.png" genNodes="//@diagram/@topLevelNodes.1"/>
         <entries xsi:type="gmfgen:Separator"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Action" description="Create new Action" largeIconPath="images/action_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/action_arasaac32.png" genNodes="//@diagram/@childNodes.3"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Person" description="Create new Person" largeIconPath="images/person_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/person_arasaac32.png" genNodes="//@diagram/@childNodes.2"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Place" description="Create new Place" largeIconPath="images/place_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/place_arasaac32.png" genNodes="//@diagram/@childNodes.4"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Action" description="Create new Action" largeIconPath="images/action_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/action_arasaac32.png" genNodes="//@diagram/@childNodes.5"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Person" description="Create new Person" largeIconPath="images/person_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/person_arasaac32.png" genNodes="//@diagram/@childNodes.4"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Place" description="Create new Place" largeIconPath="images/place_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/place_arasaac32.png" genNodes="//@diagram/@childNodes.6"/>
         <entries xsi:type="gmfgen:Separator"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="AAC Notebook" description="Create new AAC Notebook" largeIconPath="images/notebook_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/notebook_arasaac32.png" genNodes="//@diagram/@childNodes.9"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Award" description="Create new Award" largeIconPath="images/prize_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/prize_arasaac32.png" genNodes="//@diagram/@childNodes.6"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Social story" description="Create new Social story" largeIconPath="images/story_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/story_arasaac32.png" genNodes="//@diagram/@childNodes.7"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Entertainment/Calming activity" description="Create new Entertainment/Calming activity" largeIconPath="images/object_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/object_arasaac32.png" genNodes="//@diagram/@childNodes.8"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Time management" description="Create new Time management" largeIconPath="images/time_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/time_arasaac32.png" genNodes="//@diagram/@childNodes.5"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="AAC Notebook" description="Create new AAC Notebook" largeIconPath="images/notebook_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/notebook_arasaac32.png" genNodes="//@diagram/@childNodes.11"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Award" description="Create new Award" largeIconPath="images/prize_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/prize_arasaac32.png" genNodes="//@diagram/@childNodes.8"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Social story" description="Create new Social story" largeIconPath="images/story_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/story_arasaac32.png" genNodes="//@diagram/@childNodes.9"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Entertainment/Calming activity" description="Create new Entertainment/Calming activity" largeIconPath="images/object_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/object_arasaac32.png" genNodes="//@diagram/@childNodes.10"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Time management" description="Create new Time management" largeIconPath="images/time_arasaac64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/time_arasaac32.png" genNodes="//@diagram/@childNodes.7"/>
         <entries xsi:type="gmfgen:Separator"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Sequence/order" description="Create new Sequence/order" smallIconPath="/org.chico.uclm.teaw.figures/images/link32.png" genLinks="//@diagram/@links.0"/>
       </groups>
@@ -246,6 +272,8 @@
         <entries xsi:type="gmfgen:Separator"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Target emotion" description="Create new Target emotion" largeIconPath="images/emochoice_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/emochoice_arasaac32.png" genNodes="//@diagram/@childNodes.0"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Response option" description="Create new Response option" largeIconPath="images/emotion_arasaac128.png" smallIconPath="/org.chico.uclm.teaw.figures/images/emotion_arasaac32.png" genNodes="//@diagram/@childNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Positive feedback" description="Create new Positive feedback" largeIconPath="images/positiveFeedback64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/positiveFeedback32.png" genNodes="//@diagram/@childNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Negative feedback" description="Create new Negative feedback" largeIconPath="images/negativeFeedback64.png" smallIconPath="/org.chico.uclm.teaw.figures/images/negativeFeedback32.png" genNodes="//@diagram/@childNodes.3"/>
         <entries xsi:type="gmfgen:Separator"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Correct solution" description="Create new Correct solution" smallIconPath="/org.chico.uclm.teaw.figures/images/ok32.png" genLinks="//@diagram/@links.2"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Incorrect solution" description="Create new Incorrect solution" smallIconPath="/org.chico.uclm.teaw.figures/images/wrong32.png" genLinks="//@diagram/@links.1"/>
@@ -269,29 +297,31 @@
     <childReferences child="//@diagram"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.0"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.1"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.2"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.3"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.0"/>
-    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.2"/>
-    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.3"/>
     <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.4"/>
     <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.5"/>
     <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.6"/>
     <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.7"/>
     <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.8"/>
     <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.9"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.10"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.11"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.1"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.0" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.2" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@childNodes.2" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.3" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@childNodes.3" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.4" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@childNodes.4" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.2" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@childNodes.2" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.3" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences parent="//@diagram/@childNodes.3" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.5" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.5" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.6" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.6" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.4" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@childNodes.4" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.5" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.5" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.6" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.6" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.1" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.1" child="//@diagram/@childNodes.1" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>

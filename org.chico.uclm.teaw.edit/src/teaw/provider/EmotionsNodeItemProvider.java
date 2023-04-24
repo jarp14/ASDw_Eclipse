@@ -60,100 +60,8 @@ public class EmotionsNodeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDescriptionPropertyDescriptor(object);
-			addImagePathPropertyDescriptor(object);
-			addOrderPropertyDescriptor(object);
-			addSizePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_EmotionsNode_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EmotionsNode_description_feature", "_UI_EmotionsNode_type"),
-				 TeawPackage.Literals.EMOTIONS_NODE__DESCRIPTION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Image Path feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addImagePathPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_EmotionsNode_imagePath_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EmotionsNode_imagePath_feature", "_UI_EmotionsNode_type"),
-				 TeawPackage.Literals.EMOTIONS_NODE__IMAGE_PATH,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Order feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOrderPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_EmotionsNode_order_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EmotionsNode_order_feature", "_UI_EmotionsNode_type"),
-				 TeawPackage.Literals.EMOTIONS_NODE__ORDER,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Size feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSizePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_EmotionsNode_size_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EmotionsNode_size_feature", "_UI_EmotionsNode_type"),
-				 TeawPackage.Literals.EMOTIONS_NODE__SIZE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -164,10 +72,7 @@ public class EmotionsNodeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EmotionsNode)object).getDescription();
-		return label == null || label.length() == 0 ?
-			getString("_UI_EmotionsNode_type") :
-			getString("_UI_EmotionsNode_type") + " " + label;
+		return getString("_UI_EmotionsNode_type");
 	}
 
 
@@ -181,15 +86,6 @@ public class EmotionsNodeItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(EmotionsNode.class)) {
-			case TeawPackage.EMOTIONS_NODE__DESCRIPTION:
-			case TeawPackage.EMOTIONS_NODE__IMAGE_PATH:
-			case TeawPackage.EMOTIONS_NODE__ORDER:
-			case TeawPackage.EMOTIONS_NODE__SIZE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

@@ -13,11 +13,28 @@ abstract class Node {
 /*
 * CATEGORIAS
 */
-abstract class EmotionsNode {
+abstract class PlanningNode {
 	attr String description;
 	attr String imagePath;
-	attr Integer order;
+	attr Order order;
 	attr Integer size;
+}
+
+abstract class EmotionsNode {
+}
+
+enum Order {
+	None;
+	First;
+	Second;
+	Third;
+	Fourth;
+	Fifth;
+	Sixth;
+	Seventh;
+	Eighth;
+	Ninth;
+	Tenth;
 }
 
 @gmf.node(label="name", tool.name="Emotions",
@@ -28,13 +45,6 @@ class Emotions extends Node {
 	val EmotionsNode[*] emotions;
 	val RedLink[*] redLinks;
 	val GreenLink[1] greenLink; // only one, the correct answer
-}
-
-abstract class PlanningNode {
-	attr String description;
-	attr String imagePath;
-	attr Integer order;
-	attr Integer size;
 }
 
 @gmf.node(label="name", tool.name="Planning",
@@ -111,16 +121,37 @@ class CommunicationBook extends PlanningNode {
 /*
 * NODOS DIAGRAMA EMOCIONES
 */
+abstract class EmotionsPicto extends EmotionsNode {
+	attr String description;
+	attr String imagePath;
+	attr Integer size;
+}
+
+abstract class Feedback extends EmotionsNode {
+}
+
 @gmf.node(figure="org.chico.uclm.teaw.figures.EmotionChoiceFigure", tool.name="Target emotion",
 	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/emochoice_arasaac128.png", tool.small.path="images/emochoice_arasaac32.png",
 	label.placement="none", resizable="false", size="128,128")
-class EmotionChoice extends EmotionsNode {
+class EmotionChoice extends EmotionsPicto {
 }
 
 @gmf.node(figure="org.chico.uclm.teaw.figures.EmotionFigure", tool.name="Response option",
 	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/emotion_arasaac128.png", tool.small.path="images/emotion_arasaac32.png",
 	label.placement="none", resizable="false", size="128,128")
-class Emotion extends EmotionsNode {
+class Emotion extends EmotionsPicto {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.PosFeedbackFigure", tool.name="Positive feedback",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/positiveFeedback64.png", tool.small.path="images/positiveFeedback32.png",
+	label.placement="none", resizable="false", size="64,64")
+class PositiveFeedback extends Feedback {
+}
+
+@gmf.node(figure="org.chico.uclm.teaw.figures.NegFeedbackFigure", tool.name="Negative feedback",
+	tool.small.bundle="org.chico.uclm.teaw.figures", tool.large.path="images/negativeFeedback64.png", tool.small.path="images/negativeFeedback32.png",
+	label.placement="none", resizable="false", size="64,64")
+class NegativeFeedback extends Feedback {
 }
 
 
@@ -143,6 +174,7 @@ class NormalLink extends Link {
 class RedLink extends Link {
 	ref EmotionChoice[1] origin;
 	ref Emotion[1] target;
+	ref Feedback[1] npFeedback;
 }
 
 @gmf.link(source="origin", target="target", tool.name="Correct solution", style="solid", width="2", color="0,217,60",
@@ -151,4 +183,5 @@ class RedLink extends Link {
 class GreenLink extends Link {
 	ref EmotionChoice[1] origin;
 	ref Emotion[1] target;
+	ref Feedback[1] npFeedback;
 }

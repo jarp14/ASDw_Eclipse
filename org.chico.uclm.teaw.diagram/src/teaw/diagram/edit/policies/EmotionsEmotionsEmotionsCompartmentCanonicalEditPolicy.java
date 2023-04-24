@@ -27,6 +27,8 @@ import org.eclipse.gmf.runtime.notation.View;
 import teaw.TeawPackage;
 import teaw.diagram.edit.parts.EmotionChoiceEditPart;
 import teaw.diagram.edit.parts.EmotionEditPart;
+import teaw.diagram.edit.parts.NegativeFeedbackEditPart;
+import teaw.diagram.edit.parts.PositiveFeedbackEditPart;
 import teaw.diagram.part.TeawDiagramUpdater;
 import teaw.diagram.part.TeawNodeDescriptor;
 import teaw.diagram.part.TeawVisualIDRegistry;
@@ -83,7 +85,14 @@ public class EmotionsEmotionsEmotionsCompartmentCanonicalEditPolicy extends Cano
 	*/
 	private boolean isMyDiagramElement(View view) {
 		int visualID = TeawVisualIDRegistry.getVisualID(view);
-		return visualID == EmotionChoiceEditPart.VISUAL_ID || visualID == EmotionEditPart.VISUAL_ID;
+		switch (visualID) {
+		case EmotionChoiceEditPart.VISUAL_ID:
+		case EmotionEditPart.VISUAL_ID:
+		case PositiveFeedbackEditPart.VISUAL_ID:
+		case NegativeFeedbackEditPart.VISUAL_ID:
+			return true;
+		}
+		return false;
 	}
 
 	/**

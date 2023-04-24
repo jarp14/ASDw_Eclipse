@@ -70,25 +70,28 @@ public interface PlanningNode extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Order</b></em>' attribute.
+	 * The literals are from the enumeration {@link teaw.Order}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Order</em>' attribute.
-	 * @see #setOrder(Integer)
+	 * @see teaw.Order
+	 * @see #setOrder(Order)
 	 * @see teaw.TeawPackage#getPlanningNode_Order()
 	 * @model
 	 * @generated
 	 */
-	Integer getOrder();
+	Order getOrder();
 
 	/**
 	 * Sets the value of the '{@link teaw.PlanningNode#getOrder <em>Order</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Order</em>' attribute.
+	 * @see teaw.Order
 	 * @see #getOrder()
 	 * @generated
 	 */
-	void setOrder(Integer value);
+	void setOrder(Order value);
 
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.

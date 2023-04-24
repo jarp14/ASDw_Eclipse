@@ -27,8 +27,10 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
+import teaw.Action;
 import teaw.CommunicationBook;
 import teaw.Person;
+import teaw.diagram.edit.parts.ActionEditPart.ActionFigure;
 import teaw.diagram.edit.parts.PersonEditPart.PersonFigure;
 import teaw.diagram.edit.policies.CommunicationBookItemSemanticEditPolicy;
 
@@ -99,17 +101,17 @@ public class CommunicationBookEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure createNodeShape() {
-		primaryShape = new NotebookFigure();
+		primaryShape = new CommunicationBookFigure();
 		CommunicationBook component = (CommunicationBook) getNotationView().getElement();
-		((NotebookFigure) primaryShape).setImagePath(component.getImagePath());
+		((CommunicationBookFigure) primaryShape).setImagePath(component.getImagePath());
 		return primaryShape;
 	}
 
 	/**
 	* @generated
 	*/
-	public NotebookFigure getPrimaryShape() {
-		return (NotebookFigure) primaryShape;
+	public CommunicationBookFigure getPrimaryShape() {
+		return (CommunicationBookFigure) primaryShape;
 	}
 
 	/**
@@ -205,6 +207,20 @@ public class CommunicationBookEditPart extends ShapeNodeEditPart {
 		}
 	}
 
+	/**
+	* @generated
+	*/
+	public class CommunicationBookFigure extends org.chico.uclm.teaw.figures.NotebookFigure {
+
+		/**
+		 * @generated
+		 */
+		public CommunicationBookFigure() {
+			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(64), getMapMode().DPtoLP(64)));
+		}
+
+	}
+
 	protected void handleNotificationEvent(Notification event) {
 		if (event.getNotifier() == getModel()
 				&& EcorePackage.eINSTANCE.getEModelElement_EAnnotations().equals(event.getFeature())) {
@@ -223,20 +239,6 @@ public class CommunicationBookEditPart extends ShapeNodeEditPart {
 
 			super.handleNotificationEvent(event);
 		}
-	}
-	
-	/**
-	 * @generated
-	 */
-	public class NotebookFigure extends org.chico.uclm.teaw.figures.NotebookFigure {
-
-		/**
-		 * @generated
-		 */
-		public NotebookFigure() {
-			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(64), getMapMode().DPtoLP(64)));
-		}
-
 	}
 
 }
