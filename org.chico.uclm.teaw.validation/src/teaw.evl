@@ -53,3 +53,33 @@ context Emotions {
   	}
 
 }
+
+// Links
+context GreenLink {
+
+	//critique notEmptyFeedback {
+    //	check : self.Feedback.isDefined()
+    //	message : "Test GREEN"
+  	//}
+
+
+  	constraint HasNegativeFeedback {
+    	check : self.Feedback.isDefined() and self.EGL_Tool.isKindOf(PositiveFeedback)
+    	message : "The correct solution can't have a negative feedback"
+  	}
+
+}
+
+context RedLink {
+
+	//critique notEmptyFeedback {
+    //	check : self.Feedback.isDefined()
+    //	message : "Test RED"
+  	//}
+
+  	constraint HasPositiveFeedback {
+    	check : self.Feedback.isDefined() and self.EGL_Tool.isKindOf(NegativeFeedback)
+    	message : "The incorrect solution can't have a positive feedback"
+  	}
+
+}
