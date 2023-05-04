@@ -29,6 +29,6 @@ public class ImagePathCellEditor extends DialogCellEditor {
 	          absolutePath = file.getAbsolutePath();
 	      }
 
-	      return absolutePath;
+	      return absolutePath.replace("\\", "/");
 	  }
 }

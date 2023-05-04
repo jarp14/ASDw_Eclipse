@@ -35,6 +35,8 @@ enum Order {
 	Eighth;
 	Ninth;
 	Tenth;
+	Eleventh;
+	Twelfth;
 }
 
 @gmf.node(label="name", tool.name="Emotions",

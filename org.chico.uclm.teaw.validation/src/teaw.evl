@@ -4,9 +4,17 @@ context Planning {
 	constraint NodesSize {
 		check {
     		var n = PlanningNode.all.size();
-    		return n < 10;
+    		return n < 12;
     	} 
-    	message : "You can specify a maximum of 10 elements"
+    	message : "You can specify a maximum of 12 elements"
+	}
+	
+	constraint PrizeMandatory {
+		check {
+    		var n = Prize.all.size();
+    		return n > 0;
+    	} 
+    	message : "You must include at least one award in the plannification"
 	}
 
 }
@@ -57,14 +65,14 @@ context Emotions {
 // Links
 context GreenLink {
 
-	//critique notEmptyFeedback {
-    //	check : self.Feedback.isDefined()
-    //	message : "Test GREEN"
-  	//}
+	constraint notEmptyFeedback {
+    	check : self.npFeedback.isDefined()
+    	message : "The correct solution must have one positive feedback"
+  	}
 
 
   	constraint HasNegativeFeedback {
-    	check : self.Feedback.isDefined() and self.EGL_Tool.isKindOf(PositiveFeedback)
+    	check : self.npFeedback.isDefined() and self.npFeedback.isKindOf(PositiveFeedback)
     	message : "The correct solution can't have a negative feedback"
   	}
 
@@ -72,13 +80,13 @@ context GreenLink {
 
 context RedLink {
 
-	//critique notEmptyFeedback {
-    //	check : self.Feedback.isDefined()
-    //	message : "Test RED"
-  	//}
+	constraint notEmptyFeedback {
+    	check : self.npFeedback.isDefined()
+    	message : "The incorrect solution must have one negative feedback"
+  	}
 
   	constraint HasPositiveFeedback {
-    	check : self.Feedback.isDefined() and self.EGL_Tool.isKindOf(NegativeFeedback)
+    	check : self.npFeedback.isDefined() and self.npFeedback.isKindOf(NegativeFeedback)
     	message : "The incorrect solution can't have a positive feedback"
   	}
 
